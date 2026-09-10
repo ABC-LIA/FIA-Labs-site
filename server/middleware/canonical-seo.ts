@@ -1,9 +1,13 @@
 /**
  * Runs outside grok-pwa (filename sorts first) so we can:
- * 1. 308 legacy paths before the SPA / 404 catch-all
- * 2. 308 www → apex once TLS for www exists
- * 3. Restore production og:url / og:image after the injector rewrites them
+ * 1. 308 legacy paths before the SPA / 404 catch-all (backup — edge 308s in
+ *    `.vercel/output/config.json` must fire first; see vercel-edge-redirects)
+ * 2. Restore production og:url / og:image after the injector rewrites them
  *    to the grok.me host, and noindex preview / *.vercel.app / grok.me
+ *
+ * Do not 308 www → apex here. The Vercel project still "Redirects to www";
+ * a working www→apex in this middleware would loop every page until Adrian
+ * flips the domain setting. www→apex stays in vercel.json for after that flip.
  */
 import {
   applyDocumentSeo,
@@ -90,13 +94,6 @@ export default async function canonicalSeoMiddleware(
   const method = (event.req.method ?? "GET").toUpperCase();
   const host = requestHost(event);
   const path = event.url.pathname;
-  const hostname = host.split(",")[0]?.trim().split(":")[0]?.toLowerCase() ?? "";
-
-  if (hostname === "www.federatedintel.ai") {
-    return redirectTo(
-      `https://federatedintel.ai${path}${event.url.search}`,
-    );
-  }
 
   const dest = legacyRedirectTarget(path);
   if (dest && (method === "GET" || method === "HEAD")) {
