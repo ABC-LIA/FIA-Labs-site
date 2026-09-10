@@ -1,16 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { PageFrame } from "@/components/page-frame";
-import { APPS, pageHead } from "@/lib/site";
+import { APPS, PAGE_COPY, pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/work/")({
   component: WorkPage,
   head: () =>
-    pageHead(
-      "Work",
-      "Eight specialist systems from FIA Labs. Legal Intel and Aquinian Studio are in production.",
-      "/work",
-    ),
+    pageHead(PAGE_COPY.work.title, PAGE_COPY.work.description, PAGE_COPY.work.path),
 });
 
 function WorkPage() {

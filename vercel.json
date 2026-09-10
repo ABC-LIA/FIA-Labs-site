@@ -1,0 +1,49 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.federatedintel.ai" }],
+      "destination": "https://federatedintel.ai/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.federatedintel.ai" }],
+      "destination": "https://federatedintel.ai/:path*",
+      "permanent": true
+    },
+    { "source": "/lia", "destination": "/work/lia", "permanent": true },
+    { "source": "/lia/", "destination": "/work/lia", "permanent": true },
+    { "source": "/pricing", "destination": "/work", "permanent": true },
+    { "source": "/pricing/", "destination": "/work", "permanent": true },
+    { "source": "/apps", "destination": "/work", "permanent": true },
+    { "source": "/apps/", "destination": "/work", "permanent": true },
+    {
+      "source": "/pricing-philosophy",
+      "destination": "/company",
+      "permanent": true
+    },
+    {
+      "source": "/pricing-philosophy/",
+      "destination": "/company",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "*.vercel.app" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "*.grok.me" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/__grok/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    }
+  ]
+}

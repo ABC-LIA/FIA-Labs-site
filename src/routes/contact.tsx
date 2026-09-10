@@ -2,12 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { type FormEvent, useState } from "react";
 import { PageFrame } from "@/components/page-frame";
 import { Button } from "@/components/ui/button";
-import { LAB, pageHead } from "@/lib/site";
+import { LAB, PAGE_COPY, pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () =>
-    pageHead("Contact", "Write to FIA Labs — support, privacy, and legal.", "/contact"),
+    pageHead(
+      PAGE_COPY.contact.title,
+      PAGE_COPY.contact.description,
+      PAGE_COPY.contact.path,
+    ),
 });
 
 const CHANNELS = [
@@ -50,10 +54,36 @@ function ContactPage() {
     <PageFrame
       index="06 · Contact"
       title="Write to the lab."
-      dek="There is no ticket queue on this page. A letter goes to the address that matches the subject."
+      dek="Legal work lives at legalintel.ai. Theological work lives at aquinian.com. Letters for the lab itself go to the address that matches the subject."
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-12 md:grid-cols-[0.85fr_1.15fr] md:px-8 md:py-16">
         <ul className="space-y-6">
+          <li className="border-t border-border pt-4">
+            <p className="font-mono text-[10px] tracking-[0.16em] text-subtle uppercase">
+              Desks
+            </p>
+            <p className="mt-2 text-sm text-muted">
+              LegalIntel (LIA Pro) is at{" "}
+              <a
+                href="https://legalintel.ai"
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg hover:text-accent"
+              >
+                legalintel.ai
+              </a>
+              . Aquinian Studio is at{" "}
+              <a
+                href="https://aquinian.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg hover:text-accent"
+              >
+                aquinian.com
+              </a>
+              .
+            </p>
+          </li>
           {CHANNELS.map((channel) => (
             <li key={channel.email} className="border-t border-border pt-4">
               <p className="font-mono text-[10px] tracking-[0.16em] text-subtle uppercase">

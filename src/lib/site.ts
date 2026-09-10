@@ -1,4 +1,45 @@
+import { OG_IMAGE, canonicalUrl, robotsForHost } from "./seo";
+
 export const ORIGIN = "https://federatedintel.ai";
+
+export const PAGE_COPY = {
+  home: {
+    title: "FIA Labs — Federated Intel AI",
+    description:
+      "Expert systems for high-consequence work. Two desks live: LegalIntel for the file, Aquinian Studio for doctrine. A record of how the answer was reached.",
+    path: "/",
+  },
+  work: {
+    title: "The desks — FIA Labs",
+    description:
+      "LegalIntel and Aquinian Studio are in production. Six further specialists are not public until they meet the same standard.",
+    path: "/work",
+  },
+  lia: {
+    title: "LegalIntel (LIA Pro) — FIA Labs",
+    description:
+      "A governed reasoning desk for legal and forensic work. Evidence, inference and gap stay distinct. Open the desk at legalintel.ai.",
+    path: "/work/lia",
+  },
+  aquinian: {
+    title: "Aquinian Studio — FIA Labs",
+    description:
+      "Theological and philosophical work at the studio. Open it at aquinian.com.",
+    path: "/work/aquinian",
+  },
+  company: {
+    title: "Company — FIA Labs",
+    description:
+      "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. Two desks in production. Human judgment remains the authority.",
+    path: "/company",
+  },
+  contact: {
+    title: "Contact — FIA Labs",
+    description:
+      "Contact FIA Labs. Legal work lives at legalintel.ai. Theological work lives at aquinian.com.",
+    path: "/contact",
+  },
+} as const;
 
 export const LAB = {
   name: "FIA Labs",
@@ -203,19 +244,34 @@ export function getApp(slug: string) {
 }
 
 export function pageHead(title: string, description?: string, path = "/") {
-  const canonical = path === "/" ? `${ORIGIN}/` : `${ORIGIN}${path}`;
-  const fullTitle =
-    path === "/" ? "FIA Labs — Federated Intel AI" : `${title} — FIA Labs`;
+  const canonical = canonicalUrl(path);
+  const fullTitle = title.includes("FIA Labs")
+    ? title
+    : path === "/"
+      ? PAGE_COPY.home.title
+      : `${title} — FIA Labs`;
+  const robots = robotsForHost();
   return {
     meta: [
       { title: fullTitle },
       ...(description
         ? [{ name: "description" as const, content: description }]
         : []),
-      {
-        name: "robots" as const,
-        content: "index, follow, max-image-preview:large, max-snippet:-1",
-      },
+      { name: "robots" as const, content: robots },
+      { property: "og:title" as const, content: fullTitle },
+      ...(description
+        ? [{ property: "og:description" as const, content: description }]
+        : []),
+      { property: "og:url" as const, content: canonical },
+      { property: "og:image" as const, content: OG_IMAGE },
+      { property: "og:type" as const, content: "website" },
+      { property: "og:site_name" as const, content: "FIA Labs" },
+      { name: "twitter:card" as const, content: "summary_large_image" },
+      { name: "twitter:title" as const, content: fullTitle },
+      ...(description
+        ? [{ name: "twitter:description" as const, content: description }]
+        : []),
+      { name: "twitter:image" as const, content: OG_IMAGE },
     ],
     links: [{ rel: "canonical" as const, href: canonical }],
   };
@@ -328,7 +384,7 @@ export const FAQS = [
   },
 ] as const;
 
-export const JSON_LD = {
+export const ORGANIZATION_JSON_LD = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -374,38 +430,32 @@ export const JSON_LD = {
       publisher: { "@id": `${ORIGIN}/#org` },
       inLanguage: "en",
     },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://legalintel.ai/#app",
-      name: "Legal Intel",
-      alternateName: "LIA Pro",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      url: "https://legalintel.ai",
-      description:
-        "A governed reasoning desk for legal and forensic work. Evidence, inference, and gap stay on different lines.",
-      publisher: { "@id": `${ORIGIN}/#org` },
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://aquinian.com/#app",
-      name: "Aquinian Studio",
-      applicationCategory: "EducationalApplication",
-      operatingSystem: "Web",
-      url: "https://aquinian.com",
-      description:
-        "A virtual Thomistic intellect for theology, philosophy, doctrine, natural law, and cultural analysis.",
-      publisher: { "@id": `${ORIGIN}/#org` },
-    },
-    {
-      "@type": "FAQPage",
-      "@id": `${ORIGIN}/company#faq`,
-      url: `${ORIGIN}/company`,
-      mainEntity: FAQS.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: { "@type": "Answer", text: item.a },
-      })),
-    },
   ],
+};
+
+/** Desk page only. No Offer / price — LIA Pro seats live on legalintel.ai. */
+export const LIA_SOFTWARE_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://legalintel.ai/#app",
+  name: "LIA Pro",
+  alternateName: ["LegalIntel", "Legal Intel"],
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://legalintel.ai",
+  description:
+    "A governed reasoning desk for legal and forensic work. Evidence, inference, and gap stay distinct.",
+  publisher: { "@id": `${ORIGIN}/#org` },
+};
+
+export const COMPANY_FAQ_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${ORIGIN}/company#faq`,
+  url: `${ORIGIN}/company`,
+  mainEntity: FAQS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
 };
