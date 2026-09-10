@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/africa",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Project Africa — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 1587,
+      "bodyTextHash": "eadbb16edfeef05aba74129eca1ca2874d0eb3ae003d0e2eeae0125623da8dd4",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/no-lite-africa.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Project Africa — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 1519,
+      "bodyTextHash": "a7f4482a3dfffced5a4e1ad6ce71fe39ba19db7751b6103362dccc68ed9f5a91",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu 04 · AFRICA Access at the sca",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/no-lite-africa-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/no-lite-africa.json"
+}

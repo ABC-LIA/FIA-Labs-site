@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/work",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Work — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 1594,
+      "bodyTextHash": "6d407de07c862722e716e8e42cef7b187f166372f4954538644a0ad42b771d4c",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/no-lite-work.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Work — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 1526,
+      "bodyTextHash": "7f628bd651d1d75707704ca7b67448a8641bc61c5b82be2c4c87744f2c028715",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu 01 · WORK The desk. Eight spe",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/no-lite-work-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/no-lite-work.json"
+}

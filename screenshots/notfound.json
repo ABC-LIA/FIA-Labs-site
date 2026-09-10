@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8080/not-a-page",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 404,
+      "title": "FIA Labs — Federated Intel AI",
+      "hasCanvas": false,
+      "bodyTextLen": 539,
+      "bodyTextHash": "23f0e7a5357e7e9a9e202e2f74e8649201ed6b9de1a49f1062e912346d9555ad",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/notfound.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 404,
+      "title": "FIA Labs — Federated Intel AI",
+      "hasCanvas": false,
+      "bodyTextLen": 471,
+      "bodyTextHash": "524e0fd6d1ebf271f2cd7e8f6fce10fd81b8631430669735e727fbe72d0cc036",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu 404 This page is not on the r",
+      "horizontalOverflow": false,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 ()"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/notfound-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/notfound.json"
+}

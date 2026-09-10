@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/company",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Company — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 2343,
+      "bodyTextHash": "8f7bc400b597ba3765970a020ef82f7c228b9eba222a59841e14c3fc753456b6",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/company-seal.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Company — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 2275,
+      "bodyTextHash": "7f0dce713fc85a410b9f93593fad50c162cdaca0da795fee03d1783883245296",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu 05 · COMPANY A private lab. A",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/company-seal-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/company-seal.json"
+}

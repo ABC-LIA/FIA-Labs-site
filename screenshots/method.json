@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/method",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "FIA Labs — Federated Intel AI",
+      "hasCanvas": false,
+      "bodyTextLen": 2370,
+      "bodyTextHash": "f6a2a20e86e00abed6cc58fa968fe609ef42d3747386d0aad2ebbadc12caed49",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/method.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "FIA Labs — Federated Intel AI",
+      "hasCanvas": false,
+      "bodyTextLen": 2302,
+      "bodyTextHash": "98e1a77a2e62ea4229ecc1b38c5e65efbe2b9f981683ee4bbe327f5e7d2d389b",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu 02 · METHOD Federation, not c",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/method-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/method.json"
+}

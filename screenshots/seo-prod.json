@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "FIA Labs — Federated Intel AI",
+      "hasCanvas": false,
+      "bodyTextLen": 3218,
+      "bodyTextHash": "a01648f37563e5010353ef12c380ceb3ccceeb73b01f0efb12e7c506a481683a",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/seo-prod.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "FIA Labs — Federated Intel AI",
+      "hasCanvas": false,
+      "bodyTextLen": 3139,
+      "bodyTextHash": "f240de5876fbc441bf37ab9ca14ea89ca1fedd14000d12d396361f8846103a90",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu WASHINGTON, D.C. · FEDERATED ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/seo-prod-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/seo-prod.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

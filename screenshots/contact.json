@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/contact",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Contact — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 785,
+      "bodyTextHash": "68d740fc3cd3288032d677da2c34ed6606b35011e413d90f4a49f72340f280e1",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/contact.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Contact — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 717,
+      "bodyTextHash": "924c9d95a17d7fdb0a072bbee43372ca59afd0ebda1d310ca05220d74a98c63c",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu 06 · CONTACT Write to the lab",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/contact-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/contact.json"
+}

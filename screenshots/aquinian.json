@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/work/aquinian",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aquinian Studio — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 1241,
+      "bodyTextHash": "1dfd7153df1332af0e3f9d5bce7ed754db7ae635ce3a07a7e9644fc2bfc55969",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/aquinian.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aquinian Studio — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 1173,
+      "bodyTextHash": "4876ef00f7270723b4becea22c0045d8da4539808b3b32a9e4e4c21bd6027cf2",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu WORK 02 · A VIRTUAL THOMISTIC",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/aquinian-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/aquinian.json"
+}

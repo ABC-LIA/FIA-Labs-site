@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/work/mira",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "MIRA — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 1089,
+      "bodyTextHash": "5e625ba10755b2333ff15be3435874dfebc3e8780451e67f013c571e08f7d2b4",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/no-lite-mira.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "MIRA — FIA Labs",
+      "hasCanvas": false,
+      "bodyTextLen": 1021,
+      "bodyTextHash": "5623ccebbaf0d2c88b7158043046d09d199596b80363d6524a224c569a34df57",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu WORK 03 · RESEARCH THAT SEPAR",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/no-lite-mira-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/no-lite-mira.json"
+}

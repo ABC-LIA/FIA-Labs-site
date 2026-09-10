@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" role="img" aria-label="FIA Labs">
+  <rect width="16" height="16" fill="#090a0c"/>
+  <g fill="#9aadc0" stroke="none">
+    <circle cx="8" cy="8" r="1.7"/>
+    <circle cx="13.5" cy="8" r="1.15"/>
+    <circle cx="11.89" cy="4.11" r="1.15"/>
+    <circle cx="8" cy="2.5" r="1.15"/>
+    <circle cx="4.11" cy="4.11" r="1.15"/>
+    <circle cx="2.5" cy="8" r="1.15"/>
+    <circle cx="4.11" cy="11.89" r="1.15"/>
+    <circle cx="8" cy="13.5" r="1.15"/>
+    <circle cx="11.89" cy="11.89" r="1.15"/>
+  </g>
+</svg>

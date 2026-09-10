@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/work/lia",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "FIA Labs — Federated Intel AI",
+      "hasCanvas": false,
+      "bodyTextLen": 1139,
+      "bodyTextHash": "dfbc5be9ad88438e3379ddfcb0e845a9ca795afc2a18eaacbb951ee237c47443",
+      "bodyTextPrefix": "Skip to content FIA LABS FEDERATED INTEL AI 01 WORK 02 METHOD 03",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/lia.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "FIA Labs — Federated Intel AI",
+      "hasCanvas": false,
+      "bodyTextLen": 1071,
+      "bodyTextHash": "f5be2f8f50bb59b455f8962aa04f37a3f2bb811570be32d790bb9915efbddbda",
+      "bodyTextPrefix": "Skip to content FIA LABS Open menu WORK 01 · GOVERNED LEGAL REAS",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/lia-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/lia.json"
+}
