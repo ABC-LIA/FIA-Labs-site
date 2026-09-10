@@ -80,6 +80,15 @@ export function isLegacyPathRedirect(route) {
   return redirectSrcSet(legacyPathRedirectRoutes()).has(route.src);
 }
 
+/** Nitro emits `/lia` (unanchored). As a regex that also matches /work/lia. */
+export function isUnanchoredLegacyPathRedirect(route) {
+  if (!route || typeof route.src !== "string") return false;
+  for (const { from } of LEGACY_PATH_REDIRECTS) {
+    if (route.src === from || route.src === `${from}/`) return true;
+  }
+  return false;
+}
+
 /**
  * Insert path 308s immediately before filesystem / `__server`.
  * Idempotent: previous copies of the same `src` are stripped first.
@@ -88,7 +97,9 @@ export function injectLegacyPathRedirects(config) {
   const incoming = Array.isArray(config?.routes) ? config.routes : [];
   const redirects = legacyPathRedirectRoutes();
   const srcs = redirectSrcSet(redirects);
-  const rest = incoming.filter((route) => !srcs.has(route.src));
+  const rest = incoming.filter(
+    (route) => !srcs.has(route.src) && !isUnanchoredLegacyPathRedirect(route),
+  );
 
   let insertAt = rest.findIndex(isFilesystemHandle);
   if (insertAt < 0) insertAt = rest.findIndex(isCatchAllToServer);

@@ -53,6 +53,25 @@ test("injects 308s before filesystem and the __server catch-all", () => {
   assertRedirectsBeforeCatchAll(next);
 });
 
+test("strips Nitro's unanchored /lia so /work/lia cannot 308 to itself", () => {
+  const nitroWithRules = {
+    routes: [
+      { src: "/lia/", status: 308, headers: { Location: "/work/lia" } },
+      { src: "/lia", status: 308, headers: { Location: "/work/lia" } },
+      { src: "/pricing", status: 308, headers: { Location: "/work" } },
+      { handle: "filesystem" },
+      { src: "/(.*)", dest: "/__server" },
+    ],
+  };
+  const next = injectLegacyPathRedirects(nitroWithRules);
+  assert.equal(
+    next.routes.some((route) => route.src === "/lia" || route.src === "/lia/"),
+    false,
+  );
+  assert.equal(next.routes.filter((route) => route.src === "^/lia/?$").length, 1);
+  assert.equal(new RegExp("^/lia/?$").test("/work/lia"), false);
+});
+
 test("patch is idempotent and does not stack duplicates", () => {
   const once = injectLegacyPathRedirects(NITRO_OUTPUT);
   const twice = injectLegacyPathRedirects(once);
