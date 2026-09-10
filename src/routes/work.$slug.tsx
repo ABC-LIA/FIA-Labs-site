@@ -1,11 +1,28 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { ExternalLink } from "@/components/external-link";
-import { APPS, getApp, pageHead } from "@/lib/site";
+import { JsonLd } from "@/components/json-ld";
+import {
+  APPS,
+  LIA_SOFTWARE_JSON_LD,
+  PAGE_COPY,
+  getApp,
+  pageHead,
+} from "@/lib/site";
 
 export const Route = createFileRoute("/work/$slug")({
   component: AppPage,
   head: ({ params }) => {
+    if (params.slug === "lia") {
+      return pageHead(PAGE_COPY.lia.title, PAGE_COPY.lia.description, PAGE_COPY.lia.path);
+    }
+    if (params.slug === "aquinian") {
+      return pageHead(
+        PAGE_COPY.aquinian.title,
+        PAGE_COPY.aquinian.description,
+        PAGE_COPY.aquinian.path,
+      );
+    }
     const app = getApp(params.slug);
     return pageHead(app?.name ?? "Work", app?.summary, `/work/${params.slug}`);
   },
@@ -22,6 +39,7 @@ function AppPage() {
 
   return (
     <main id="content">
+      {app.slug === "lia" ? <JsonLd data={LIA_SOFTWARE_JSON_LD} /> : null}
       <header className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
           <Link
@@ -46,14 +64,13 @@ function AppPage() {
             {app.description}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            {app.deskUrl ? (
-              <ExternalLink href={app.deskUrl}>
-                {app.slug === "aquinian" ? "Open the studio" : "Open the desk"}
-              </ExternalLink>
-            ) : null}
             {app.marketingUrl ? (
-              <ExternalLink href={app.marketingUrl} quiet>
-                {app.marketingUrl.replace("https://", "")}
+              <ExternalLink href={app.marketingUrl}>
+                {app.slug === "lia"
+                  ? "Open LegalIntel"
+                  : app.slug === "aquinian"
+                    ? "Open Aquinian"
+                    : app.marketingUrl.replace("https://", "")}
               </ExternalLink>
             ) : (
               <Link
@@ -63,6 +80,11 @@ function AppPage() {
                 How the method works
               </Link>
             )}
+            {app.deskUrl ? (
+              <ExternalLink href={app.deskUrl} quiet>
+                {app.slug === "aquinian" ? "Open the studio" : "Open the desk"}
+              </ExternalLink>
+            ) : null}
           </div>
         </div>
       </header>

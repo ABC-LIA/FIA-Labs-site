@@ -175,6 +175,16 @@ export default defineConfig(({ command, isPreview }) => ({
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
             serverDir: "./server",
+            // Emitted into .vercel/output/config.json *before* the SPA
+            // catch-all, so /lia etc. never render as soft 404s.
+            routeRules: {
+              "/lia": { redirect: { to: "/work/lia", status: 308 } },
+              "/pricing": { redirect: { to: "/work", status: 308 } },
+              "/apps": { redirect: { to: "/work", status: 308 } },
+              "/pricing-philosophy": {
+                redirect: { to: "/company", status: 308 },
+              },
+            },
           }),
         ]
       : []),

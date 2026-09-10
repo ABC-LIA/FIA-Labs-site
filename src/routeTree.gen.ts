@@ -11,9 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AfricaRouteImport } from './routes/africa'
+import { Route as AppsRouteImport } from './routes/apps'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as LiaRouteImport } from './routes/lia'
 import { Route as MethodRouteImport } from './routes/method'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PricingPhilosophyRouteImport } from './routes/pricing-philosophy'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -31,6 +35,11 @@ const AfricaRoute = AfricaRouteImport.update({
   path: '/africa',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppsRoute = AppsRouteImport.update({
+  id: '/apps',
+  path: '/apps',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CompanyRoute = CompanyRouteImport.update({
   id: '/company',
   path: '/company',
@@ -41,9 +50,24 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LiaRoute = LiaRouteImport.update({
+  id: '/lia',
+  path: '/lia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MethodRoute = MethodRouteImport.update({
   id: '/method',
   path: '/method',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingPhilosophyRoute = PricingPhilosophyRouteImport.update({
+  id: '/pricing-philosophy',
+  path: '/pricing-philosophy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -80,9 +104,13 @@ const WorkSlugRoute = WorkSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/africa': typeof AfricaRoute
+  '/apps': typeof AppsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/lia': typeof LiaRoute
   '/method': typeof MethodRoute
+  '/pricing': typeof PricingRoute
+  '/pricing-philosophy': typeof PricingPhilosophyRoute
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
   '/terms': typeof TermsRoute
@@ -93,9 +121,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/africa': typeof AfricaRoute
+  '/apps': typeof AppsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/lia': typeof LiaRoute
   '/method': typeof MethodRoute
+  '/pricing': typeof PricingRoute
+  '/pricing-philosophy': typeof PricingPhilosophyRoute
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
   '/terms': typeof TermsRoute
@@ -106,9 +138,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/africa': typeof AfricaRoute
+  '/apps': typeof AppsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/lia': typeof LiaRoute
   '/method': typeof MethodRoute
+  '/pricing': typeof PricingRoute
+  '/pricing-philosophy': typeof PricingPhilosophyRoute
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
   '/terms': typeof TermsRoute
@@ -121,9 +157,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/africa'
+    | '/apps'
     | '/company'
     | '/contact'
+    | '/lia'
     | '/method'
+    | '/pricing'
+    | '/pricing-philosophy'
     | '/privacy'
     | '/research'
     | '/terms'
@@ -134,9 +174,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/africa'
+    | '/apps'
     | '/company'
     | '/contact'
+    | '/lia'
     | '/method'
+    | '/pricing'
+    | '/pricing-philosophy'
     | '/privacy'
     | '/research'
     | '/terms'
@@ -146,9 +190,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/africa'
+    | '/apps'
     | '/company'
     | '/contact'
+    | '/lia'
     | '/method'
+    | '/pricing'
+    | '/pricing-philosophy'
     | '/privacy'
     | '/research'
     | '/terms'
@@ -160,9 +208,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AfricaRoute: typeof AfricaRoute
+  AppsRoute: typeof AppsRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
+  LiaRoute: typeof LiaRoute
   MethodRoute: typeof MethodRoute
+  PricingRoute: typeof PricingRoute
+  PricingPhilosophyRoute: typeof PricingPhilosophyRoute
   PrivacyRoute: typeof PrivacyRoute
   ResearchRoute: typeof ResearchRoute
   TermsRoute: typeof TermsRoute
@@ -185,6 +237,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AfricaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/apps': {
+      id: '/apps'
+      path: '/apps'
+      fullPath: '/apps'
+      preLoaderRoute: typeof AppsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/company': {
       id: '/company'
       path: '/company'
@@ -199,11 +258,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lia': {
+      id: '/lia'
+      path: '/lia'
+      fullPath: '/lia'
+      preLoaderRoute: typeof LiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/method': {
       id: '/method'
       path: '/method'
       fullPath: '/method'
       preLoaderRoute: typeof MethodRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing-philosophy': {
+      id: '/pricing-philosophy'
+      path: '/pricing-philosophy'
+      fullPath: '/pricing-philosophy'
+      preLoaderRoute: typeof PricingPhilosophyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -266,9 +346,13 @@ const WorkRouteWithChildren = WorkRoute._addFileChildren(WorkRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AfricaRoute: AfricaRoute,
+  AppsRoute: AppsRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
+  LiaRoute: LiaRoute,
   MethodRoute: MethodRoute,
+  PricingRoute: PricingRoute,
+  PricingPhilosophyRoute: PricingPhilosophyRoute,
   PrivacyRoute: PrivacyRoute,
   ResearchRoute: ResearchRoute,
   TermsRoute: TermsRoute,

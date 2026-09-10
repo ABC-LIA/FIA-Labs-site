@@ -1,14 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageFrame } from "@/components/page-frame";
-import { FAQS, LAB, VOICES, pageHead } from "@/lib/site";
+import { JsonLd } from "@/components/json-ld";
+import { COMPANY_FAQ_JSON_LD, FAQS, LAB, PAGE_COPY, VOICES, pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/company")({
   component: CompanyPage,
   head: () =>
     pageHead(
-      "Company",
-      "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C., wholly owned by Unison Pictures Pty Ltd.",
-      "/company",
+      PAGE_COPY.company.title,
+      PAGE_COPY.company.description,
+      PAGE_COPY.company.path,
     ),
 });
 
@@ -33,6 +34,7 @@ function CompanyPage() {
         </figure>
       }
     >
+      <JsonLd data={COMPANY_FAQ_JSON_LD} />
       <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
         <section className="grid gap-10 border-b border-border pb-14 md:grid-cols-2">
           <div className="space-y-4 text-[0.95rem] leading-relaxed text-muted">

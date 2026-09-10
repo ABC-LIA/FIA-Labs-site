@@ -1,16 +1,28 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { FederationField } from "@/components/federation-field";
-import { APPS, ARTICLES, FEATURED, LAB, PRINCIPLES, pageHead } from "@/lib/site";
+import { JsonLd } from "@/components/json-ld";
+import {
+  APPS,
+  ARTICLES,
+  FEATURED,
+  LAB,
+  ORGANIZATION_JSON_LD,
+  PAGE_COPY,
+  PRINCIPLES,
+  pageHead,
+} from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   component: Home,
-  head: () => pageHead("FIA Labs", LAB.description, "/"),
+  head: () =>
+    pageHead(PAGE_COPY.home.title, PAGE_COPY.home.description, PAGE_COPY.home.path),
 });
 
 function Home() {
   return (
     <main id="content">
+      <JsonLd data={ORGANIZATION_JSON_LD} />
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.15fr_0.85fr] md:px-8 md:py-20 lg:py-24">
           <div className="fia-rise">
@@ -82,14 +94,21 @@ function Home() {
                   {app.summary}
                 </p>
                 <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3">
-                  <Link
-                    to="/work/$slug"
-                    params={{ slug: app.slug }}
-                    className="inline-flex items-center gap-1.5 text-sm text-fg"
-                  >
-                    On this site
-                    <ArrowRight className="size-3.5" />
-                  </Link>
+                  {app.marketingUrl ? (
+                    <a
+                      href={app.marketingUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm text-fg"
+                    >
+                      {app.slug === "lia"
+                        ? "Open LegalIntel"
+                        : app.slug === "aquinian"
+                          ? "Open Aquinian"
+                          : "Visit the site"}
+                      <ArrowUpRight className="size-3.5" />
+                    </a>
+                  ) : null}
                   {app.deskUrl ? (
                     <a
                       href={app.deskUrl}
@@ -101,6 +120,14 @@ function Home() {
                       <ArrowUpRight className="size-3.5" />
                     </a>
                   ) : null}
+                  <Link
+                    to="/work/$slug"
+                    params={{ slug: app.slug }}
+                    className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-fg"
+                  >
+                    On this site
+                    <ArrowRight className="size-3.5" />
+                  </Link>
                 </div>
               </article>
             ))}

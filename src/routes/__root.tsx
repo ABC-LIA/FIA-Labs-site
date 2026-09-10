@@ -9,7 +9,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AuthProvider } from "@/lib/auth/provider";
-import { JSON_LD, LAB } from "@/lib/site";
+import { LAB } from "@/lib/site";
+import { robotsForHost } from "@/lib/seo";
 import { THEME_BOOTSTRAP } from "@/lib/theme";
 import appCss from "../styles.css?url";
 
@@ -24,7 +25,7 @@ export const Route = createRootRoute({
       { name: "description", content: LAB.description },
       { name: "theme-color", content: "#090a0c" },
       { name: "application-name", content: APP_NAME },
-      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+      { name: "robots", content: robotsForHost() },
       { name: "author", content: APP_NAME },
     ],
     links: [
@@ -58,10 +59,6 @@ function RootDocument() {
       </head>
       <body className="bg-bg font-sans text-fg">
         <PreviewHostBridge />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
-        />
         <AuthProvider>
           <div className="flex min-h-dvh flex-col">
             <SiteHeader />
