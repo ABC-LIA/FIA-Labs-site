@@ -13,6 +13,34 @@
       "src": "/assets/(.*)"
     },
     {
+      "src": "^/lia/?$",
+      "status": 308,
+      "headers": {
+        "Location": "/work/lia"
+      }
+    },
+    {
+      "src": "^/pricing/?$",
+      "status": 308,
+      "headers": {
+        "Location": "/work"
+      }
+    },
+    {
+      "src": "^/apps/?$",
+      "status": 308,
+      "headers": {
+        "Location": "/work"
+      }
+    },
+    {
+      "src": "^/pricing-philosophy/?$",
+      "status": 308,
+      "headers": {
+        "Location": "/company"
+      }
+    },
+    {
       "handle": "filesystem"
     },
     {

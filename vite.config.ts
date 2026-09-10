@@ -9,6 +9,8 @@ import { nitro } from "nitro/vite";
 // @ts-expect-error JS plugin alongside the TS vite config
 import { grokPwaPlugin } from "./scripts/grok-pwa-plugin.mjs";
 // @ts-expect-error JS plugin alongside the TS vite config
+import { vercelEdgeRedirectsPlugin } from "./scripts/vercel-edge-redirects.mjs";
+// @ts-expect-error JS plugin alongside the TS vite config
 import { appEnvPlugin } from "./scripts/app-env-plugin.mjs";
 import { isMigrationFile } from "./scripts/migration-plan.mjs";
 
@@ -169,19 +171,29 @@ export default defineConfig(({ command, isPreview }) => ({
     tanstackStart(),
     ...(command === "build" || isPreview
       ? [
+          // Register BEFORE nitro() so this closeBundle runs after Nitro writes
+          // .vercel/output/config.json (Vite runs closeBundle in reverse order).
+          vercelEdgeRedirectsPlugin(),
           nitro({
             preset: "vercel",
             // Auto-registers server/middleware/* (the PWA install page +
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
             serverDir: "./server",
-            // Emitted into .vercel/output/config.json *before* the SPA
-            // catch-all, so /lia etc. never render as soft 404s.
+            // Server-side backup. Nitro 3's vercel preset does not reliably
+            // copy these into config.json ahead of /(.*) → __server — the
+            // plugin above + scripts/patch-vercel-config.mjs do that.
             routeRules: {
               "/lia": { redirect: { to: "/work/lia", status: 308 } },
+              "/lia/": { redirect: { to: "/work/lia", status: 308 } },
               "/pricing": { redirect: { to: "/work", status: 308 } },
+              "/pricing/": { redirect: { to: "/work", status: 308 } },
               "/apps": { redirect: { to: "/work", status: 308 } },
+              "/apps/": { redirect: { to: "/work", status: 308 } },
               "/pricing-philosophy": {
+                redirect: { to: "/company", status: 308 },
+              },
+              "/pricing-philosophy/": {
                 redirect: { to: "/company", status: 308 },
               },
             },
