@@ -22,7 +22,7 @@ function CompanyPage() {
       aside={
         <figure className="justify-self-start md:justify-self-end">
           <img
-            src="/logo.png?v=3"
+            src="/logo.png?v=4"
             alt="FIA Labs seal — FiA mark on a circuit die"
             width={160}
             height={160}
