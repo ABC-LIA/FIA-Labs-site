@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { type FormEvent, useState } from "react";
 import { PageFrame } from "@/components/page-frame";
 import { Button } from "@/components/ui/button";
@@ -54,7 +54,7 @@ function ContactPage() {
     <PageFrame
       index="06 · Contact"
       title="Write to the lab."
-      dek="Legal work lives at legalintel.ai. Theological work lives at aquinian.com. Letters for the lab itself go to the address that matches the subject."
+      dek="Legal work lives at legalintel.ai. Theological work lives at aquinian.com. Medical work lives at medicalintel.org. Letters for the lab itself go to the address that matches the subject."
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-12 md:grid-cols-[0.85fr_1.15fr] md:px-8 md:py-16">
         <ul className="space-y-6">
@@ -81,6 +81,20 @@ function ContactPage() {
               >
                 aquinian.com
               </a>
+              . Medical Intel (MIA Pro) is at{" "}
+              <a
+                href="https://medicalintel.org"
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg hover:text-accent"
+              >
+                medicalintel.org
+              </a>
+              . Brandium, CFO Sentinel, and Cine-Novelist are live on their own
+              domains. The full index is on{" "}
+              <Link to="/work" className="text-fg hover:text-accent">
+                Work
+              </Link>
               .
             </p>
           </li>

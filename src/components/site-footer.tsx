@@ -16,18 +16,6 @@ export function SiteFooter() {
             Wholly owned by {LAB.owner}.
           </p>
           <p className="mt-5 font-display text-lg italic text-fg/90">{LAB.slogan}</p>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-            Legal Intel AI (LIA) lives at{" "}
-            <a href="https://legalintel.ai" className="text-muted hover:text-fg">
-              legalintel.ai
-            </a>
-            {". "}
-            Medical Intel (MIA) lives at{" "}
-            <a href="https://medicalintel.org" className="text-muted hover:text-fg">
-              medicalintel.org
-            </a>
-            {"."}
-          </p>
         </div>
 
         <div>

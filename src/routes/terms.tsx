@@ -10,7 +10,7 @@ export const Route = createFileRoute("/terms")({
 const SECTIONS = [
   {
     title: "1. The lab",
-    body: `These Terms govern access to FIA Labs applications and services, a DBA of ${LAB.legalName}, registered in ${LAB.city}, ${LAB.country}, and wholly owned by ${LAB.owner}. The apps include LIA Pro (Legal Intel), MIRA, Aquinian, Cine-Novelist, CarCounsel, Brandium, ExecMind, and CFO Sentinel.`,
+    body: `These Terms govern access to FIA Labs applications and services, a DBA of ${LAB.legalName}, registered in ${LAB.city}, ${LAB.country}, and wholly owned by ${LAB.owner}. The apps include LIA Pro (Legal Intel), MIA Pro (Medical Intel), Aquinian, Cine-Novelist, CarCounsel, Brandium, ExecMind, and CFO Sentinel.`,
   },
   {
     title: "2. What the apps are",

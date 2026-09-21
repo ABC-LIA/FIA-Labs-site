@@ -15,6 +15,8 @@
     },
     { "source": "/lia", "destination": "/work/lia", "permanent": true },
     { "source": "/lia/", "destination": "/work/lia", "permanent": true },
+    { "source": "/work/mira", "destination": "/work/mia", "permanent": true },
+    { "source": "/work/mira/", "destination": "/work/mia", "permanent": true },
     { "source": "/pricing", "destination": "/work", "permanent": true },
     { "source": "/pricing/", "destination": "/work", "permanent": true },
     { "source": "/apps", "destination": "/work", "permanent": true },

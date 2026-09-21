@@ -1,7 +1,7 @@
-import { o as LAB } from "./site-1KtBHgQk.mjs";
+import { o as LAB } from "./site-CmMFAehA.mjs";
 import { B as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/privacy-BBGNNwid.js
+//#region node_modules/.nitro/vite/services/ssr/assets/privacy-C0tf-m5Q.js
 var import_jsx_runtime = require_jsx_runtime();
 var SECTIONS = [
 	{
@@ -50,7 +50,7 @@ function PrivacyPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
 		index: "Privacy",
 		title: "Privacy policy",
-		dek: `Last updated 21 October 2025. ${LAB.legalName} (“FIA,” “we,” “our,” or “us”) respects your privacy. This policy covers FIA Labs applications, including LIA Pro, MIRA, CFO Sentinel, Aquinian, Brandium, CarCounsel, Cine-Novelist, and ExecMind.`,
+		dek: `Last updated 21 October 2025. ${LAB.legalName} (“FIA,” “we,” “our,” or “us”) respects your privacy. This policy covers FIA Labs applications, including LIA Pro, MIA Pro, CFO Sentinel, Aquinian, Brandium, CarCounsel, Cine-Novelist, and ExecMind.`,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-3xl space-y-10 px-5 py-12 md:px-8 md:py-16",
 			children: [SECTIONS.map((section) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {

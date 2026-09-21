@@ -77,7 +77,10 @@ test("patch is idempotent and does not stack duplicates", () => {
   const twice = injectLegacyPathRedirects(once);
   const liaCount = twice.routes.filter((route) => route.src === "^/lia/?$").length;
   assert.equal(liaCount, 1);
-  assert.equal(twice.routes.filter(isLegacyPathRedirect).length, 4);
+  assert.equal(
+    twice.routes.filter(isLegacyPathRedirect).length,
+    legacyPathRedirectRoutes().length,
+  );
 });
 
 test("refuses apex → www if it appears in the routing table", () => {
@@ -113,6 +116,7 @@ test("script map matches src/lib/seo.ts LEGACY_REDIRECTS", () => {
     ["/pricing", "/work"],
     ["/apps", "/work"],
     ["/pricing-philosophy", "/company"],
+    ["/work/mira", "/work/mia"],
   ]) {
     assert.match(
       seo,
@@ -141,6 +145,7 @@ test("vercel.json keeps www→apex and path 308s, never apex→www", () => {
     ["/pricing", "/work"],
     ["/apps", "/work"],
     ["/pricing-philosophy", "/company"],
+    ["/work/mira", "/work/mia"],
   ]) {
     assert.equal(
       redirects.some((rule) => rule.source === from && rule.destination === to && rule.permanent),

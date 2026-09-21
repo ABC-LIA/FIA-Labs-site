@@ -70,7 +70,7 @@ function PrivacyPage() {
     <PageFrame
       index="Privacy"
       title="Privacy policy"
-      dek={`Last updated 21 October 2025. ${LAB.legalName} (“FIA,” “we,” “our,” or “us”) respects your privacy. This policy covers FIA Labs applications, including LIA Pro, MIRA, CFO Sentinel, Aquinian, Brandium, CarCounsel, Cine-Novelist, and ExecMind.`}
+      dek={`Last updated 21 October 2025. ${LAB.legalName} (“FIA,” “we,” “our,” or “us”) respects your privacy. This policy covers FIA Labs applications, including LIA Pro, MIA Pro, CFO Sentinel, Aquinian, Brandium, CarCounsel, Cine-Novelist, and ExecMind.`}
     >
       <div className="mx-auto max-w-3xl space-y-10 px-5 py-12 md:px-8 md:py-16">
         {SECTIONS.map((section) => (

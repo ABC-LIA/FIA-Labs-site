@@ -20,10 +20,13 @@ describe("legacyRedirectTarget", () => {
     assert.equal(legacyRedirectTarget("/pricing"), "/work");
     assert.equal(legacyRedirectTarget("/apps"), "/work");
     assert.equal(legacyRedirectTarget("/pricing-philosophy"), "/company");
+    assert.equal(legacyRedirectTarget("/work/mira"), "/work/mia");
+    assert.equal(legacyRedirectTarget("/work/mira/"), "/work/mia");
   });
 
   it("does not invent redirects for live pages", () => {
     assert.equal(legacyRedirectTarget("/work/lia"), null);
+    assert.equal(legacyRedirectTarget("/work/mia"), null);
     assert.equal(legacyRedirectTarget("/"), null);
   });
 });

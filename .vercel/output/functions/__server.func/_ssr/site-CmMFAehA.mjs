@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/site-1KtBHgQk.js
+//#region node_modules/.nitro/vite/services/ssr/assets/site-CmMFAehA.js
 var CANONICAL_ORIGIN = "https://federatedintel.ai";
 var INDEX_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1";
 var NOINDEX_ROBOTS = "noindex, nofollow";
@@ -25,12 +25,12 @@ var ORIGIN = "https://federatedintel.ai";
 var PAGE_COPY = {
 	home: {
 		title: "FIA Labs — Federated Intel AI",
-		description: "Expert systems for high-consequence work. Two desks live: LegalIntel for the file, Aquinian Studio for doctrine. A record of how the answer was reached.",
+		description: "Expert systems for high-consequence work. Six desks in production: Legal Intel, Aquinian Studio, Medical Intel, Brandium, CFO Sentinel, and Cine-Novelist. ExecMind and CarCounsel remain forthcoming. A record of how the answer was reached.",
 		path: "/"
 	},
 	work: {
 		title: "The desks — FIA Labs",
-		description: "LegalIntel and Aquinian Studio are in production. Six further specialists are not public until they meet the same standard.",
+		description: "Legal Intel, Aquinian Studio, Medical Intel, Brandium, CFO Sentinel, and Cine-Novelist are in production. ExecMind and CarCounsel are not public until they meet the same standard.",
 		path: "/work"
 	},
 	lia: {
@@ -43,14 +43,34 @@ var PAGE_COPY = {
 		description: "Theological and philosophical work at the studio. Open it at aquinian.com.",
 		path: "/work/aquinian"
 	},
+	mia: {
+		title: "Medical Intel (MIA Pro) — FIA Labs",
+		description: "A medical AI research desk for literature, biotechnology, and the medico-legal file. Not medical advice. Human judgment remains the authority. Open the desk at medicalintel.org.",
+		path: "/work/mia"
+	},
+	brandium: {
+		title: "Brandium Pro — FIA Labs",
+		description: "Positioning, creative strategy, and acquisition — governed by the numbers that constrain growth. Open Brandium at brandium.pro.",
+		path: "/work/brandium"
+	},
+	cfoSentinel: {
+		title: "CFO Sentinel — FIA Labs",
+		description: "Cash, margins, runway, and downside — where capital is created, consumed, or placed at risk. Open CFO Sentinel at cfosentinel.pro.",
+		path: "/work/cfo-sentinel"
+	},
+	cineNovelist: {
+		title: "Cine-Novelist — FIA Labs",
+		description: "Character, structure, theme, and scene — stories that can withstand revision. Open Cine-Novelist at cinenovelist.com.",
+		path: "/work/cine-novelist"
+	},
 	company: {
 		title: "Company — FIA Labs",
-		description: "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. Two desks in production. Human judgment remains the authority.",
+		description: "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. Six desks in production. Human judgment remains the authority.",
 		path: "/company"
 	},
 	contact: {
 		title: "Contact — FIA Labs",
-		description: "Contact FIA Labs. Legal work lives at legalintel.ai. Theological work lives at aquinian.com.",
+		description: "Contact FIA Labs. Legal work lives at legalintel.ai. Theological work lives at aquinian.com. Medical work lives at medicalintel.org.",
 		path: "/contact"
 	}
 };
@@ -63,7 +83,7 @@ var LAB = {
 	country: "USA",
 	tagline: "We don’t just predict outcomes. We reason them.",
 	slogan: "8 Experts. 2 Engines. 1 Ethical Future.",
-	description: "FIA Labs builds expert AI systems for high-consequence work — law, theology, research, finance, and the rest of the professional desk.",
+	description: "FIA Labs builds expert AI systems for high-consequence work — law, medicine, theology, research, finance, and the rest of the professional desk.",
 	email: "support@federatedintel.ai",
 	privacyEmail: "privacy@federatedintel.ai",
 	legalEmail: "legal@federatedintel.ai",
@@ -136,20 +156,23 @@ var APPS = [
 		featured: true
 	},
 	{
-		slug: "mira",
-		shortName: "MIRA",
-		name: "MIRA",
-		kicker: "Research that separates evidence from assertion",
-		summary: "Investigate complex questions, compare sources, and keep provenance on the record.",
-		description: "MIRA helps users investigate complex questions, compare sources, trace claims, and organise findings into a defensible research record. Built for work where provenance and uncertainty matter — including biomedical, forensic, and scholarly inquiry.",
+		slug: "mia",
+		shortName: "MIA Pro",
+		name: "Medical Intel",
+		kicker: "Medical research, kept on the record",
+		summary: "A desk for literature, biotechnology, and the medico-legal file. Evidence, inference, and gap stay distinct.",
+		description: "MIA Pro — Medical Intel — is a medical AI research desk for literature, biotechnology, and medico-legal work. It is not a chatbot for brainstorming, and it is not medical advice. Review sources, test competing readings, identify gaps, and preserve the reasoning behind a finding. Human judgment remains the authority.",
 		points: [
+			"Conversations for testing an idea; matters for building a file.",
 			"Separates what a source establishes from what it merely asserts.",
-			"Traces claims across documents and keeps uncertainty visible.",
-			"Supports biomedical, forensic, and scholarly research postures.",
-			"Designed so a finding can be reconstructed later, not merely restated."
+			"Built for biomedical literature, biotechnology, and medico-legal review.",
+			"Does not diagnose, treat, or replace a licensed clinician."
 		],
-		status: "forthcoming",
-		statusLabel: "Forthcoming"
+		status: "live",
+		statusLabel: "Live",
+		marketingUrl: "https://medicalintel.org",
+		deskUrl: "https://mia.medicalintel.org",
+		featured: true
 	},
 	{
 		slug: "cfo-sentinel",
@@ -164,12 +187,13 @@ var APPS = [
 			"Built for operators and boards who need a defensible financial picture.",
 			"Does not issue investment advice."
 		],
-		status: "forthcoming",
-		statusLabel: "Forthcoming"
+		status: "live",
+		statusLabel: "Live",
+		marketingUrl: "https://cfosentinel.pro"
 	},
 	{
 		slug: "brandium",
-		shortName: "Brandium",
+		shortName: "Brandium Pro",
 		name: "Brandium",
 		kicker: "Growth under unit economics",
 		summary: "Positioning, creative strategy, and acquisition — governed by the numbers that actually constrain growth.",
@@ -180,8 +204,9 @@ var APPS = [
 			"Built for founders, operators, and investors who refuse narrative distortion.",
 			"A strategist, not a content mill."
 		],
-		status: "forthcoming",
-		statusLabel: "Forthcoming"
+		status: "live",
+		statusLabel: "Live",
+		marketingUrl: "https://brandium.pro"
 	},
 	{
 		slug: "execmind",
@@ -212,8 +237,9 @@ var APPS = [
 			"Production intelligence: breakdowns, budget pressure, continuity risk.",
 			"Built for writers, directors, producers, and showrunners."
 		],
-		status: "forthcoming",
-		statusLabel: "Forthcoming"
+		status: "live",
+		statusLabel: "Live",
+		marketingUrl: "https://cinenovelist.com"
 	},
 	{
 		slug: "carcounsel",
@@ -236,6 +262,9 @@ var FEATURED = APPS.filter((app) => app.featured);
 APPS.filter((app) => !app.featured);
 function getApp(slug) {
 	return APPS.find((app) => app.slug === slug);
+}
+function workPageCopy(slug) {
+	return Object.values(PAGE_COPY).find((page) => page.path === `/work/${slug}`);
 }
 function pageHead(title, description, path = "/") {
 	const canonical = canonicalUrl(path);
@@ -370,7 +399,7 @@ var VOICES = [{
 var FAQS = [
 	{
 		q: "What is FIA Labs?",
-		a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. We build expert AI systems for high-consequence professional work. Two desks are in production: Legal Intel (LIA Pro) and Aquinian Studio. The other six specialists are not public until they meet the same standard."
+		a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. We build expert AI systems for high-consequence professional work. Six desks are in production: Legal Intel (LIA Pro), Aquinian Studio, Medical Intel (MIA Pro), Brandium, CFO Sentinel, and Cine-Novelist. ExecMind and CarCounsel are not public until they meet the same standard."
 	},
 	{
 		q: "What does “federated” mean here?",
@@ -382,15 +411,15 @@ var FAQS = [
 	},
 	{
 		q: "Where do I actually work?",
-		a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Each product has its own domain, accounts, and seats."
+		a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. Brandium is at brandium.pro, CFO Sentinel at cfosentinel.pro, and Cine-Novelist at cinenovelist.com. Each product has its own domain, accounts, and seats."
 	},
 	{
-		q: "What about the other six specialists?",
-		a: "MIRA, CFO Sentinel, Brandium, ExecMind, Cine-Novelist, and CarCounsel are named on this site because they belong to the federation. They are not for sale and not offered as chatbots. A desk ships when it can show working."
+		q: "What about ExecMind and CarCounsel?",
+		a: "They belong to the federation and are named on this site. They are not public, not for sale, and not offered as chatbots. A desk ships when it can show working."
 	},
 	{
 		q: "Do you train on my files?",
-		a: "No. We do not train our models on your data. Session material is handled under the Privacy Policy. Legal Intel keeps files on the matter they belong to. Aquinian scopes saved work to the signed-in account."
+		a: "No. We do not train our models on your data. Session material is handled under the Privacy Policy. Legal Intel and Medical Intel keep files on the matter they belong to. Aquinian scopes saved work to the signed-in account."
 	},
 	{
 		q: "Is this a substitute for professional advice?",
@@ -456,6 +485,19 @@ var LIA_SOFTWARE_JSON_LD = {
 	description: "A governed reasoning desk for legal and forensic work. Evidence, inference, and gap stay distinct.",
 	publisher: { "@id": `${ORIGIN}/#org` }
 };
+/** Desk page only. No Offer / price — MIA Pro seats live on medicalintel.org. */
+var MIA_SOFTWARE_JSON_LD = {
+	"@context": "https://schema.org",
+	"@type": "SoftwareApplication",
+	"@id": "https://medicalintel.org/#app",
+	name: "MIA Pro",
+	alternateName: ["MedicalIntel", "Medical Intel"],
+	applicationCategory: "HealthApplication",
+	operatingSystem: "Web",
+	url: "https://medicalintel.org",
+	description: "A medical AI research desk for literature, biotechnology, and the medico-legal file. Not medical advice.",
+	publisher: { "@id": `${ORIGIN}/#org` }
+};
 var COMPANY_FAQ_JSON_LD = {
 	"@context": "https://schema.org",
 	"@type": "FAQPage",
@@ -471,4 +513,4 @@ var COMPANY_FAQ_JSON_LD = {
 	}))
 };
 //#endregion
-export { FEATURED as a, NAV as c, PRINCIPLES as d, VOICES as f, robotsForHost as h, FAQS as i, ORGANIZATION_JSON_LD as l, pageHead as m, ARTICLES as n, LAB as o, getApp as p, COMPANY_FAQ_JSON_LD as r, LIA_SOFTWARE_JSON_LD as s, APPS as t, PAGE_COPY as u };
+export { workPageCopy as _, FEATURED as a, MIA_SOFTWARE_JSON_LD as c, PAGE_COPY as d, PRINCIPLES as f, robotsForHost as g, pageHead as h, FAQS as i, NAV as l, getApp as m, ARTICLES as n, LAB as o, VOICES as p, COMPANY_FAQ_JSON_LD as r, LIA_SOFTWARE_JSON_LD as s, APPS as t, ORGANIZATION_JSON_LD as u };

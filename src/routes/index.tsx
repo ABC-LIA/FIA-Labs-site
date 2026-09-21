@@ -65,7 +65,7 @@ function Home() {
               <p className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">
                 01 · In production
               </p>
-              <h2 className="mt-3 font-display text-3xl md:text-4xl">Two desks, live</h2>
+              <h2 className="mt-3 font-display text-3xl md:text-4xl">Live desks</h2>
             </div>
             <Link
               to="/work"
@@ -75,7 +75,7 @@ function Home() {
             </Link>
           </div>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {FEATURED.map((app) => (
               <article
                 key={app.slug}
@@ -105,7 +105,9 @@ function Home() {
                         ? "Open LegalIntel"
                         : app.slug === "aquinian"
                           ? "Open Aquinian"
-                          : "Visit the site"}
+                          : app.slug === "mia"
+                            ? "Open Medical Intel"
+                            : "Visit the site"}
                       <ArrowUpRight className="size-3.5" />
                     </a>
                   ) : null}
@@ -141,11 +143,12 @@ function Home() {
             02 · The rest of the desk
           </p>
           <h2 className="mt-3 font-display text-3xl md:text-4xl">
-            Six specialists, same standard
+            The rest of the federation
           </h2>
           <p className="mt-4 max-w-2xl text-muted">
-            Named, not offered. A desk ships when it can show working — the same
-            standard as Legal Intel and Aquinian Studio.
+            Brandium, CFO Sentinel, and Cine-Novelist are live on their own
+            domains. ExecMind and CarCounsel remain forthcoming — a desk ships
+            when it can show working.
           </p>
           <ol className="mt-10 divide-y divide-border border-y border-border">
             {APPS.filter((a) => !a.featured).map((app, i) => (
@@ -156,7 +159,7 @@ function Home() {
                   className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-3 py-5 md:grid-cols-[3rem_8rem_1fr_auto]"
                 >
                   <span className="font-mono text-xs text-subtle">
-                    {String(i + 3).padStart(2, "0")}
+                    {String(i + FEATURED.length + 1).padStart(2, "0")}
                   </span>
                   <span className="font-mono text-xs tracking-[0.12em] text-fg uppercase">
                     {app.shortName}

@@ -1,9 +1,9 @@
-import { p as getApp, s as LIA_SOFTWARE_JSON_LD, t as APPS } from "./site-1KtBHgQk.mjs";
+import { c as MIA_SOFTWARE_JSON_LD, m as getApp, s as LIA_SOFTWARE_JSON_LD, t as APPS } from "./site-CmMFAehA.mjs";
 import { B as require_jsx_runtime, v as Link, z as notFound } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { c as ArrowLeft, o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { n as Route, r as cn } from "./router-B1sPhA1Z.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-B5BgxbNP.js
+import { n as Route, r as cn } from "./router-CV-zDSUN.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-DxBs0Kns.js
 var import_jsx_runtime = require_jsx_runtime();
 function ExternalLink({ href, children, className, quiet }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
@@ -28,6 +28,7 @@ function AppPage() {
 		id: "content",
 		children: [
 			app.slug === "lia" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(JsonLd, { data: LIA_SOFTWARE_JSON_LD }) : null,
+			app.slug === "mia" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(JsonLd, { data: MIA_SOFTWARE_JSON_LD }) : null,
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
 				className: "border-b border-border",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -64,7 +65,7 @@ function AppPage() {
 							className: "mt-8 flex flex-wrap gap-3",
 							children: [app.marketingUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
 								href: app.marketingUrl,
-								children: app.slug === "lia" ? "Open LegalIntel" : app.slug === "aquinian" ? "Open Aquinian" : app.marketingUrl.replace("https://", "")
+								children: app.slug === "lia" ? "Open LegalIntel" : app.slug === "aquinian" ? "Open Aquinian" : app.slug === "mia" ? "Open Medical Intel" : app.marketingUrl.replace("https://", "")
 							}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 								to: "/method",
 								className: "inline-flex h-11 items-center rounded-md border border-border px-5 text-sm text-fg",

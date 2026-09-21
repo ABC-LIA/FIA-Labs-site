@@ -1,12 +1,12 @@
-import { o as LAB } from "./site-1KtBHgQk.mjs";
+import { o as LAB } from "./site-CmMFAehA.mjs";
 import { B as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/terms-Ban-VEXJ.js
+//#region node_modules/.nitro/vite/services/ssr/assets/terms-BqmrVMXP.js
 var import_jsx_runtime = require_jsx_runtime();
 var SECTIONS = [
 	{
 		title: "1. The lab",
-		body: `These Terms govern access to FIA Labs applications and services, a DBA of ${LAB.legalName}, registered in ${LAB.city}, ${LAB.country}, and wholly owned by ${LAB.owner}. The apps include LIA Pro (Legal Intel), MIRA, Aquinian, Cine-Novelist, CarCounsel, Brandium, ExecMind, and CFO Sentinel.`
+		body: `These Terms govern access to FIA Labs applications and services, a DBA of ${LAB.legalName}, registered in ${LAB.city}, ${LAB.country}, and wholly owned by ${LAB.owner}. The apps include LIA Pro (Legal Intel), MIA Pro (Medical Intel), Aquinian, Cine-Novelist, CarCounsel, Brandium, ExecMind, and CFO Sentinel.`
 	},
 	{
 		title: "2. What the apps are",
