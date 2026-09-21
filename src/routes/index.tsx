@@ -146,9 +146,9 @@ function Home() {
             The rest of the federation
           </h2>
           <p className="mt-4 max-w-2xl text-muted">
-            Brandium, CFO Sentinel, and Cine-Novelist are live on their own
-            domains. ExecMind and CarCounsel remain forthcoming — a desk ships
-            when it can show working.
+            CFO Sentinel and Cine-Novelist are live on their own domains.
+            Brandium, ExecMind, and CarCounsel remain forthcoming — a desk
+            ships when it can show working.
           </p>
           <ol className="mt-10 divide-y divide-border border-y border-border">
             {APPS.filter((a) => !a.featured).map((app, i) => (

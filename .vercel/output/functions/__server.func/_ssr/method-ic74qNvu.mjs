@@ -1,7 +1,7 @@
-import { f as PRINCIPLES } from "./site-CmMFAehA.mjs";
+import { f as PRINCIPLES } from "./site-Cl4TPudw.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/method-DtWgm66T.js
+//#region node_modules/.nitro/vite/services/ssr/assets/method-ic74qNvu.js
 var import_jsx_runtime = require_jsx_runtime();
 function MethodPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {

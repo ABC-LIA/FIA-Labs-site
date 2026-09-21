@@ -11,7 +11,6 @@ This is the parent lab site. Products live on their own domains. FIA Labs does n
 - [Legal Intel (LIA Pro)](https://legalintel.ai): governed legal and forensic reasoning. Desk: https://pro.legalintel.ai
 - [Aquinian Studio](https://aquinian.com): a virtual Thomistic intellect for theology, philosophy, doctrine, natural law, and cultural analysis. Studio: https://studio.aquinian.com
 - [Medical Intel (MIA Pro)](https://medicalintel.org): medical AI research for literature, biotechnology, and the medico-legal file. Not medical advice. Desk: https://mia.medicalintel.org
-- [Brandium Pro](https://brandium.pro): positioning, creative strategy, and acquisition under unit economics
 - [CFO Sentinel](https://cfosentinel.pro): cash, margins, runway, and downside
 - [Cine-Novelist](https://cinenovelist.com): character, structure, theme, and scene — stories that can withstand revision
 
@@ -19,7 +18,7 @@ Human judgment remains the authority. These are not substitutes for counsel, a p
 
 ## Forthcoming — named, not offered
 
-ExecMind (executive decisions), CarCounsel (automotive guidance).
+Brandium Pro (positioning, creative strategy, and acquisition under unit economics), ExecMind (executive decisions), CarCounsel (automotive guidance).
 
 They belong to the federation. They are not public, not for sale, and not offered as chatbots. A desk ships when it can show working.
 
