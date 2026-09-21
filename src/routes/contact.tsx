@@ -90,8 +90,8 @@ function ContactPage() {
               >
                 medicalintel.org
               </a>
-              . Brandium, CFO Sentinel, and Cine-Novelist are live on their own
-              domains. The full index is on{" "}
+              . Brandium, CFO Sentinel, Cine-Novelist, and ExecMind are live on
+              their own domains. The full index is on{" "}
               <Link to="/work" className="text-fg hover:text-accent">
                 Work
               </Link>

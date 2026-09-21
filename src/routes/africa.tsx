@@ -33,8 +33,8 @@ function AfricaPage() {
             <p>
               That grant is not a product we sell from this site. The public
               desks now are Legal Intel, Aquinian Studio, Medical Intel,
-              Brandium, CFO Sentinel, and Cine-Novelist. ExecMind and CarCounsel
-              remain unpublished until they can show working at that standard.
+              Brandium, CFO Sentinel, Cine-Novelist, and ExecMind. CarCounsel
+              remains unpublished until it can show working at that standard.
             </p>
             <p>
               If you are an NGO, ministry, university, or clinic that wants to

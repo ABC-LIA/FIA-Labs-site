@@ -1,8 +1,8 @@
-import { i as FAQS, o as LAB, p as VOICES, r as COMPANY_FAQ_JSON_LD } from "./site-CmMFAehA.mjs";
+import { i as FAQS, o as LAB, p as VOICES, r as COMPANY_FAQ_JSON_LD } from "./site-31FcZQ_Z.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/company-C_1o7hV2.js
+//#region node_modules/.nitro/vite/services/ssr/assets/company-CeV0l_X3.js
 var import_jsx_runtime = require_jsx_runtime();
 function CompanyPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(PageFrame, {
@@ -30,7 +30,7 @@ function CompanyPage() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "space-y-4 text-[0.95rem] leading-relaxed text-muted",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "At FIA Labs we build expert AI agents that think in the posture of lawyers, physicians, CFOs, strategists, and researchers. Six desks are live: Legal Intel for the legal and forensic file, Aquinian Studio for theology, philosophy, and doctrine, Medical Intel for literature and the medico-legal file, Brandium, CFO Sentinel, and Cine-Novelist. ExecMind and CarCounsel are not public until they meet that standard." }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "At FIA Labs we build expert AI agents that think in the posture of lawyers, physicians, CFOs, strategists, and researchers. Seven desks are live: Legal Intel for the legal and forensic file, Aquinian Studio for theology, philosophy, and doctrine, Medical Intel for literature and the medico-legal file, Brandium, CFO Sentinel, Cine-Novelist, and ExecMind. CarCounsel is not public until it meets that standard." }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "The patented federated system — eight specialists reasoning together under arbitration — is under development. We do not pretend it is finished. We do not ship a costume of expertise and call it a profession." }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "font-display text-xl italic text-fg",
