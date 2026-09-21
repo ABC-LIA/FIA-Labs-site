@@ -14,14 +14,15 @@ This is the parent lab site. Products live on their own domains. FIA Labs does n
 - [Brandium Pro](https://brandium.pro): positioning, creative strategy, and acquisition under unit economics
 - [CFO Sentinel](https://cfosentinel.pro): cash, margins, runway, and downside
 - [Cine-Novelist](https://cinenovelist.com): character, structure, theme, and scene — stories that can withstand revision
+- [ExecMind](https://execmind.app): structured decision support for executives
 
 Human judgment remains the authority. These are not substitutes for counsel, a physician, a priest, a CFO, or other licensed professionals.
 
 ## Forthcoming — named, not offered
 
-ExecMind (executive decisions), CarCounsel (automotive guidance).
+CarCounsel (automotive guidance).
 
-They belong to the federation. They are not public, not for sale, and not offered as chatbots. A desk ships when it can show working.
+It belongs to the federation. It is not public, not for sale, and not offered as a chatbot. A desk ships when it can show working.
 
 ## Method
 

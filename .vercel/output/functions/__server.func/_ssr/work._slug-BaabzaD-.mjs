@@ -1,9 +1,9 @@
-import { c as MIA_SOFTWARE_JSON_LD, m as getApp, s as LIA_SOFTWARE_JSON_LD, t as APPS } from "./site-CmMFAehA.mjs";
+import { c as MIA_SOFTWARE_JSON_LD, m as getApp, s as LIA_SOFTWARE_JSON_LD, t as APPS } from "./site-31FcZQ_Z.mjs";
 import { B as require_jsx_runtime, v as Link, z as notFound } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { c as ArrowLeft, o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { n as Route, r as cn } from "./router-CV-zDSUN.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-DxBs0Kns.js
+import { n as Route, r as cn } from "./router-p5A6pmDr.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-BaabzaD-.js
 var import_jsx_runtime = require_jsx_runtime();
 function ExternalLink({ href, children, className, quiet }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
