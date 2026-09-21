@@ -418,6 +418,7 @@ export const ORGANIZATION_JSON_LD = {
         "https://fia-labs.com",
         "https://federatedintel.substack.com",
         "https://legalintel.ai",
+        "https://medicalintel.org",
         "https://aquinian.com",
       ],
     },
