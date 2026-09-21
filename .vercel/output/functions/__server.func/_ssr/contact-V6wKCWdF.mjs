@@ -1,12 +1,12 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { o as LAB } from "./site-1KtBHgQk.mjs";
-import { B as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { o as LAB } from "./site-CmMFAehA.mjs";
+import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
 import { t as cva } from "../_libs/class-variance-authority+clsx.mjs";
-import { r as cn } from "./router-B1sPhA1Z.mjs";
+import { r as cn } from "./router-CV-zDSUN.mjs";
 import { t as Slot } from "../_libs/radix-ui__react-slot.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/contact-BEBSauoW.js
+//#region node_modules/.nitro/vite/services/ssr/assets/contact-V6wKCWdF.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var buttonVariants = cva("inline-flex items-center justify-center gap-2 font-sans font-medium tracking-tight transition-[opacity,transform,background-color,color,border-color] duration-150 ease-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-40 active:not-disabled:scale-[0.96]", {
@@ -80,7 +80,7 @@ function ContactPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
 		index: "06 · Contact",
 		title: "Write to the lab.",
-		dek: "Legal work lives at legalintel.ai. Theological work lives at aquinian.com. Letters for the lab itself go to the address that matches the subject.",
+		dek: "Legal work lives at legalintel.ai. Theological work lives at aquinian.com. Medical work lives at medicalintel.org. Letters for the lab itself go to the address that matches the subject.",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto grid max-w-6xl gap-12 px-5 py-12 md:grid-cols-[0.85fr_1.15fr] md:px-8 md:py-16",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
@@ -110,6 +110,22 @@ function ContactPage() {
 								rel: "noreferrer",
 								className: "text-fg hover:text-accent",
 								children: "aquinian.com"
+							}),
+							". Medical Intel (MIA Pro) is at",
+							" ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: "https://medicalintel.org",
+								target: "_blank",
+								rel: "noreferrer",
+								className: "text-fg hover:text-accent",
+								children: "medicalintel.org"
+							}),
+							". Brandium, CFO Sentinel, and Cine-Novelist are live on their own domains. The full index is on",
+							" ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+								to: "/work",
+								className: "text-fg hover:text-accent",
+								children: "Work"
 							}),
 							"."
 						]

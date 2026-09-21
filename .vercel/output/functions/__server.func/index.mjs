@@ -43,7 +43,8 @@ var LEGACY_REDIRECTS = {
 	"/lia": "/work/lia",
 	"/pricing": "/work",
 	"/apps": "/work",
-	"/pricing-philosophy": "/company"
+	"/pricing-philosophy": "/company",
+	"/work/mira": "/work/mia"
 };
 function hostnameFromHostHeader(header) {
 	return String(header ?? "").split(",")[0].trim().split(":")[0].toLowerCase();

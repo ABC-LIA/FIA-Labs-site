@@ -1,27 +1,31 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { ExternalLink } from "@/components/external-link";
 import { JsonLd } from "@/components/json-ld";
 import {
   APPS,
   LIA_SOFTWARE_JSON_LD,
-  PAGE_COPY,
+  MIA_SOFTWARE_JSON_LD,
   getApp,
   pageHead,
+  workPageCopy,
 } from "@/lib/site";
 
 export const Route = createFileRoute("/work/$slug")({
   component: AppPage,
-  head: ({ params }) => {
-    if (params.slug === "lia") {
-      return pageHead(PAGE_COPY.lia.title, PAGE_COPY.lia.description, PAGE_COPY.lia.path);
+  beforeLoad: ({ params }) => {
+    if (params.slug === "mira") {
+      throw redirect({
+        to: "/work/$slug",
+        params: { slug: "mia" },
+        statusCode: 308,
+      });
     }
-    if (params.slug === "aquinian") {
-      return pageHead(
-        PAGE_COPY.aquinian.title,
-        PAGE_COPY.aquinian.description,
-        PAGE_COPY.aquinian.path,
-      );
+  },
+  head: ({ params }) => {
+    const copy = workPageCopy(params.slug);
+    if (copy) {
+      return pageHead(copy.title, copy.description, copy.path);
     }
     const app = getApp(params.slug);
     return pageHead(app?.name ?? "Work", app?.summary, `/work/${params.slug}`);
@@ -40,6 +44,7 @@ function AppPage() {
   return (
     <main id="content">
       {app.slug === "lia" ? <JsonLd data={LIA_SOFTWARE_JSON_LD} /> : null}
+      {app.slug === "mia" ? <JsonLd data={MIA_SOFTWARE_JSON_LD} /> : null}
       <header className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
           <Link
@@ -70,7 +75,9 @@ function AppPage() {
                   ? "Open LegalIntel"
                   : app.slug === "aquinian"
                     ? "Open Aquinian"
-                    : app.marketingUrl.replace("https://", "")}
+                    : app.slug === "mia"
+                      ? "Open Medical Intel"
+                      : app.marketingUrl.replace("https://", "")}
               </ExternalLink>
             ) : (
               <Link

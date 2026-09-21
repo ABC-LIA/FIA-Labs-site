@@ -49,7 +49,7 @@ function MethodPage() {
           </p>
           <p className="mt-4 text-[0.95rem] leading-relaxed text-muted">
             The patented federated system — eight experts reasoning together
-            under arbitration — is under development. The two production desks
+            under arbitration — is under development. The production desks
             already carry the same discipline: show working, keep the human in
             the chair.
           </p>

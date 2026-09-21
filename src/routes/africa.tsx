@@ -23,18 +23,18 @@ function AfricaPage() {
         <div className="grid gap-10 md:grid-cols-[1fr_0.85fr]">
           <div className="space-y-5 text-[0.95rem] leading-relaxed text-muted">
             <p>
-              Project Africa put LIA Pro, MIRA, Aquinian, CarCounsel, Cine-Novelist,
-              CFO Sentinel, ExecMind, and Brandium in reach of people who would
-              otherwise meet a paywall first. The work is legal empowerment,
-              research, ethics, mobility, craft, finance, governance, and
-              enterprise — the same eight names, without a different product
-              for a different latitude.
+              Project Africa put LIA Pro, MIA Pro, Aquinian, CarCounsel,
+              Cine-Novelist, CFO Sentinel, ExecMind, and Brandium in reach of
+              people who would otherwise meet a paywall first. The work is legal
+              empowerment, research, ethics, mobility, craft, finance,
+              governance, and enterprise — the same eight names, without a
+              different product for a different latitude.
             </p>
             <p>
               That grant is not a product we sell from this site. The public
-              desks now are Legal Intel and Aquinian Studio. The other
-              specialists remain unpublished until they can show working at
-              that standard.
+              desks now are Legal Intel, Aquinian Studio, Medical Intel,
+              Brandium, CFO Sentinel, and Cine-Novelist. ExecMind and CarCounsel
+              remain unpublished until they can show working at that standard.
             </p>
             <p>
               If you are an NGO, ministry, university, or clinic that wants to

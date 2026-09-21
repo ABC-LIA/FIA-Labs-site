@@ -14,7 +14,7 @@ function WorkPage() {
     <PageFrame
       index="01 · Work"
       title="The desk."
-      dek="Eight specialist systems. Two desks are in production on their own domains. The rest of the federation is named here until it can ship at the same standard."
+      dek="Eight specialist systems. Six desks are in production on their own domains. ExecMind and CarCounsel are named here until they can ship at the same standard."
     >
       <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-14">
         <ol className="divide-y divide-border border-y border-border">

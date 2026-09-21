@@ -41,6 +41,13 @@
       }
     },
     {
+      "src": "^/work/mira/?$",
+      "status": 308,
+      "headers": {
+        "Location": "/work/mia"
+      }
+    },
+    {
       "handle": "filesystem"
     },
     {

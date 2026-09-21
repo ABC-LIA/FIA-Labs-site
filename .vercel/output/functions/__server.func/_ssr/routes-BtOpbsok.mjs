@@ -1,11 +1,11 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { a as FEATURED, d as PRINCIPLES, l as ORGANIZATION_JSON_LD, n as ARTICLES, o as LAB, t as APPS } from "./site-1KtBHgQk.mjs";
+import { a as FEATURED, f as PRINCIPLES, n as ARTICLES, o as LAB, t as APPS, u as ORGANIZATION_JSON_LD } from "./site-CmMFAehA.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { r as cn } from "./router-B1sPhA1Z.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BJj9G30n.js
+import { r as cn } from "./router-CV-zDSUN.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BtOpbsok.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var CX = 200;
@@ -167,14 +167,14 @@ function Home() {
 							children: "01 · In production"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "mt-3 font-display text-3xl md:text-4xl",
-							children: "Two desks, live"
+							children: "Live desks"
 						})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 							to: "/work",
 							className: "hidden font-mono text-[11px] tracking-[0.16em] text-muted uppercase hover:text-fg sm:inline",
 							children: "Full index"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-10 grid gap-4 md:grid-cols-2",
+						className: "mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3",
 						children: FEATURED.map((app) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 							className: "flex flex-col border border-border bg-surface p-6 md:p-8",
 							children: [
@@ -204,7 +204,7 @@ function Home() {
 											target: "_blank",
 											rel: "noreferrer",
 											className: "inline-flex items-center gap-1.5 text-sm text-fg",
-											children: [app.slug === "lia" ? "Open LegalIntel" : app.slug === "aquinian" ? "Open Aquinian" : "Visit the site", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpRight, { className: "size-3.5" })]
+											children: [app.slug === "lia" ? "Open LegalIntel" : app.slug === "aquinian" ? "Open Aquinian" : app.slug === "mia" ? "Open Medical Intel" : "Visit the site", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpRight, { className: "size-3.5" })]
 										}) : null,
 										app.deskUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 											href: app.deskUrl,
@@ -237,11 +237,11 @@ function Home() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "mt-3 font-display text-3xl md:text-4xl",
-							children: "Six specialists, same standard"
+							children: "The rest of the federation"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "mt-4 max-w-2xl text-muted",
-							children: "Named, not offered. A desk ships when it can show working — the same standard as Legal Intel and Aquinian Studio."
+							children: "Brandium, CFO Sentinel, and Cine-Novelist are live on their own domains. ExecMind and CarCounsel remain forthcoming — a desk ships when it can show working."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
 							className: "mt-10 divide-y divide-border border-y border-border",
@@ -252,7 +252,7 @@ function Home() {
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "font-mono text-xs text-subtle",
-										children: String(i + 3).padStart(2, "0")
+										children: String(i + FEATURED.length + 1).padStart(2, "0")
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										className: "font-mono text-xs tracking-[0.12em] text-fg uppercase",

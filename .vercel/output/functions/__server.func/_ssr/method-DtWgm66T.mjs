@@ -1,7 +1,7 @@
-import { d as PRINCIPLES } from "./site-1KtBHgQk.mjs";
+import { f as PRINCIPLES } from "./site-CmMFAehA.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/method-CYVSJysX.js
+//#region node_modules/.nitro/vite/services/ssr/assets/method-DtWgm66T.js
 var import_jsx_runtime = require_jsx_runtime();
 function MethodPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
@@ -42,7 +42,7 @@ function MethodPage() {
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-4 text-[0.95rem] leading-relaxed text-muted",
-						children: "The patented federated system — eight experts reasoning together under arbitration — is under development. The two production desks already carry the same discipline: show working, keep the human in the chair."
+						children: "The patented federated system — eight experts reasoning together under arbitration — is under development. The production desks already carry the same discipline: show working, keep the human in the chair."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "mt-6 flex flex-wrap gap-5",
