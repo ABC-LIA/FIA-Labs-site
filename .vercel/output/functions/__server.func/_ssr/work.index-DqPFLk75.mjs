@@ -1,8 +1,8 @@
-import { t as APPS } from "./site-BzLZSt0o.mjs";
-import { v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { t as APPS } from "./site-1KtBHgQk.mjs";
+import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { s as ArrowRight } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.index-CDRZu2lq.js
+//#region node_modules/.nitro/vite/services/ssr/assets/work.index-DqPFLk75.js
 var import_jsx_runtime = require_jsx_runtime();
 function WorkPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
