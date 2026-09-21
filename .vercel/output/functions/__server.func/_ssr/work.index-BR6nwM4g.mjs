@@ -1,14 +1,14 @@
-import { t as APPS } from "./site-CmMFAehA.mjs";
+import { t as APPS } from "./site-Cl4TPudw.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { s as ArrowRight } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.index-DErriUdy.js
+//#region node_modules/.nitro/vite/services/ssr/assets/work.index-BR6nwM4g.js
 var import_jsx_runtime = require_jsx_runtime();
 function WorkPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
 		index: "01 · Work",
 		title: "The desk.",
-		dek: "Eight specialist systems. Six desks are in production on their own domains. ExecMind and CarCounsel are named here until they can ship at the same standard.",
+		dek: "Eight specialist systems. Five desks are in production on their own domains. Brandium, ExecMind, and CarCounsel are named here until they can ship at the same standard.",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-14",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {

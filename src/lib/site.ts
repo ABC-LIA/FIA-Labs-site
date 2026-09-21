@@ -6,13 +6,13 @@ export const PAGE_COPY = {
   home: {
     title: "FIA Labs — Federated Intel AI",
     description:
-      "Expert systems for high-consequence work. Six desks in production: Legal Intel, Aquinian Studio, Medical Intel, Brandium, CFO Sentinel, and Cine-Novelist. ExecMind and CarCounsel remain forthcoming. A record of how the answer was reached.",
+      "Expert systems for high-consequence work. Five desks in production: Legal Intel, Aquinian Studio, Medical Intel, CFO Sentinel, and Cine-Novelist. Brandium, ExecMind, and CarCounsel remain forthcoming. A record of how the answer was reached.",
     path: "/",
   },
   work: {
     title: "The desks — FIA Labs",
     description:
-      "Legal Intel, Aquinian Studio, Medical Intel, Brandium, CFO Sentinel, and Cine-Novelist are in production. ExecMind and CarCounsel are not public until they meet the same standard.",
+      "Legal Intel, Aquinian Studio, Medical Intel, CFO Sentinel, and Cine-Novelist are in production. Brandium, ExecMind, and CarCounsel are not public until they meet the same standard.",
     path: "/work",
   },
   lia: {
@@ -36,7 +36,7 @@ export const PAGE_COPY = {
   brandium: {
     title: "Brandium Pro — FIA Labs",
     description:
-      "Positioning, creative strategy, and acquisition — governed by the numbers that constrain growth. Open Brandium at brandium.pro.",
+      "Positioning, creative strategy, and acquisition — governed by the numbers that constrain growth. Named on this site until it can ship at the same standard.",
     path: "/work/brandium",
   },
   cfoSentinel: {
@@ -54,7 +54,7 @@ export const PAGE_COPY = {
   company: {
     title: "Company — FIA Labs",
     description:
-      "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. Six desks in production. Human judgment remains the authority.",
+      "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. Five desks in production. Human judgment remains the authority.",
     path: "/company",
   },
   contact: {
@@ -205,9 +205,8 @@ export const APPS: LabApp[] = [
       "Built for founders, operators, and investors who refuse narrative distortion.",
       "A strategist, not a content mill.",
     ],
-    status: "live",
-    statusLabel: "Live",
-    marketingUrl: "https://brandium.pro",
+    status: "forthcoming",
+    statusLabel: "Forthcoming",
   },
   {
     slug: "execmind",
@@ -390,7 +389,7 @@ export const VOICES = [
 export const FAQS = [
   {
     q: "What is FIA Labs?",
-    a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. We build expert AI systems for high-consequence professional work. Six desks are in production: Legal Intel (LIA Pro), Aquinian Studio, Medical Intel (MIA Pro), Brandium, CFO Sentinel, and Cine-Novelist. ExecMind and CarCounsel are not public until they meet the same standard.",
+    a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. We build expert AI systems for high-consequence professional work. Five desks are in production: Legal Intel (LIA Pro), Aquinian Studio, Medical Intel (MIA Pro), CFO Sentinel, and Cine-Novelist. Brandium, ExecMind, and CarCounsel are not public until they meet the same standard.",
   },
   {
     q: "What does “federated” mean here?",
@@ -402,10 +401,10 @@ export const FAQS = [
   },
   {
     q: "Where do I actually work?",
-    a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. Brandium is at brandium.pro, CFO Sentinel at cfosentinel.pro, and Cine-Novelist at cinenovelist.com. Each product has its own domain, accounts, and seats.",
+    a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. CFO Sentinel is at cfosentinel.pro, and Cine-Novelist at cinenovelist.com. Each product has its own domain, accounts, and seats.",
   },
   {
-    q: "What about ExecMind and CarCounsel?",
+    q: "What about Brandium, ExecMind, and CarCounsel?",
     a: "They belong to the federation and are named on this site. They are not public, not for sale, and not offered as chatbots. A desk ships when it can show working.",
   },
   {

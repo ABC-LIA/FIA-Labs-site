@@ -40,12 +40,12 @@ function CompanyPage() {
           <div className="space-y-4 text-[0.95rem] leading-relaxed text-muted">
             <p>
               At FIA Labs we build expert AI agents that think in the posture of
-              lawyers, physicians, CFOs, strategists, and researchers. Six desks
-              are live: Legal Intel for the legal and forensic file, Aquinian
-              Studio for theology, philosophy, and doctrine, Medical Intel for
-              literature and the medico-legal file, Brandium, CFO Sentinel, and
-              Cine-Novelist. ExecMind and CarCounsel are not public until they
-              meet that standard.
+              lawyers, physicians, CFOs, strategists, and researchers. Five
+              desks are live: Legal Intel for the legal and forensic file,
+              Aquinian Studio for theology, philosophy, and doctrine, Medical
+              Intel for literature and the medico-legal file, CFO Sentinel, and
+              Cine-Novelist. Brandium, ExecMind, and CarCounsel are not public
+              until they meet that standard.
             </p>
             <p>
               The patented federated system — eight specialists reasoning

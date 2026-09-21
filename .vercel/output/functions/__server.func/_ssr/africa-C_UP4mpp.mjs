@@ -1,7 +1,7 @@
-import { t as APPS } from "./site-CmMFAehA.mjs";
+import { t as APPS } from "./site-Cl4TPudw.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/africa-yplUCs2n.js
+//#region node_modules/.nitro/vite/services/ssr/assets/africa-C_UP4mpp.js
 var import_jsx_runtime = require_jsx_runtime();
 function AfricaPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
@@ -16,7 +16,7 @@ function AfricaPage() {
 					className: "space-y-5 text-[0.95rem] leading-relaxed text-muted",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Project Africa put LIA Pro, MIA Pro, Aquinian, CarCounsel, Cine-Novelist, CFO Sentinel, ExecMind, and Brandium in reach of people who would otherwise meet a paywall first. The work is legal empowerment, research, ethics, mobility, craft, finance, governance, and enterprise — the same eight names, without a different product for a different latitude." }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "That grant is not a product we sell from this site. The public desks now are Legal Intel, Aquinian Studio, Medical Intel, Brandium, CFO Sentinel, and Cine-Novelist. ExecMind and CarCounsel remain unpublished until they can show working at that standard." }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "That grant is not a product we sell from this site. The public desks now are Legal Intel, Aquinian Studio, Medical Intel, CFO Sentinel, and Cine-Novelist. Brandium, ExecMind, and CarCounsel remain unpublished until they can show working at that standard." }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "If you are an NGO, ministry, university, or clinic that wants to deploy rather than merely receive access, write to us." })
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
