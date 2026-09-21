@@ -1,5 +1,59 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/site-BzLZSt0o.js
+//#region node_modules/.nitro/vite/services/ssr/assets/site-1KtBHgQk.js
+var CANONICAL_ORIGIN = "https://federatedintel.ai";
+var INDEX_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1";
+var NOINDEX_ROBOTS = "noindex, nofollow";
+var OG_IMAGE = `${CANONICAL_ORIGIN}/og.jpg`;
+var PRODUCTION_HOSTS = /* @__PURE__ */ new Set(["federatedintel.ai", "www.federatedintel.ai"]);
+function hostnameFromHostHeader(header) {
+	return String(header ?? "").split(",")[0].trim().split(":")[0].toLowerCase();
+}
+function isProductionHost(host) {
+	return PRODUCTION_HOSTS.has(hostnameFromHostHeader(host));
+}
+/** Unknown SSR host stays indexable so production is never noindexed by accident. */
+function robotsForHost(host) {
+	if (typeof host === "string" && host.length > 0) return isProductionHost(host) ? INDEX_ROBOTS : NOINDEX_ROBOTS;
+	if (typeof window !== "undefined") return isProductionHost(window.location.hostname) ? INDEX_ROBOTS : NOINDEX_ROBOTS;
+	return INDEX_ROBOTS;
+}
+function canonicalUrl(path) {
+	const normalized = path.startsWith("/") ? path : `/${path}`;
+	if (normalized === "/") return `${CANONICAL_ORIGIN}/`;
+	return `${CANONICAL_ORIGIN}${normalized.replace(/\/+$/, "")}`;
+}
 var ORIGIN = "https://federatedintel.ai";
+var PAGE_COPY = {
+	home: {
+		title: "FIA Labs — Federated Intel AI",
+		description: "Expert systems for high-consequence work. Two desks live: LegalIntel for the file, Aquinian Studio for doctrine. A record of how the answer was reached.",
+		path: "/"
+	},
+	work: {
+		title: "The desks — FIA Labs",
+		description: "LegalIntel and Aquinian Studio are in production. Six further specialists are not public until they meet the same standard.",
+		path: "/work"
+	},
+	lia: {
+		title: "LegalIntel (LIA Pro) — FIA Labs",
+		description: "A governed reasoning desk for legal and forensic work. Evidence, inference and gap stay distinct. Open the desk at legalintel.ai.",
+		path: "/work/lia"
+	},
+	aquinian: {
+		title: "Aquinian Studio — FIA Labs",
+		description: "Theological and philosophical work at the studio. Open it at aquinian.com.",
+		path: "/work/aquinian"
+	},
+	company: {
+		title: "Company — FIA Labs",
+		description: "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. Two desks in production. Human judgment remains the authority.",
+		path: "/company"
+	},
+	contact: {
+		title: "Contact — FIA Labs",
+		description: "Contact FIA Labs. Legal work lives at legalintel.ai. Theological work lives at aquinian.com.",
+		path: "/contact"
+	}
+};
 var LAB = {
 	name: "FIA Labs",
 	legalName: "Federated Intel AI LLC",
@@ -184,17 +238,59 @@ function getApp(slug) {
 	return APPS.find((app) => app.slug === slug);
 }
 function pageHead(title, description, path = "/") {
-	const canonical = path === "/" ? `${ORIGIN}/` : `${ORIGIN}${path}`;
+	const canonical = canonicalUrl(path);
+	const fullTitle = title.includes("FIA Labs") ? title : path === "/" ? PAGE_COPY.home.title : `${title} — FIA Labs`;
+	const robots = robotsForHost();
 	return {
 		meta: [
-			{ title: path === "/" ? "FIA Labs — Federated Intel AI" : `${title} — FIA Labs` },
+			{ title: fullTitle },
 			...description ? [{
 				name: "description",
 				content: description
 			}] : [],
 			{
 				name: "robots",
-				content: "index, follow, max-image-preview:large, max-snippet:-1"
+				content: robots
+			},
+			{
+				property: "og:title",
+				content: fullTitle
+			},
+			...description ? [{
+				property: "og:description",
+				content: description
+			}] : [],
+			{
+				property: "og:url",
+				content: canonical
+			},
+			{
+				property: "og:image",
+				content: OG_IMAGE
+			},
+			{
+				property: "og:type",
+				content: "website"
+			},
+			{
+				property: "og:site_name",
+				content: "FIA Labs"
+			},
+			{
+				name: "twitter:card",
+				content: "summary_large_image"
+			},
+			{
+				name: "twitter:title",
+				content: fullTitle
+			},
+			...description ? [{
+				name: "twitter:description",
+				content: description
+			}] : [],
+			{
+				name: "twitter:image",
+				content: OG_IMAGE
 			}
 		],
 		links: [{
@@ -262,23 +358,15 @@ var PRINCIPLES = [
 		body: "The systems support a professional desk. They do not replace counsel, a physician, a priest, a CFO, or a mechanic. The person in the chair decides."
 	}
 ];
-var VOICES = [
-	{
-		quote: "LIA Pro has been a game-changer for our organization and the victims we support. It analyzes full prosecution briefs, pinpoints exactly where cases went wrong, and guides us toward practical, often brilliant, solutions.",
-		name: "Giselle O",
-		role: "President, Miscarriage of Justice Support Fund Inc."
-	},
-	{
-		quote: "I use LIA Pro and MIRA to navigate complex medical-legal cases with confidence. The information is not just accurate — it is validated and thoughtfully reasoned.",
-		name: "Anne W",
-		role: "Bioethicist"
-	},
-	{
-		quote: "Cine-Novelist is the most powerful screenwriting and film production tool I have used. It delivers professional-grade script coverage instantly, tells me what needs fixing — and whether it is worth fixing.",
-		name: "Jen H",
-		role: "Independent film producer"
-	}
-];
+var VOICES = [{
+	quote: "LIA has become an important part of my work life and has substantially improved my productivity. It provides quick access to relevant information, helps navigate complex legislative and governance matters, and has been particularly valuable in preparing professional, well-structured documents.",
+	name: "Anne Ryan",
+	role: "Councillor, City of Busselton"
+}, {
+	quote: "Within a remarkably short time, LIA identified numerous legal and procedural irregularities that had previously gone unnoticed. The clarity and precision of her analysis significantly strengthened my position.",
+	name: "John Button",
+	role: "Wrongful-conviction advocate"
+}];
 var FAQS = [
 	{
 		q: "What is FIA Labs?",
@@ -309,87 +397,78 @@ var FAQS = [
 		a: "No. The apps are for informational, educational, and research use. They do not replace legal, medical, financial, pastoral, or mechanical advice. Outputs can be wrong. You are responsible for how they are used."
 	}
 ];
-var JSON_LD = {
+var ORGANIZATION_JSON_LD = {
 	"@context": "https://schema.org",
-	"@graph": [
-		{
+	"@graph": [{
+		"@type": "Organization",
+		"@id": `${ORIGIN}/#org`,
+		name: "FIA Labs",
+		legalName: "Federated Intel AI LLC",
+		alternateName: ["Federated Intel AI", "FIA"],
+		url: ORIGIN,
+		email: "support@federatedintel.ai",
+		description: LAB.description,
+		slogan: LAB.tagline,
+		logo: {
+			"@type": "ImageObject",
+			url: `${ORIGIN}/logo.png`,
+			width: 512,
+			height: 512
+		},
+		image: `${ORIGIN}/logo.png`,
+		address: {
+			"@type": "PostalAddress",
+			addressLocality: "Washington",
+			addressRegion: "DC",
+			addressCountry: "US"
+		},
+		parentOrganization: {
 			"@type": "Organization",
-			"@id": `${ORIGIN}/#org`,
-			name: "FIA Labs",
-			legalName: "Federated Intel AI LLC",
-			alternateName: ["Federated Intel AI", "FIA"],
-			url: ORIGIN,
-			email: "support@federatedintel.ai",
-			description: LAB.description,
-			slogan: LAB.tagline,
-			logo: {
-				"@type": "ImageObject",
-				url: `${ORIGIN}/logo.png`,
-				width: 512,
-				height: 512
-			},
-			image: `${ORIGIN}/logo.png`,
-			address: {
-				"@type": "PostalAddress",
-				addressLocality: "Washington",
-				addressRegion: "DC",
-				addressCountry: "US"
-			},
-			parentOrganization: {
-				"@type": "Organization",
-				name: "Unison Pictures Pty Ltd"
-			},
-			sameAs: [
-				"https://fia-labs.com",
-				"https://federatedintel.substack.com",
-				"https://legalintel.ai",
-				"https://aquinian.com"
-			]
+			name: "Unison Pictures Pty Ltd"
 		},
-		{
-			"@type": "WebSite",
-			"@id": `${ORIGIN}/#site`,
-			url: ORIGIN,
-			name: "FIA Labs",
-			description: LAB.description,
-			publisher: { "@id": `${ORIGIN}/#org` },
-			inLanguage: "en"
-		},
-		{
-			"@type": "SoftwareApplication",
-			"@id": "https://legalintel.ai/#app",
-			name: "Legal Intel",
-			alternateName: "LIA Pro",
-			applicationCategory: "BusinessApplication",
-			operatingSystem: "Web",
-			url: "https://legalintel.ai",
-			description: "A governed reasoning desk for legal and forensic work. Evidence, inference, and gap stay on different lines.",
-			publisher: { "@id": `${ORIGIN}/#org` }
-		},
-		{
-			"@type": "SoftwareApplication",
-			"@id": "https://aquinian.com/#app",
-			name: "Aquinian Studio",
-			applicationCategory: "EducationalApplication",
-			operatingSystem: "Web",
-			url: "https://aquinian.com",
-			description: "A virtual Thomistic intellect for theology, philosophy, doctrine, natural law, and cultural analysis.",
-			publisher: { "@id": `${ORIGIN}/#org` }
-		},
-		{
-			"@type": "FAQPage",
-			"@id": `${ORIGIN}/company#faq`,
-			url: `${ORIGIN}/company`,
-			mainEntity: FAQS.map((item) => ({
-				"@type": "Question",
-				name: item.q,
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: item.a
-				}
-			}))
+		sameAs: [
+			"https://fia-labs.com",
+			"https://federatedintel.substack.com",
+			"https://legalintel.ai",
+			"https://medicalintel.org",
+			"https://aquinian.com"
+		]
+	}, {
+		"@type": "WebSite",
+		"@id": `${ORIGIN}/#site`,
+		url: ORIGIN,
+		name: "FIA Labs",
+		description: LAB.description,
+		publisher: { "@id": `${ORIGIN}/#org` },
+		inLanguage: "en"
+	}]
+};
+/** Desk page only. No Offer / price — LIA Pro seats live on legalintel.ai. */
+var LIA_SOFTWARE_JSON_LD = {
+	"@context": "https://schema.org",
+	"@type": "SoftwareApplication",
+	"@id": "https://legalintel.ai/#app",
+	name: "LIA Pro",
+	alternateName: ["LegalIntel", "Legal Intel"],
+	applicationCategory: "BusinessApplication",
+	operatingSystem: "Web",
+	url: "https://legalintel.ai",
+	description: "A governed reasoning desk for legal and forensic work. Evidence, inference, and gap stay distinct.",
+	publisher: { "@id": `${ORIGIN}/#org` }
+};
+var COMPANY_FAQ_JSON_LD = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"@id": `${ORIGIN}/company#faq`,
+	url: `${ORIGIN}/company`,
+	mainEntity: FAQS.map((item) => ({
+		"@type": "Question",
+		name: item.q,
+		acceptedAnswer: {
+			"@type": "Answer",
+			text: item.a
 		}
-	]
+	}))
 };
 //#endregion
-export { JSON_LD as a, PRINCIPLES as c, pageHead as d, FEATURED as i, VOICES as l, ARTICLES as n, LAB as o, FAQS as r, NAV as s, APPS as t, getApp as u };
+export { FEATURED as a, NAV as c, PRINCIPLES as d, VOICES as f, robotsForHost as h, FAQS as i, ORGANIZATION_JSON_LD as l, pageHead as m, ARTICLES as n, LAB as o, getApp as p, COMPANY_FAQ_JSON_LD as r, LIA_SOFTWARE_JSON_LD as s, APPS as t, PAGE_COPY as u };

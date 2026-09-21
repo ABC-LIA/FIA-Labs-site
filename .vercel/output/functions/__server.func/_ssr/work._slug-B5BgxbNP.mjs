@@ -1,8 +1,9 @@
-import { t as APPS, u as getApp } from "./site-BzLZSt0o.mjs";
-import { R as notFound, v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { p as getApp, s as LIA_SOFTWARE_JSON_LD, t as APPS } from "./site-1KtBHgQk.mjs";
+import { B as require_jsx_runtime, v as Link, z as notFound } from "../_libs/@tanstack/react-router+[...].mjs";
+import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { c as ArrowLeft, o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { n as Route, r as cn } from "./router-C2elU3y4.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-CbrqtuWm.js
+import { n as Route, r as cn } from "./router-B1sPhA1Z.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-B5BgxbNP.js
 var import_jsx_runtime = require_jsx_runtime();
 function ExternalLink({ href, children, className, quiet }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
@@ -26,6 +27,7 @@ function AppPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
 		id: "content",
 		children: [
+			app.slug === "lia" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(JsonLd, { data: LIA_SOFTWARE_JSON_LD }) : null,
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
 				className: "border-b border-border",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -60,18 +62,18 @@ function AppPage() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "mt-8 flex flex-wrap gap-3",
-							children: [app.deskUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
-								href: app.deskUrl,
-								children: app.slug === "aquinian" ? "Open the studio" : "Open the desk"
-							}) : null, app.marketingUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
+							children: [app.marketingUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
 								href: app.marketingUrl,
-								quiet: true,
-								children: app.marketingUrl.replace("https://", "")
+								children: app.slug === "lia" ? "Open LegalIntel" : app.slug === "aquinian" ? "Open Aquinian" : app.marketingUrl.replace("https://", "")
 							}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 								to: "/method",
 								className: "inline-flex h-11 items-center rounded-md border border-border px-5 text-sm text-fg",
 								children: "How the method works"
-							})]
+							}), app.deskUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
+								href: app.deskUrl,
+								quiet: true,
+								children: app.slug === "aquinian" ? "Open the studio" : "Open the desk"
+							}) : null]
 						})
 					]
 				})

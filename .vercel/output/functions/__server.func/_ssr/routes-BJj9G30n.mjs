@@ -1,10 +1,11 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { c as PRINCIPLES, i as FEATURED, n as ARTICLES, o as LAB, t as APPS } from "./site-BzLZSt0o.mjs";
-import { v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { a as FEATURED, d as PRINCIPLES, l as ORGANIZATION_JSON_LD, n as ARTICLES, o as LAB, t as APPS } from "./site-1KtBHgQk.mjs";
+import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
+import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { r as cn } from "./router-C2elU3y4.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DQvxLj6J.js
+import { r as cn } from "./router-B1sPhA1Z.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BJj9G30n.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var CX = 200;
@@ -112,6 +113,7 @@ function Home() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
 		id: "content",
 		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(JsonLd, { data: ORGANIZATION_JSON_LD }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				className: "border-b border-border",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -196,18 +198,28 @@ function Home() {
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "mt-8 flex flex-wrap gap-x-5 gap-y-3",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-										to: "/work/$slug",
-										params: { slug: app.slug },
-										className: "inline-flex items-center gap-1.5 text-sm text-fg",
-										children: ["On this site", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "size-3.5" })]
-									}), app.deskUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-										href: app.deskUrl,
-										target: "_blank",
-										rel: "noreferrer",
-										className: "inline-flex items-center gap-1.5 text-sm text-muted hover:text-fg",
-										children: [app.slug === "aquinian" ? "Open the studio" : "Open the desk", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpRight, { className: "size-3.5" })]
-									}) : null]
+									children: [
+										app.marketingUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											href: app.marketingUrl,
+											target: "_blank",
+											rel: "noreferrer",
+											className: "inline-flex items-center gap-1.5 text-sm text-fg",
+											children: [app.slug === "lia" ? "Open LegalIntel" : app.slug === "aquinian" ? "Open Aquinian" : "Visit the site", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpRight, { className: "size-3.5" })]
+										}) : null,
+										app.deskUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											href: app.deskUrl,
+											target: "_blank",
+											rel: "noreferrer",
+											className: "inline-flex items-center gap-1.5 text-sm text-muted hover:text-fg",
+											children: [app.slug === "aquinian" ? "Open the studio" : "Open the desk", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpRight, { className: "size-3.5" })]
+										}) : null,
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+											to: "/work/$slug",
+											params: { slug: app.slug },
+											className: "inline-flex items-center gap-1.5 text-sm text-muted hover:text-fg",
+											children: ["On this site", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "size-3.5" })]
+										})
+									]
 								})
 							]
 						}, app.slug))

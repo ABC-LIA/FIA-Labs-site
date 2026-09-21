@@ -1,27 +1,28 @@
-import { l as VOICES, o as LAB, r as FAQS } from "./site-BzLZSt0o.mjs";
-import { v as Link, z as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { f as VOICES, i as FAQS, o as LAB, r as COMPANY_FAQ_JSON_LD } from "./site-1KtBHgQk.mjs";
+import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/company-BmqRJe_S.js
+import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/company-BNFxNN5-.js
 var import_jsx_runtime = require_jsx_runtime();
 function CompanyPage() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(PageFrame, {
 		index: "05 · Company",
 		title: "A private lab. A public standard.",
 		dek: `${LAB.name} is a DBA of ${LAB.legalName}, registered in ${LAB.city}, ${LAB.country}, and wholly owned by ${LAB.owner}. We build expert systems for people who have to stand behind a file.`,
 		aside: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
 			className: "justify-self-start md:justify-self-end",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-				src: "/logo.png",
+				src: "/logo.png?v=4",
 				alt: "FIA Labs seal — FiA mark on a circuit die",
-				width: 128,
-				height: 128,
-				className: "size-24 rounded-full border border-border bg-surface object-cover md:size-32"
+				width: 160,
+				height: 160,
+				className: "size-28 object-contain md:size-40"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("figcaption", {
 				className: "mt-3 font-mono text-[10px] tracking-[0.16em] text-subtle uppercase",
 				children: "Registered mark"
 			})]
 		}),
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(JsonLd, { data: COMPANY_FAQ_JSON_LD }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
@@ -61,12 +62,12 @@ function CompanyPage() {
 						className: "font-mono text-[11px] tracking-[0.22em] text-subtle uppercase",
 						children: "From the desk"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-						className: "mt-8 grid gap-4 md:grid-cols-3",
+						className: "mt-8 grid gap-5 md:grid-cols-2",
 						children: VOICES.map((voice) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-							className: "border border-border bg-surface p-6",
+							className: "flex flex-col border border-border bg-surface p-7 md:p-8",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("blockquote", {
-									className: "font-display text-[1.05rem] leading-relaxed italic text-fg/90",
+									className: "flex-1 font-display text-[1.1rem] leading-relaxed italic text-fg md:text-[1.15rem]",
 									children: [
 										"“",
 										voice.quote,
@@ -74,11 +75,11 @@ function CompanyPage() {
 									]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-5 font-mono text-[11px] tracking-[0.12em] text-muted uppercase",
+									className: "mt-8 font-mono text-[11px] tracking-[0.12em] text-muted uppercase",
 									children: voice.name
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-1 text-xs text-subtle",
+									className: "mt-1 text-sm text-subtle",
 									children: voice.role
 								})
 							]
@@ -134,7 +135,7 @@ function CompanyPage() {
 					]
 				})
 			]
-		})
+		})]
 	});
 }
 //#endregion

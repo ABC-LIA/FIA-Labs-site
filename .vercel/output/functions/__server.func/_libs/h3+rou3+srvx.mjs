@@ -650,5 +650,20 @@ var H3Core = class {
 		return routeMiddleware ? [...globalMiddleware, ...routeMiddleware] : globalMiddleware;
 	}
 };
+function redirect(location, status = 302, statusText) {
+	return new HTTPResponse(`<html><head><meta http-equiv="refresh" content="0; url=${location.replace(/[&"<>]/g, (c) => ({
+		"&": "&amp;",
+		"\"": "&quot;",
+		"<": "&lt;",
+		">": "&gt;"
+	})[c])}" /></head></html>`, {
+		status,
+		statusText: statusText || (status === 301 ? "Moved Permanently" : "Found"),
+		headers: {
+			"content-type": "text/html; charset=utf-8",
+			location
+		}
+	});
+}
 //#endregion
-export { toRequest as a, toEventHandler as i, HTTPError as n, NodeResponse as o, defineLazyEventHandler as r, FastURL as s, H3Core as t };
+export { toEventHandler as a, FastURL as c, redirect as i, HTTPError as n, toRequest as o, defineLazyEventHandler as r, NodeResponse as s, H3Core as t };
