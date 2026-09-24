@@ -117,6 +117,7 @@ test("script map matches src/lib/seo.ts LEGACY_REDIRECTS", () => {
     ["/apps", "/work"],
     ["/pricing-philosophy", "/company"],
     ["/work/mira", "/work/mia"],
+    ["/work/carcounsel", "/work"],
   ]) {
     assert.match(
       seo,
@@ -146,6 +147,7 @@ test("vercel.json keeps www→apex and path 308s, never apex→www", () => {
     ["/apps", "/work"],
     ["/pricing-philosophy", "/company"],
     ["/work/mira", "/work/mia"],
+    ["/work/carcounsel", "/work"],
   ]) {
     assert.equal(
       redirects.some((rule) => rule.source === from && rule.destination === to && rule.permanent),

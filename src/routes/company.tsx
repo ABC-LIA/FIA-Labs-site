@@ -47,19 +47,20 @@ function CompanyPage() {
         <section className="grid gap-10 border-b border-border pb-14 md:grid-cols-2">
           <div className="space-y-4 text-[0.95rem] leading-relaxed text-muted">
             <p>
-              At FIA Labs we build expert AI agents that think in the posture of
-              lawyers, physicians, CFOs, strategists, and researchers. Five
-              desks are live: Legal Intel for the legal and forensic file,
-              Aquinian Studio for theology, philosophy, and doctrine, Medical
-              Intel for literature and the medico-legal file, CFO Sentinel, and
-              Cine-Novelist. Brandium, ExecMind, and CarCounsel are not public
-              until they meet that standard.
+              FederatedIntel / FIA Labs is the parent — Federated Intelligence
+              Architecture — not an eighth app. We build specialist systems
+              that think in the posture of lawyers, physicians, CFOs,
+              strategists, and researchers. Seven Pro desks are live: Legal
+              Intel, Medical Intel, Brandium, CFO Sentinel, ExecMind,
+              Aquinian Studio, and Cine-Novelist.
             </p>
             <p>
-              The patented federated system — eight specialists reasoning
-              together under arbitration — is under development. We do not
-              pretend it is finished. We do not ship a costume of expertise
-              and call it a profession.
+              Specialists, not a generalist. Rooms stay separate. The only
+              object that crosses a desk is a user-authorised FIA Brief. The
+              patented federated system — specialists reasoning together under
+              arbitration — is under development. We do not pretend it is
+              finished. We do not ship a costume of expertise and call it a
+              profession.
             </p>
             <p className="font-display text-xl italic text-fg">
               {LAB.tagline}

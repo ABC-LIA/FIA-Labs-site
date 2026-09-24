@@ -6,7 +6,6 @@ import { JsonLd } from "@/components/json-ld";
 import {
   APPS,
   ARTICLES,
-  FEATURED,
   LAB,
   ORGANIZATION_JSON_LD,
   PAGE_COPY,
@@ -35,9 +34,9 @@ function Home() {
               <span className="mt-2 block italic text-accent">We reason them.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
-              Expert systems for high-consequence work. Eight specialists. Two
-              engines. A record of how the answer was reached — so a professional
-              can still decide.
+              Expert systems for high-consequence work. Seven live Pro desks.
+              Two engines. A record of how the answer was reached — so a
+              professional can still decide.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -77,7 +76,7 @@ function Home() {
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {FEATURED.map((app) => (
+            {APPS.map((app) => (
               <article
                 key={app.slug}
                 className="flex flex-col border border-border bg-surface p-6 md:p-8"
@@ -143,47 +142,7 @@ function Home() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-16">
           <p className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">
-            02 · The rest of the desk
-          </p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl">
-            The rest of the federation
-          </h2>
-          <p className="mt-4 max-w-2xl text-muted">
-            CFO Sentinel and Cine-Novelist are live on their own domains.
-            Brandium, ExecMind, and CarCounsel remain forthcoming — a desk
-            ships when it can show working.
-          </p>
-          <ol className="mt-10 divide-y divide-border border-y border-border">
-            {APPS.filter((a) => !a.featured).map((app, i) => (
-              <li key={app.slug}>
-                <Link
-                  to="/work/$slug"
-                  params={{ slug: app.slug }}
-                  className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-3 py-5 md:grid-cols-[3rem_8rem_1fr_auto]"
-                >
-                  <span className="font-mono text-xs text-subtle">
-                    {String(i + FEATURED.length + 1).padStart(2, "0")}
-                  </span>
-                  <span className="font-mono text-xs tracking-[0.12em] text-fg uppercase">
-                    {app.shortName}
-                  </span>
-                  <span className="col-start-2 max-w-xl text-sm text-muted md:col-start-3">
-                    {app.kicker}
-                  </span>
-                  <span className="font-mono text-[10px] tracking-[0.14em] text-subtle uppercase group-hover:text-fg">
-                    {app.statusLabel}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-16">
-          <p className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">
-            03 · Method
+            02 · Method
           </p>
           <h2 className="mt-3 max-w-3xl font-display text-3xl md:text-4xl">
             A conclusion that cannot be reconstructed is not ready for this kind of work.
@@ -211,7 +170,7 @@ function Home() {
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[0.9fr_1.1fr] md:px-8 md:py-16">
           <div>
             <p className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">
-              04 · Truth infrastructure
+              03 · Truth infrastructure
             </p>
             <h2 className="mt-3 font-display text-3xl md:text-4xl">
               Research, not launch copy.
@@ -256,7 +215,7 @@ function Home() {
             className="border border-border bg-surface p-6 transition-colors duration-150 hover:border-rule md:p-8"
           >
             <p className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">
-              05 · Access
+              04 · Access
             </p>
             <h2 className="mt-3 font-display text-2xl md:text-3xl">Project Africa</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted">
@@ -273,7 +232,7 @@ function Home() {
             className="border border-border bg-surface p-6 transition-colors duration-150 hover:border-rule md:p-8"
           >
             <p className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">
-              06 · The lab
+              05 · The lab
             </p>
             <h2 className="mt-3 font-display text-2xl md:text-3xl">Company</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted">

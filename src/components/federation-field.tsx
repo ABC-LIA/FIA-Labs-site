@@ -24,7 +24,7 @@ export function FederationField() {
         viewBox="0 0 400 400"
         className="h-full w-full"
         role="img"
-        aria-label="Eight specialist systems arranged around a federated hub"
+        aria-label="Seven specialist desks arranged around a federated hub"
       >
         <circle
           cx={CX}
@@ -47,7 +47,7 @@ export function FederationField() {
         />
 
         {APPS.map((app, i) => {
-          const p = polar(i * 45);
+          const p = polar(i * (360 / APPS.length));
           const isOn = active === app.slug;
           return (
             <line
@@ -71,7 +71,7 @@ export function FederationField() {
       </svg>
 
       {APPS.map((app, i) => {
-        const p = polar(i * 45);
+        const p = polar(i * (360 / APPS.length));
         const left = `${(p.x / 400) * 100}%`;
         const top = `${(p.y / 400) * 100}%`;
         const isOn = active === app.slug;

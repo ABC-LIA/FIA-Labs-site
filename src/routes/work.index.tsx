@@ -15,7 +15,7 @@ function WorkPage() {
     <PageFrame
       index="01 · Work"
       title="The desk."
-      dek="Eight specialist systems. FIA Plan is the house seat — one plan for the suite, Federation included. Five desks are in production on their own domains. Brandium, ExecMind, and CarCounsel are named here until they can ship at the same standard."
+      dek="Seven live Pro desks. FIA Plan is the house seat — one plan for the suite, Federation included. Conversations, files, matters, and memory stay on the desk that owns them. Only authorised FIA Briefs cross desks."
     >
       <FiaPlanSection />
       <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-14">

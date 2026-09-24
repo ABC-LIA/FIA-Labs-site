@@ -22,6 +22,12 @@ export const Route = createFileRoute("/work/$slug")({
         statusCode: 308,
       });
     }
+    if (params.slug === "carcounsel") {
+      throw redirect({
+        to: "/work",
+        statusCode: 308,
+      });
+    }
   },
   head: ({ params }) => {
     const copy = workPageCopy(params.slug);
