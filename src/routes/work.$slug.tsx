@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { ExternalLink } from "@/components/external-link";
+import { FiaPlanDeskNote } from "@/components/fia-plan-section";
 import { JsonLd } from "@/components/json-ld";
 import {
   APPS,
@@ -113,6 +114,8 @@ function AppPage() {
           </ol>
         </div>
       </section>
+
+      <FiaPlanDeskNote />
 
       <nav
         className="mx-auto grid max-w-6xl gap-px bg-border md:grid-cols-2"

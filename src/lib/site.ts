@@ -12,7 +12,7 @@ export const PAGE_COPY = {
   work: {
     title: "The desks — FIA Labs",
     description:
-      "Legal Intel, Aquinian Studio, Medical Intel, CFO Sentinel, and Cine-Novelist are in production. Brandium, ExecMind, and CarCounsel are not public until they meet the same standard.",
+      "FIA Plan is the house seat for the suite — one plan, Federation included. Legal Intel, Aquinian Studio, Medical Intel, CFO Sentinel, and Cine-Novelist are in production. Brandium, ExecMind, and CarCounsel are not public until they meet the same standard.",
     path: "/work",
   },
   lia: {
@@ -54,7 +54,7 @@ export const PAGE_COPY = {
   company: {
     title: "Company — FIA Labs",
     description:
-      "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. Five desks in production. Human judgment remains the authority.",
+      "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. FIA Plan is the house seat for the suite. Five desks in production. Human judgment remains the authority.",
     path: "/company",
   },
   contact: {
@@ -386,32 +386,77 @@ export const VOICES = [
   },
 ] as const;
 
+export const FIA_PLAN = {
+  name: "FIA Plan",
+  kicker: "The house seat",
+  price: "$50",
+  period: "month",
+  cta: "Subscribe",
+  active: "Active",
+  footerFact: "1,000 credits / period · Federation included",
+  blurb:
+    "The house seat for FIA Labs. One plan for the suite: law (LIA), medical research (MIA), finance (CFO Sentinel), strategy (ExecMind), brand and marketing (Brandium), ethics and philosophy (Aquinian Studio), film and narrative (Cine-Novelist).",
+  deskScope:
+    "You work at the desk that owns the question. Files and conversations stay on that desk. When a matter needs another discipline, you send an FIA Brief — a packet you authorise — and read the reply. Nothing else is shared.",
+  credits:
+    "Includes 1,000 credits each billing period, usable on any shipped desk. Extra credit packs work across the suite and do not expire. You pay for what you consume after the included allotment.",
+  alternative:
+    "FIA Plan is an alternative to a single-desk seat, not an extra charge on top of Operator, Counsel, or Chambers.",
+} as const;
+
 export const FAQS = [
   {
+    id: "what-is-fia-labs",
     q: "What is FIA Labs?",
     a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. We build expert AI systems for high-consequence professional work. Five desks are in production: Legal Intel (LIA Pro), Aquinian Studio, Medical Intel (MIA Pro), CFO Sentinel, and Cine-Novelist. Brandium, ExecMind, and CarCounsel are not public until they meet the same standard.",
   },
   {
+    id: "fia-plan",
+    q: "What is FIA Plan?",
+    a: `${FIA_PLAN.blurb} It entitles the account to the shipped FIA Labs suite and turns Federation on. ${FIA_PLAN.alternative} ${FIA_PLAN.price}/${FIA_PLAN.period}.`,
+  },
+  {
+    id: "federation-fia-brief",
+    q: "What is Federation — and what is an FIA Brief?",
+    a: `${FIA_PLAN.deskScope} Only authorised FIA Briefs cross desks.`,
+  },
+  {
+    id: "credits",
+    q: "How do credits and packs work?",
+    a: FIA_PLAN.credits,
+  },
+  {
+    id: "desk-seats",
+    q: "How does FIA Plan relate to a desk seat?",
+    a: `${FIA_PLAN.alternative} Operator, Counsel, and Chambers remain single-desk seats. FIA Plan is the other choice: the house seat for the shipped suite, with Federation on.`,
+  },
+  {
+    id: "federated",
     q: "What does “federated” mean here?",
     a: "Not a single general model asked to impersonate eight professions. A federation of specialist systems, each with a domain, collaborating under arbitration. The architecture is built so that a conclusion can be cross-checked rather than merely restated with confidence.",
   },
   {
+    id: "symbolic-arbitration",
     q: "What is symbolic arbitration?",
     a: "A second pass over a proposed answer using logic, domain rules, and precedent. It is how the system distinguishes a fluent continuation from a claim the record will support. Sequential reasoning then shows the steps.",
   },
   {
+    id: "where-to-work",
     q: "Where do I actually work?",
-    a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. CFO Sentinel is at cfosentinel.pro, and Cine-Novelist at cinenovelist.com. Each product has its own domain, accounts, and seats.",
+    a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. CFO Sentinel is at cfosentinel.pro, and Cine-Novelist at cinenovelist.com. Each desk has its own domain. FIA Plan is the house seat for the shipped suite — an alternative to a single-desk seat on Operator, Counsel, or Chambers.",
   },
   {
+    id: "forthcoming",
     q: "What about Brandium, ExecMind, and CarCounsel?",
-    a: "They belong to the federation and are named on this site. They are not public, not for sale, and not offered as chatbots. A desk ships when it can show working.",
+    a: "They belong to the federation and are named on this site. They are not public, not for sale, and not offered as chatbots. A desk ships when it can show working. FIA Plan already names Brandium and ExecMind in the suite; credits apply on any shipped desk.",
   },
   {
+    id: "training",
     q: "Do you train on my files?",
-    a: "No. We do not train our models on your data. Session material is handled under the Privacy Policy. Legal Intel and Medical Intel keep files on the matter they belong to. Aquinian scopes saved work to the signed-in account.",
+    a: "No. We do not train our models on your data. Session material is handled under the Privacy Policy. Legal Intel and Medical Intel keep files on the matter they belong to. Aquinian scopes saved work to the signed-in account. Conversations and files stay per desk; only authorised FIA Briefs cross desks.",
   },
   {
+    id: "advice",
     q: "Is this a substitute for professional advice?",
     a: "No. The apps are for informational, educational, and research use. They do not replace legal, medical, financial, pastoral, or mechanical advice. Outputs can be wrong. You are responsible for how they are used.",
   },

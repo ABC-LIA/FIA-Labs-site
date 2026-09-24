@@ -31,6 +31,15 @@ export function SiteFooter() {
               </li>
             ))}
             <li>
+              <Link
+                to="/work"
+                hash="fia-plan"
+                className="text-sm text-muted hover:text-fg"
+              >
+                FIA Plan
+              </Link>
+            </li>
+            <li>
               <Link to="/contact" className="text-sm text-muted hover:text-fg">
                 Contact
               </Link>
