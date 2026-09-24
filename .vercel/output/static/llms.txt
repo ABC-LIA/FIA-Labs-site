@@ -2,31 +2,33 @@
 
 > We don’t just predict outcomes. We reason them.
 
-FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. It builds expert AI systems for high-consequence professional work.
+FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. FederatedIntel / FIA Labs is the parent — Federated Intelligence Architecture — not an eighth app. fia-labs.com redirects to federatedintel.ai.
 
 This is the parent lab site. Products live on their own domains. FIA Labs does not sell Lite editions, custom GPTs, affiliate products, or a $49 catalog.
 
-## Public products
+## Live Pro desks (seven)
 
-- [Legal Intel (LIA Pro)](https://legalintel.ai): governed legal and forensic reasoning. Desk: https://pro.legalintel.ai
-- [Aquinian Studio](https://aquinian.com): a virtual Thomistic intellect for theology, philosophy, doctrine, natural law, and cultural analysis. Studio: https://studio.aquinian.com
-- [Medical Intel (MIA Pro)](https://medicalintel.org): medical AI research for literature, biotechnology, and the medico-legal file. Not medical advice. Desk: https://mia.medicalintel.org
+- [Legal Intel (LIA Pro)](https://legalintel.ai): governed legal and forensic reasoning. Not legal advice. Desk: https://pro.legalintel.ai
+- [Medical Intel (MIA Pro)](https://medicalintel.org): medical AI research for literature, biotechnology, and the medico-legal file. Not medical advice. Does not replace clinical judgment. Desk: https://mia.medicalintel.org
+- [Brandium Pro](https://brandium.pro): positioning, creative strategy, and acquisition under unit economics
 - [CFO Sentinel](https://cfosentinel.pro): cash, margins, runway, and downside
+- [ExecMind](https://execmind.app): structured decision support for executives
+- [Aquinian Studio](https://aquinian.com): a virtual Thomistic intellect for theology, philosophy, doctrine, natural law, and cultural analysis. Studio: https://studio.aquinian.com
 - [Cine-Novelist](https://cinenovelist.com): character, structure, theme, and scene — stories that can withstand revision
 
-Human judgment remains the authority. These are not substitutes for counsel, a physician, a priest, a CFO, or other licensed professionals.
+Human judgment remains the authority. These are specialists, not a generalist, and not substitutes for counsel, a physician, a priest, a CFO, or other licensed professionals.
 
-## Forthcoming — named, not offered
+## FIA Plan
 
-Brandium Pro (positioning, creative strategy, and acquisition under unit economics), ExecMind (executive decisions), CarCounsel (automotive guidance).
+FIA Plan is the house seat: $50/month, an alternative to a single-desk Operator, Counsel, or Chambers seat — not an add-on. It includes 1,000 credits per period across the suite, held in one shared FIA Tank. Extra credit packs do not expire.
 
-They belong to the federation. They are not public, not for sale, and not offered as chatbots. A desk ships when it can show working.
+Rooms stay separate. Conversations, files, matters, and memory are not shared across desks. The only cross-desk object is a user-authorised FIA Brief.
 
 ## Method
 
-Eight specialist systems. Two engines: a generation engine proposes; a symbolic engine tests. Symbolic arbitration, sequential reasoning, and a visible distinction between evidence, inference, and gap. A conclusion that cannot be reconstructed is not ready for this kind of work.
+Seven specialist systems. Two engines: a generation engine proposes; a symbolic engine tests. Symbolic arbitration, sequential reasoning, and a visible distinction between evidence, inference, and gap. A conclusion that cannot be reconstructed is not ready for this kind of work.
 
-The patented federated system — eight specialists reasoning together under arbitration — is under development.
+The patented federated system — seven specialists reasoning together under arbitration — is under development.
 
 ## Site
 

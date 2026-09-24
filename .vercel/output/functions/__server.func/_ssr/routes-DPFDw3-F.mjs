@@ -1,11 +1,12 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { a as FEATURED, f as PRINCIPLES, n as ARTICLES, o as LAB, t as APPS, u as ORGANIZATION_JSON_LD } from "./site-Cl4TPudw.mjs";
+import { f as PRINCIPLES, n as ARTICLES, o as LAB, t as APPS, u as ORGANIZATION_JSON_LD } from "./site-BWQTIidw.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { r as cn } from "./router--65d-h7L.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-Beyb35eL.js
+import { r as cn } from "./router-DksM91Vc.mjs";
+import { n as FiaPlanSection } from "./fia-plan-section-TvSpQZ0F.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DPFDw3-F.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var CX = 200;
@@ -27,7 +28,7 @@ function FederationField() {
 				viewBox: "0 0 400 400",
 				className: "h-full w-full",
 				role: "img",
-				"aria-label": "Eight specialist systems arranged around a federated hub",
+				"aria-label": "Seven specialist desks arranged around a federated hub",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
 						cx: CX,
@@ -49,7 +50,7 @@ function FederationField() {
 						strokeDasharray: "4 10"
 					}),
 					APPS.map((app, i) => {
-						const p = polar(i * 45);
+						const p = polar(i * (360 / APPS.length));
 						const isOn = active === app.slug;
 						return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
 							x1: CX,
@@ -77,7 +78,7 @@ function FederationField() {
 				]
 			}),
 			APPS.map((app, i) => {
-				const p = polar(i * 45);
+				const p = polar(i * (360 / APPS.length));
 				const left = `${p.x / 400 * 100}%`;
 				const top = `${p.y / 400 * 100}%`;
 				const isOn = active === app.slug;
@@ -138,7 +139,7 @@ function Home() {
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg",
-								children: "Expert systems for high-consequence work. Eight specialists. Two engines. A record of how the answer was reached — so a professional can still decide."
+								children: "Expert systems for high-consequence work. Seven live Pro desks. Two engines. A record of how the answer was reached — so a professional can still decide."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "mt-8 flex flex-wrap gap-3",
@@ -175,7 +176,7 @@ function Home() {
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3",
-						children: FEATURED.map((app) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
+						children: APPS.map((app) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 							className: "flex flex-col border border-border bg-surface p-6 md:p-8",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -226,6 +227,7 @@ function Home() {
 					})]
 				})
 			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FiaPlanSection, { variant: "teaser" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				className: "border-b border-border",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -233,53 +235,7 @@ function Home() {
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "font-mono text-[11px] tracking-[0.22em] text-subtle uppercase",
-							children: "02 · The rest of the desk"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "mt-3 font-display text-3xl md:text-4xl",
-							children: "The rest of the federation"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-4 max-w-2xl text-muted",
-							children: "CFO Sentinel and Cine-Novelist are live on their own domains. Brandium, ExecMind, and CarCounsel remain forthcoming — a desk ships when it can show working."
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
-							className: "mt-10 divide-y divide-border border-y border-border",
-							children: APPS.filter((a) => !a.featured).map((app, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
-								to: "/work/$slug",
-								params: { slug: app.slug },
-								className: "group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-3 py-5 md:grid-cols-[3rem_8rem_1fr_auto]",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "font-mono text-xs text-subtle",
-										children: String(i + FEATURED.length + 1).padStart(2, "0")
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "font-mono text-xs tracking-[0.12em] text-fg uppercase",
-										children: app.shortName
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "col-start-2 max-w-xl text-sm text-muted md:col-start-3",
-										children: app.kicker
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "font-mono text-[10px] tracking-[0.14em] text-subtle uppercase group-hover:text-fg",
-										children: app.statusLabel
-									})
-								]
-							}) }, app.slug))
-						})
-					]
-				})
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-				className: "border-b border-border",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-16",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-mono text-[11px] tracking-[0.22em] text-subtle uppercase",
-							children: "03 · Method"
+							children: "02 · Method"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "mt-3 max-w-3xl font-display text-3xl md:text-4xl",
@@ -320,7 +276,7 @@ function Home() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "font-mono text-[11px] tracking-[0.22em] text-subtle uppercase",
-							children: "04 · Truth infrastructure"
+							children: "03 · Truth infrastructure"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "mt-3 font-display text-3xl md:text-4xl",
@@ -363,7 +319,7 @@ function Home() {
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "font-mono text-[11px] tracking-[0.22em] text-subtle uppercase",
-							children: "05 · Access"
+							children: "04 · Access"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "mt-3 font-display text-2xl md:text-3xl",
@@ -384,7 +340,7 @@ function Home() {
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "font-mono text-[11px] tracking-[0.22em] text-subtle uppercase",
-							children: "06 · The lab"
+							children: "05 · The lab"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "mt-3 font-display text-2xl md:text-3xl",

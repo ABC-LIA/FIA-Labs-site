@@ -1,9 +1,10 @@
-import { c as MIA_SOFTWARE_JSON_LD, m as getApp, s as LIA_SOFTWARE_JSON_LD, t as APPS } from "./site-Cl4TPudw.mjs";
+import { c as MIA_SOFTWARE_JSON_LD, m as getApp, s as LIA_SOFTWARE_JSON_LD, t as APPS } from "./site-BWQTIidw.mjs";
 import { B as require_jsx_runtime, v as Link, z as notFound } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { c as ArrowLeft, o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { n as Route, r as cn } from "./router--65d-h7L.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-CsPQUrOD.js
+import { n as Route, r as cn } from "./router-DksM91Vc.mjs";
+import { t as FiaPlanDeskNote } from "./fia-plan-section-TvSpQZ0F.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-CvjJx59n.js
 var import_jsx_runtime = require_jsx_runtime();
 function ExternalLink({ href, children, className, quiet }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
@@ -101,6 +102,7 @@ function AppPage() {
 					})]
 				})
 			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FiaPlanDeskNote, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
 				className: "mx-auto grid max-w-6xl gap-px bg-border md:grid-cols-2",
 				"aria-label": "Adjacent systems",

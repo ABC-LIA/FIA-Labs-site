@@ -1,8 +1,8 @@
-import { i as FAQS, o as LAB, p as VOICES, r as COMPANY_FAQ_JSON_LD } from "./site-Cl4TPudw.mjs";
+import { a as FIA_PLAN, i as FAQS, o as LAB, p as VOICES, r as COMPANY_FAQ_JSON_LD } from "./site-BWQTIidw.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/company-DYaezCY8.js
+//#region node_modules/.nitro/vite/services/ssr/assets/company-BLYzxOo0.js
 var import_jsx_runtime = require_jsx_runtime();
 function CompanyPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(PageFrame, {
@@ -30,8 +30,8 @@ function CompanyPage() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "space-y-4 text-[0.95rem] leading-relaxed text-muted",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "At FIA Labs we build expert AI agents that think in the posture of lawyers, physicians, CFOs, strategists, and researchers. Five desks are live: Legal Intel for the legal and forensic file, Aquinian Studio for theology, philosophy, and doctrine, Medical Intel for literature and the medico-legal file, CFO Sentinel, and Cine-Novelist. Brandium, ExecMind, and CarCounsel are not public until they meet that standard." }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "The patented federated system — eight specialists reasoning together under arbitration — is under development. We do not pretend it is finished. We do not ship a costume of expertise and call it a profession." }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "FederatedIntel / FIA Labs is the parent — Federated Intelligence Architecture — not an eighth app. We build specialist systems that think in the posture of lawyers, physicians, CFOs, strategists, and researchers. Seven Pro desks are live: Legal Intel, Medical Intel, Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine-Novelist." }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Specialists, not a generalist. Rooms stay separate. The only object that crosses a desk is a user-authorised FIA Brief. The patented federated system — specialists reasoning together under arbitration — is under development. We do not pretend it is finished. We do not ship a costume of expertise and call it a profession." }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "font-display text-xl italic text-fg",
 								children: LAB.tagline
@@ -87,6 +87,34 @@ function CompanyPage() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					className: "border-b border-border py-14",
+					id: "fia-plan-note",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "font-mono text-[11px] tracking-[0.22em] text-subtle uppercase",
+							children: FIA_PLAN.kicker
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "mt-3 font-display text-3xl md:text-4xl",
+							children: FIA_PLAN.name
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-muted",
+							children: FIA_PLAN.blurb
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-muted",
+							children: FIA_PLAN.alternative
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/work",
+							hash: "fia-plan",
+							className: "mt-6 inline-flex h-11 items-center text-sm text-fg",
+							children: "The house seat on Work"
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 					className: "pt-14",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -96,7 +124,8 @@ function CompanyPage() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							className: "mt-6 divide-y divide-border border-y border-border",
 							children: FAQS.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("details", {
-								className: "group py-5",
+								id: item.id,
+								className: "group scroll-mt-24 py-5",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("summary", {
 									className: "cursor-pointer list-none font-display text-xl marker:content-none",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {

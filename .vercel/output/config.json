@@ -48,6 +48,13 @@
       }
     },
     {
+      "src": "^/work/carcounsel/?$",
+      "status": 308,
+      "headers": {
+        "Location": "/work"
+      }
+    },
+    {
       "handle": "filesystem"
     },
     {

@@ -1,12 +1,12 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { o as LAB } from "./site-Cl4TPudw.mjs";
+import { o as LAB } from "./site-BWQTIidw.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
 import { t as cva } from "../_libs/class-variance-authority+clsx.mjs";
-import { r as cn } from "./router--65d-h7L.mjs";
+import { r as cn } from "./router-DksM91Vc.mjs";
 import { t as Slot } from "../_libs/radix-ui__react-slot.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/contact-DrNkEy9x.js
+//#region node_modules/.nitro/vite/services/ssr/assets/contact-CcCwE5xT.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var buttonVariants = cva("inline-flex items-center justify-center gap-2 font-sans font-medium tracking-tight transition-[opacity,transform,background-color,color,border-color] duration-150 ease-out focus-visible:outline-none disabled:pointer-events-none disabled:opacity-40 active:not-disabled:scale-[0.96]", {
@@ -80,7 +80,7 @@ function ContactPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
 		index: "06 · Contact",
 		title: "Write to the lab.",
-		dek: "Legal work lives at legalintel.ai. Theological work lives at aquinian.com. Medical work lives at medicalintel.org. Letters for the lab itself go to the address that matches the subject.",
+		dek: "Legal work lives at legalintel.ai. Medical work lives at medicalintel.org. Theological work lives at aquinian.com. Brandium, CFO Sentinel, ExecMind, and Cine-Novelist are live on their own domains. Letters for the lab itself go to the address that matches the subject.",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto grid max-w-6xl gap-12 px-5 py-12 md:grid-cols-[0.85fr_1.15fr] md:px-8 md:py-16",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
@@ -102,15 +102,6 @@ function ContactPage() {
 								className: "text-fg hover:text-accent",
 								children: "legalintel.ai"
 							}),
-							". Aquinian Studio is at",
-							" ",
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								href: "https://aquinian.com",
-								target: "_blank",
-								rel: "noreferrer",
-								className: "text-fg hover:text-accent",
-								children: "aquinian.com"
-							}),
 							". Medical Intel (MIA Pro) is at",
 							" ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
@@ -120,7 +111,52 @@ function ContactPage() {
 								className: "text-fg hover:text-accent",
 								children: "medicalintel.org"
 							}),
-							". CFO Sentinel and Cine-Novelist are live on their own domains. The full index is on",
+							". Brandium is at",
+							" ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: "https://brandium.pro",
+								target: "_blank",
+								rel: "noreferrer",
+								className: "text-fg hover:text-accent",
+								children: "brandium.pro"
+							}),
+							". CFO Sentinel is at",
+							" ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: "https://cfosentinel.pro",
+								target: "_blank",
+								rel: "noreferrer",
+								className: "text-fg hover:text-accent",
+								children: "cfosentinel.pro"
+							}),
+							". ExecMind is at",
+							" ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: "https://execmind.app",
+								target: "_blank",
+								rel: "noreferrer",
+								className: "text-fg hover:text-accent",
+								children: "execmind.app"
+							}),
+							". Aquinian Studio is at",
+							" ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: "https://aquinian.com",
+								target: "_blank",
+								rel: "noreferrer",
+								className: "text-fg hover:text-accent",
+								children: "aquinian.com"
+							}),
+							". Cine-Novelist is at",
+							" ",
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: "https://cinenovelist.com",
+								target: "_blank",
+								rel: "noreferrer",
+								className: "text-fg hover:text-accent",
+								children: "cinenovelist.com"
+							}),
+							". The full index is on",
 							" ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
 								to: "/work",
