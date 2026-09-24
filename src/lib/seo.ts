@@ -13,7 +13,7 @@ export const PRODUCTION_HOSTS = new Set([
 /** Retired IA → current desks. Permanent (301/308). Do not add these to the sitemap. */
 export const LEGACY_REDIRECTS: Readonly<Record<string, string>> = {
   "/lia": "/work/lia",
-  "/pricing": "/work",
+  "/pricing": "/work", // house-seat card lives on /work#fia-plan
   "/apps": "/work",
   "/pricing-philosophy": "/company",
   "/work/mira": "/work/mia",

@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { FiaPlanSection } from "@/components/fia-plan-section";
 import { PageFrame } from "@/components/page-frame";
 import { APPS, PAGE_COPY, pageHead } from "@/lib/site";
 
@@ -14,8 +15,9 @@ function WorkPage() {
     <PageFrame
       index="01 · Work"
       title="The desk."
-      dek="Eight specialist systems. Five desks are in production on their own domains. Brandium, ExecMind, and CarCounsel are named here until they can ship at the same standard."
+      dek="Eight specialist systems. FIA Plan is the house seat — one plan for the suite, Federation included. Five desks are in production on their own domains. Brandium, ExecMind, and CarCounsel are named here until they can ship at the same standard."
     >
+      <FiaPlanSection />
       <div className="mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-14">
         <ol className="divide-y divide-border border-y border-border">
           {APPS.map((app, i) => (

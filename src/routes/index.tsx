@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { FederationField } from "@/components/federation-field";
+import { FiaPlanSection } from "@/components/fia-plan-section";
 import { JsonLd } from "@/components/json-ld";
 import {
   APPS,
@@ -136,6 +137,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <FiaPlanSection variant="teaser" />
 
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-16">

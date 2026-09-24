@@ -1,7 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageFrame } from "@/components/page-frame";
 import { JsonLd } from "@/components/json-ld";
-import { COMPANY_FAQ_JSON_LD, FAQS, LAB, PAGE_COPY, VOICES, pageHead } from "@/lib/site";
+import {
+  COMPANY_FAQ_JSON_LD,
+  FAQS,
+  FIA_PLAN,
+  LAB,
+  PAGE_COPY,
+  VOICES,
+  pageHead,
+} from "@/lib/site";
 
 export const Route = createFileRoute("/company")({
   component: CompanyPage,
@@ -93,13 +101,37 @@ function CompanyPage() {
           </ul>
         </section>
 
+        <section className="border-b border-border py-14" id="fia-plan-note">
+          <p className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">
+            {FIA_PLAN.kicker}
+          </p>
+          <h2 className="mt-3 font-display text-3xl md:text-4xl">{FIA_PLAN.name}</h2>
+          <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-muted">
+            {FIA_PLAN.blurb}
+          </p>
+          <p className="mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-muted">
+            {FIA_PLAN.alternative}
+          </p>
+          <Link
+            to="/work"
+            hash="fia-plan"
+            className="mt-6 inline-flex h-11 items-center text-sm text-fg"
+          >
+            The house seat on Work
+          </Link>
+        </section>
+
         <section className="pt-14">
           <p className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">
             Questions
           </p>
           <div className="mt-6 divide-y divide-border border-y border-border">
             {FAQS.map((item) => (
-              <details key={item.q} className="group py-5">
+              <details
+                key={item.q}
+                id={item.id}
+                className="group scroll-mt-24 py-5"
+              >
                 <summary className="cursor-pointer list-none font-display text-xl marker:content-none">
                   <span className="flex items-start justify-between gap-4">
                     {item.q}
