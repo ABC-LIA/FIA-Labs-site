@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/site-BWQTIidw.js
+//#region node_modules/.nitro/vite/services/ssr/assets/site-D21DOjWi.js
 var CANONICAL_ORIGIN = "https://federatedintel.ai";
 var INDEX_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1";
 var NOINDEX_ROBOTS = "noindex, nofollow";
@@ -35,17 +35,17 @@ var PAGE_COPY = {
 	},
 	lia: {
 		title: "LegalIntel (LIA Pro) — FIA Labs",
-		description: "A governed reasoning desk for legal and forensic work. Evidence, inference and gap stay distinct. Not legal advice. Open the desk at legalintel.ai.",
+		description: "A governed reasoning desk for legal and forensic work. Evidence, inference and gap stay distinct. Not legal advice. Open the desk at pro.legalintel.ai.",
 		path: "/work/lia"
 	},
 	aquinian: {
 		title: "Aquinian Studio — FIA Labs",
-		description: "Theological and philosophical work at the studio. Open it at aquinian.com.",
+		description: "Theological and philosophical work at the studio. Open the studio at studio.aquinian.com.",
 		path: "/work/aquinian"
 	},
 	mia: {
 		title: "Medical Intel (MIA Pro) — FIA Labs",
-		description: "A medical AI research desk for literature, biotechnology, and the medico-legal file. Not medical advice. Human judgment remains the authority. Open the desk at medicalintel.org.",
+		description: "A medical AI research desk for literature, biotechnology, and the medico-legal file. Not medical advice. Human judgment remains the authority. Open the desk at mia.medicalintel.org.",
 		path: "/work/mia"
 	},
 	brandium: {
@@ -121,6 +121,36 @@ var NAV = [
 		index: "05"
 	}
 ];
+/** Live Pro hosts — the primary “Open the desk” destination. */
+var DESK_HOSTS = {
+	lia: "https://pro.legalintel.ai",
+	mia: "https://mia.medicalintel.org",
+	brandium: "https://brandium.pro",
+	"cfo-sentinel": "https://cfosentinel.pro",
+	execmind: "https://execmind.app",
+	aquinian: "https://studio.aquinian.com",
+	"cine-novelist": "https://cinenovelist.com"
+};
+/** Public marketing sites. Shown only when they differ from the Pro host. */
+var MARKETING_HOSTS = {
+	lia: "https://legalintel.ai",
+	mia: "https://medicalintel.org",
+	brandium: "https://brandium.pro",
+	"cfo-sentinel": "https://cfosentinel.pro",
+	execmind: "https://execmind.app",
+	aquinian: "https://aquinian.com",
+	"cine-novelist": "https://cinenovelist.com"
+};
+function deskOpenLabel(app) {
+	return app.slug === "aquinian" ? "Open the studio" : "Open the desk";
+}
+function marketingHostLabel(url) {
+	return url.replace(/^https:\/\//, "").replace(/\/$/, "");
+}
+function separateMarketingUrl(app) {
+	if (app.marketingUrl === app.deskUrl) return void 0;
+	return app.marketingUrl;
+}
 var APPS = [
 	{
 		slug: "lia",
@@ -137,8 +167,8 @@ var APPS = [
 		],
 		status: "live",
 		statusLabel: "Live",
-		marketingUrl: "https://legalintel.ai",
-		deskUrl: "https://pro.legalintel.ai",
+		marketingUrl: MARKETING_HOSTS.lia,
+		deskUrl: DESK_HOSTS.lia,
 		featured: true
 	},
 	{
@@ -156,8 +186,8 @@ var APPS = [
 		],
 		status: "live",
 		statusLabel: "Live",
-		marketingUrl: "https://medicalintel.org",
-		deskUrl: "https://mia.medicalintel.org",
+		marketingUrl: MARKETING_HOSTS.mia,
+		deskUrl: DESK_HOSTS.mia,
 		featured: true
 	},
 	{
@@ -175,7 +205,8 @@ var APPS = [
 		],
 		status: "live",
 		statusLabel: "Live",
-		marketingUrl: "https://brandium.pro",
+		marketingUrl: MARKETING_HOSTS.brandium,
+		deskUrl: DESK_HOSTS.brandium,
 		featured: true
 	},
 	{
@@ -193,7 +224,8 @@ var APPS = [
 		],
 		status: "live",
 		statusLabel: "Live",
-		marketingUrl: "https://cfosentinel.pro"
+		marketingUrl: MARKETING_HOSTS["cfo-sentinel"],
+		deskUrl: DESK_HOSTS["cfo-sentinel"]
 	},
 	{
 		slug: "execmind",
@@ -210,7 +242,8 @@ var APPS = [
 		],
 		status: "live",
 		statusLabel: "Live",
-		marketingUrl: "https://execmind.app"
+		marketingUrl: MARKETING_HOSTS.execmind,
+		deskUrl: DESK_HOSTS.execmind
 	},
 	{
 		slug: "aquinian",
@@ -227,8 +260,8 @@ var APPS = [
 		],
 		status: "live",
 		statusLabel: "Live",
-		marketingUrl: "https://aquinian.com",
-		deskUrl: "https://studio.aquinian.com",
+		marketingUrl: MARKETING_HOSTS.aquinian,
+		deskUrl: DESK_HOSTS.aquinian,
 		featured: true
 	},
 	{
@@ -246,7 +279,8 @@ var APPS = [
 		],
 		status: "live",
 		statusLabel: "Live",
-		marketingUrl: "https://cinenovelist.com"
+		marketingUrl: MARKETING_HOSTS["cine-novelist"],
+		deskUrl: DESK_HOSTS["cine-novelist"]
 	}
 ];
 APPS.filter((app) => app.featured);
@@ -553,4 +587,4 @@ var COMPANY_FAQ_JSON_LD = {
 	}))
 };
 //#endregion
-export { workPageCopy as _, FIA_PLAN as a, MIA_SOFTWARE_JSON_LD as c, PAGE_COPY as d, PRINCIPLES as f, robotsForHost as g, pageHead as h, FAQS as i, NAV as l, getApp as m, ARTICLES as n, LAB as o, VOICES as p, COMPANY_FAQ_JSON_LD as r, LIA_SOFTWARE_JSON_LD as s, APPS as t, ORGANIZATION_JSON_LD as u };
+export { pageHead as _, FIA_PLAN as a, workPageCopy as b, MIA_SOFTWARE_JSON_LD as c, PAGE_COPY as d, PRINCIPLES as f, marketingHostLabel as g, getApp as h, FAQS as i, NAV as l, deskOpenLabel as m, ARTICLES as n, LAB as o, VOICES as p, COMPANY_FAQ_JSON_LD as r, LIA_SOFTWARE_JSON_LD as s, APPS as t, ORGANIZATION_JSON_LD as u, robotsForHost as v, separateMarketingUrl as y };

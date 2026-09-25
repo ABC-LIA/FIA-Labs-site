@@ -1,16 +1,16 @@
-import { c as MIA_SOFTWARE_JSON_LD, m as getApp, s as LIA_SOFTWARE_JSON_LD, t as APPS } from "./site-BWQTIidw.mjs";
+import { c as MIA_SOFTWARE_JSON_LD, g as marketingHostLabel, h as getApp, m as deskOpenLabel, s as LIA_SOFTWARE_JSON_LD, t as APPS, y as separateMarketingUrl } from "./site-D21DOjWi.mjs";
 import { B as require_jsx_runtime, v as Link, z as notFound } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { c as ArrowLeft, o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { n as Route, r as cn } from "./router-DksM91Vc.mjs";
-import { t as FiaPlanDeskNote } from "./fia-plan-section-TvSpQZ0F.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-CvjJx59n.js
+import { n as Route, r as cn } from "./router-Cix6VcgM.mjs";
+import { t as FiaPlanDeskNote } from "./fia-plan-section--2zPbW98.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-BpSXHmoH.js
 var import_jsx_runtime = require_jsx_runtime();
 function ExternalLink({ href, children, className, quiet }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 		href,
 		target: "_blank",
-		rel: "noreferrer",
+		rel: "noopener noreferrer",
 		className: cn("inline-flex items-center gap-1.5 transition-opacity duration-150 hover:opacity-80", quiet ? "text-sm text-muted hover:text-fg" : "h-11 rounded-md bg-fg px-5 font-sans text-sm font-medium text-bg", className),
 		children: [children, /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpRight, {
 			className: "size-3.5",
@@ -25,6 +25,7 @@ function AppPage() {
 	const index = APPS.findIndex((item) => item.slug === app.slug);
 	const prev = APPS[(index - 1 + APPS.length) % APPS.length];
 	const next = APPS[(index + 1) % APPS.length];
+	const marketing = separateMarketingUrl(app);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
 		id: "content",
 		children: [
@@ -64,17 +65,13 @@ function AppPage() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "mt-8 flex flex-wrap gap-3",
-							children: [app.marketingUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
-								href: app.marketingUrl,
-								children: app.slug === "lia" ? "Open LegalIntel" : app.slug === "aquinian" ? "Open Aquinian" : app.slug === "mia" ? "Open Medical Intel" : app.marketingUrl.replace("https://", "")
-							}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-								to: "/method",
-								className: "inline-flex h-11 items-center rounded-md border border-border px-5 text-sm text-fg",
-								children: "How the method works"
-							}), app.deskUrl ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
 								href: app.deskUrl,
+								children: deskOpenLabel(app)
+							}), marketing ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ExternalLink, {
+								href: marketing,
 								quiet: true,
-								children: app.slug === "aquinian" ? "Open the studio" : "Open the desk"
+								children: marketingHostLabel(marketing)
 							}) : null]
 						})
 					]
