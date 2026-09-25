@@ -48,14 +48,14 @@ function MethodPage() {
             site.
           </p>
           <p className="mt-4 text-[0.95rem] leading-relaxed text-muted">
-            The patented federated system — eight experts reasoning together
-            under arbitration — is under development. The production desks
+            The patented federated system — seven specialists reasoning
+            together under arbitration — is under development. The live desks
             already carry the same discipline: show working, keep the human in
             the chair.
           </p>
           <div className="mt-6 flex flex-wrap gap-5">
             <Link to="/work" className="text-sm text-fg">
-              The eight systems
+              The seven desks
             </Link>
             <Link to="/research" className="text-sm text-muted hover:text-fg">
               Truth infrastructure

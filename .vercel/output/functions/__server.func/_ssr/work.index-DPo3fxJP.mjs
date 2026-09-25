@@ -1,15 +1,16 @@
-import { t as APPS } from "./site-Cl4TPudw.mjs";
+import { t as APPS } from "./site-BWQTIidw.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { s as ArrowRight } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.index-BR6nwM4g.js
+import { n as FiaPlanSection } from "./fia-plan-section-TvSpQZ0F.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.index-DPo3fxJP.js
 var import_jsx_runtime = require_jsx_runtime();
 function WorkPage() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(PageFrame, {
 		index: "01 · Work",
 		title: "The desk.",
-		dek: "Eight specialist systems. Five desks are in production on their own domains. Brandium, ExecMind, and CarCounsel are named here until they can ship at the same standard.",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		dek: "Seven live Pro desks. FIA Plan is the house seat — one plan for the suite, Federation included. Conversations, files, matters, and memory stay on the desk that owns them. Only authorised FIA Briefs cross desks.",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FiaPlanSection, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-14",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
 				className: "divide-y divide-border border-y border-border",
@@ -40,7 +41,7 @@ function WorkPage() {
 					]
 				}) }, app.slug))
 			})
-		})
+		})]
 	});
 }
 //#endregion

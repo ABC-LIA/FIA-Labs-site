@@ -27,6 +27,7 @@ export const LEGACY_PATH_REDIRECTS = [
   { from: "/apps", to: "/work" },
   { from: "/pricing-philosophy", to: "/company" },
   { from: "/work/mira", to: "/work/mia" },
+  { from: "/work/carcounsel", to: "/work" },
 ];
 
 export const WWW_HOST = "www.federatedintel.ai";

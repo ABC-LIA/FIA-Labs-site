@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/site-Cl4TPudw.js
+//#region node_modules/.nitro/vite/services/ssr/assets/site-BWQTIidw.js
 var CANONICAL_ORIGIN = "https://federatedintel.ai";
 var INDEX_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1";
 var NOINDEX_ROBOTS = "noindex, nofollow";
@@ -25,17 +25,17 @@ var ORIGIN = "https://federatedintel.ai";
 var PAGE_COPY = {
 	home: {
 		title: "FIA Labs — Federated Intel AI",
-		description: "Expert systems for high-consequence work. Five desks in production: Legal Intel, Aquinian Studio, Medical Intel, CFO Sentinel, and Cine-Novelist. Brandium, ExecMind, and CarCounsel remain forthcoming. A record of how the answer was reached.",
+		description: "Expert systems for high-consequence work. Seven live Pro desks: Legal Intel, Medical Intel, Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine-Novelist. A record of how the answer was reached.",
 		path: "/"
 	},
 	work: {
 		title: "The desks — FIA Labs",
-		description: "Legal Intel, Aquinian Studio, Medical Intel, CFO Sentinel, and Cine-Novelist are in production. Brandium, ExecMind, and CarCounsel are not public until they meet the same standard.",
+		description: "FIA Plan is the house seat for the suite — one plan, Federation included. Seven live Pro desks. Conversations, files, matters, and memory stay on the desk that owns them. Only authorised FIA Briefs cross desks.",
 		path: "/work"
 	},
 	lia: {
 		title: "LegalIntel (LIA Pro) — FIA Labs",
-		description: "A governed reasoning desk for legal and forensic work. Evidence, inference and gap stay distinct. Open the desk at legalintel.ai.",
+		description: "A governed reasoning desk for legal and forensic work. Evidence, inference and gap stay distinct. Not legal advice. Open the desk at legalintel.ai.",
 		path: "/work/lia"
 	},
 	aquinian: {
@@ -50,13 +50,18 @@ var PAGE_COPY = {
 	},
 	brandium: {
 		title: "Brandium Pro — FIA Labs",
-		description: "Positioning, creative strategy, and acquisition — governed by the numbers that constrain growth. Named on this site until it can ship at the same standard.",
+		description: "Positioning, creative strategy, and acquisition — governed by the numbers that constrain growth. Open Brandium at brandium.pro.",
 		path: "/work/brandium"
 	},
 	cfoSentinel: {
 		title: "CFO Sentinel — FIA Labs",
 		description: "Cash, margins, runway, and downside — where capital is created, consumed, or placed at risk. Open CFO Sentinel at cfosentinel.pro.",
 		path: "/work/cfo-sentinel"
+	},
+	execmind: {
+		title: "ExecMind — FIA Labs",
+		description: "Frame the decision, challenge the assumption, compare the options, and write down why. Open ExecMind at execmind.app.",
+		path: "/work/execmind"
 	},
 	cineNovelist: {
 		title: "Cine-Novelist — FIA Labs",
@@ -65,12 +70,12 @@ var PAGE_COPY = {
 	},
 	company: {
 		title: "Company — FIA Labs",
-		description: "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. Five desks in production. Human judgment remains the authority.",
+		description: "FIA Labs is a DBA of Federated Intel AI LLC, Washington, D.C. FIA Plan is the house seat for the suite. Seven live Pro desks. Human judgment remains the authority.",
 		path: "/company"
 	},
 	contact: {
 		title: "Contact — FIA Labs",
-		description: "Contact FIA Labs. Legal work lives at legalintel.ai. Theological work lives at aquinian.com. Medical work lives at medicalintel.org.",
+		description: "Contact FIA Labs. Legal work lives at legalintel.ai. Medical work lives at medicalintel.org. Theological work lives at aquinian.com. The full suite is on Work.",
 		path: "/contact"
 	}
 };
@@ -82,8 +87,8 @@ var LAB = {
 	city: "Washington, D.C.",
 	country: "USA",
 	tagline: "We don’t just predict outcomes. We reason them.",
-	slogan: "8 Experts. 2 Engines. 1 Ethical Future.",
-	description: "FIA Labs builds expert AI systems for high-consequence work — law, medicine, theology, research, finance, and the rest of the professional desk.",
+	slogan: "7 Experts. 2 Engines. 1 Ethical Future.",
+	description: "FIA Labs — Federated Intelligence Architecture — is the parent lab for seven live Pro desks. Not an eighth app. fia-labs.com redirects here.",
 	email: "support@federatedintel.ai",
 	privacyEmail: "privacy@federatedintel.ai",
 	legalEmail: "legal@federatedintel.ai",
@@ -123,7 +128,7 @@ var APPS = [
 		name: "Legal Intel",
 		kicker: "Governed legal reasoning",
 		summary: "A desk for the file in front of you. Evidence, inference, and gap stay on different lines.",
-		description: "LIA Pro — Legal Intel — is a governed reasoning desk for legal and forensic work. It is not a chatbot for brainstorming. Review evidence, test competing interpretations, identify gaps, and preserve the reasoning behind important decisions. Human judgment remains the authority.",
+		description: "LIA Pro — Legal Intel — is a governed reasoning desk for legal and forensic work. It is not a chatbot for brainstorming, and it is not legal advice. Review evidence, test competing interpretations, identify gaps, and preserve the reasoning behind important decisions. Human judgment remains the authority.",
 		points: [
 			"Conversations for testing an idea; matters for building a file.",
 			"The ledger classifies material as evidence, inference, or gap.",
@@ -135,6 +140,77 @@ var APPS = [
 		marketingUrl: "https://legalintel.ai",
 		deskUrl: "https://pro.legalintel.ai",
 		featured: true
+	},
+	{
+		slug: "mia",
+		shortName: "MIA Pro",
+		name: "Medical Intel",
+		kicker: "Medical research, kept on the record",
+		summary: "A desk for literature, biotechnology, and the medico-legal file. Evidence, inference, and gap stay distinct.",
+		description: "MIA Pro — Medical Intel — is a medical AI research desk for literature, biotechnology, and medico-legal work. It is not a chatbot for brainstorming, and it is not medical advice. It does not replace clinical judgment. Review sources, test competing readings, identify gaps, and preserve the reasoning behind a finding. Human judgment remains the authority.",
+		points: [
+			"Conversations for testing an idea; matters for building a file.",
+			"Separates what a source establishes from what it merely asserts.",
+			"Built for biomedical literature, biotechnology, and medico-legal review.",
+			"Does not diagnose, treat, or replace a licensed clinician."
+		],
+		status: "live",
+		statusLabel: "Live",
+		marketingUrl: "https://medicalintel.org",
+		deskUrl: "https://mia.medicalintel.org",
+		featured: true
+	},
+	{
+		slug: "brandium",
+		shortName: "Brandium Pro",
+		name: "Brandium",
+		kicker: "Growth under unit economics",
+		summary: "Positioning, creative strategy, and acquisition — governed by the numbers that actually constrain growth.",
+		description: "Brandium connects positioning, creative strategy, acquisition economics, and capital discipline. It helps organisations identify the real constraint, test the numbers, and avoid scaling fragile growth.",
+		points: [
+			"Finds the constraint before amplifying the story.",
+			"Holds creative claims against unit economics.",
+			"Built for founders, operators, and investors who refuse narrative distortion.",
+			"A strategist, not a content mill."
+		],
+		status: "live",
+		statusLabel: "Live",
+		marketingUrl: "https://brandium.pro",
+		featured: true
+	},
+	{
+		slug: "cfo-sentinel",
+		shortName: "CFO Sentinel",
+		name: "CFO Sentinel",
+		kicker: "Financial intelligence",
+		summary: "Cash, margins, runway, and downside — where capital is created, consumed, or placed at risk.",
+		description: "CFO Sentinel analyses cash flow, margins, forecasts, working capital, and downside exposure. It gives decision-makers a clearer view of where capital is being created, consumed, or placed at risk — without replacing a finance function.",
+		points: [
+			"Runway, allocation, and working-capital pressure in one reading.",
+			"Downside exposure treated as a first-class object, not a footnote.",
+			"Built for operators and boards who need a defensible financial picture.",
+			"Does not issue investment advice."
+		],
+		status: "live",
+		statusLabel: "Live",
+		marketingUrl: "https://cfosentinel.pro"
+	},
+	{
+		slug: "execmind",
+		shortName: "ExecMind",
+		name: "ExecMind",
+		kicker: "Structured decision support",
+		summary: "Frame the decision, challenge the assumption, compare the options, and write down why.",
+		description: "ExecMind helps executives frame difficult decisions, challenge assumptions, compare strategic options, and document the basis for action. Designed for leadership environments where clarity and accountability are essential.",
+		points: [
+			"Forces the question into a form that can be inspected.",
+			"Surfaces hidden premises before a decision is taken.",
+			"Documents the basis for action, not only the action itself.",
+			"A thinking partner for the room — not a replacement for it."
+		],
+		status: "live",
+		statusLabel: "Live",
+		marketingUrl: "https://execmind.app"
 	},
 	{
 		slug: "aquinian",
@@ -156,74 +232,6 @@ var APPS = [
 		featured: true
 	},
 	{
-		slug: "mia",
-		shortName: "MIA Pro",
-		name: "Medical Intel",
-		kicker: "Medical research, kept on the record",
-		summary: "A desk for literature, biotechnology, and the medico-legal file. Evidence, inference, and gap stay distinct.",
-		description: "MIA Pro — Medical Intel — is a medical AI research desk for literature, biotechnology, and medico-legal work. It is not a chatbot for brainstorming, and it is not medical advice. Review sources, test competing readings, identify gaps, and preserve the reasoning behind a finding. Human judgment remains the authority.",
-		points: [
-			"Conversations for testing an idea; matters for building a file.",
-			"Separates what a source establishes from what it merely asserts.",
-			"Built for biomedical literature, biotechnology, and medico-legal review.",
-			"Does not diagnose, treat, or replace a licensed clinician."
-		],
-		status: "live",
-		statusLabel: "Live",
-		marketingUrl: "https://medicalintel.org",
-		deskUrl: "https://mia.medicalintel.org",
-		featured: true
-	},
-	{
-		slug: "cfo-sentinel",
-		shortName: "CFO Sentinel",
-		name: "CFO Sentinel",
-		kicker: "Financial intelligence",
-		summary: "Cash, margins, runway, and downside — where capital is created, consumed, or placed at risk.",
-		description: "CFO Sentinel analyses cash flow, margins, forecasts, working capital, and downside exposure. It gives decision-makers a clearer view of where capital is being created, consumed, or placed at risk — without replacing a finance function.",
-		points: [
-			"Runway, allocation, and working-capital pressure in one reading.",
-			"Downside exposure treated as a first-class object, not a footnote.",
-			"Built for operators and boards who need a defensible financial picture.",
-			"Does not issue investment advice."
-		],
-		status: "live",
-		statusLabel: "Live",
-		marketingUrl: "https://cfosentinel.pro"
-	},
-	{
-		slug: "brandium",
-		shortName: "Brandium Pro",
-		name: "Brandium",
-		kicker: "Growth under unit economics",
-		summary: "Positioning, creative strategy, and acquisition — governed by the numbers that actually constrain growth.",
-		description: "Brandium connects positioning, creative strategy, acquisition economics, and capital discipline. It helps organisations identify the real constraint, test the numbers, and avoid scaling fragile growth.",
-		points: [
-			"Finds the constraint before amplifying the story.",
-			"Holds creative claims against unit economics.",
-			"Built for founders, operators, and investors who refuse narrative distortion.",
-			"A strategist, not a content mill."
-		],
-		status: "forthcoming",
-		statusLabel: "Forthcoming"
-	},
-	{
-		slug: "execmind",
-		shortName: "ExecMind",
-		name: "ExecMind",
-		kicker: "Structured decision support",
-		summary: "Frame the decision, challenge the assumption, compare the options, and write down why.",
-		description: "ExecMind helps executives frame difficult decisions, challenge assumptions, compare strategic options, and document the basis for action. Designed for leadership environments where clarity and accountability are essential.",
-		points: [
-			"Forces the question into a form that can be inspected.",
-			"Surfaces hidden premises before a decision is taken.",
-			"Documents the basis for action, not only the action itself.",
-			"A thinking partner for the room — not a replacement for it."
-		],
-		status: "forthcoming",
-		statusLabel: "Forthcoming"
-	},
-	{
 		slug: "cine-novelist",
 		shortName: "Cine-Novelist",
 		name: "Cine-Novelist",
@@ -239,26 +247,11 @@ var APPS = [
 		status: "live",
 		statusLabel: "Live",
 		marketingUrl: "https://cinenovelist.com"
-	},
-	{
-		slug: "carcounsel",
-		shortName: "CarCounsel",
-		name: "CarCounsel",
-		kicker: "Automotive guidance",
-		summary: "Understand the vehicle, compare the repair, and ask a more precise question of the person who will do the work.",
-		description: "CarCounsel helps users understand vehicle issues, compare repair options, organise records, and prepare more precise questions for mechanics, insurers, dealers, or advisers. It supports informed decisions without replacing qualified expertise.",
-		points: [
-			"Diagnostics from symptoms, records, images, or sound.",
-			"Repair options compared, not merely listed.",
-			"Ownership, buying, and selling decisions held to the same standard.",
-			"Does not replace a licensed technician."
-		],
-		status: "forthcoming",
-		statusLabel: "Forthcoming"
 	}
 ];
-var FEATURED = APPS.filter((app) => app.featured);
+APPS.filter((app) => app.featured);
 APPS.filter((app) => !app.featured);
+APPS.filter((app) => app.status === "live");
 function getApp(slug) {
 	return APPS.find((app) => app.slug === slug);
 }
@@ -358,7 +351,7 @@ var PRINCIPLES = [
 	{
 		index: "01",
 		title: "Federated specialists",
-		body: "Eight expert systems, each with a domain, a posture, and a refusal to pretend competence it does not have. They do not collapse into a single general model wearing eight hats."
+		body: "Seven expert systems, each with a domain, a posture, and a refusal to pretend competence it does not have. They do not collapse into a single general model wearing seven hats."
 	},
 	{
 		index: "02",
@@ -383,7 +376,7 @@ var PRINCIPLES = [
 	{
 		index: "06",
 		title: "Human judgment remains the authority",
-		body: "The systems support a professional desk. They do not replace counsel, a physician, a priest, a CFO, or a mechanic. The person in the chair decides."
+		body: "The systems support a professional desk. They do not replace counsel, a physician, a priest, or a CFO. Specialists, not a generalist. The person in the chair decides."
 	}
 ];
 var VOICES = [{
@@ -395,34 +388,74 @@ var VOICES = [{
 	name: "John Button",
 	role: "Wrongful-conviction advocate"
 }];
+var FIA_PLAN = {
+	name: "FIA Plan",
+	kicker: "The house seat",
+	price: "$50",
+	period: "month",
+	cta: "Subscribe",
+	active: "Active",
+	footerFact: "1,000 credits / period · one FIA Tank · Federation included",
+	blurb: "The house seat for FIA Labs. One plan for the suite: law (LIA), medical research (MIA), finance (CFO Sentinel), strategy (ExecMind), brand and marketing (Brandium), ethics and philosophy (Aquinian Studio), film and narrative (Cine-Novelist).",
+	deskScope: "You work at the desk that owns the question. Conversations, files, matters, and memory stay on that desk. Rooms are not shared. When a matter needs another discipline, you send an FIA Brief — a packet you authorise — and read the reply. Nothing else is shared.",
+	credits: "Includes 1,000 credits each billing period across the suite, held in one shared FIA Tank. Extra credit packs do not expire. Shared credits and one tank are the product intent — rooms stay separate.",
+	alternative: "FIA Plan is an alternative to a single-desk seat, not an extra charge on top of Operator, Counsel, or Chambers."
+};
 var FAQS = [
 	{
+		id: "what-is-fia-labs",
 		q: "What is FIA Labs?",
-		a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. We build expert AI systems for high-consequence professional work. Five desks are in production: Legal Intel (LIA Pro), Aquinian Studio, Medical Intel (MIA Pro), CFO Sentinel, and Cine-Novelist. Brandium, ExecMind, and CarCounsel are not public until they meet the same standard."
+		a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. FederatedIntel / FIA Labs is the parent — Federated Intelligence Architecture — not an eighth app. fia-labs.com redirects to federatedintel.ai. We build specialist AI systems for high-consequence professional work. Seven Pro desks are live: Legal Intel (LIA Pro), Medical Intel (MIA Pro), Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine-Novelist."
 	},
 	{
+		id: "fia-plan",
+		q: "What is FIA Plan?",
+		a: `${FIA_PLAN.blurb} It entitles the account to the live FIA Labs suite and turns Federation on. ${FIA_PLAN.alternative} ${FIA_PLAN.price}/${FIA_PLAN.period}.`
+	},
+	{
+		id: "federation-fia-brief",
+		q: "What is Federation — and what is an FIA Brief?",
+		a: `${FIA_PLAN.deskScope} Only authorised FIA Briefs cross desks.`
+	},
+	{
+		id: "fia-tank",
+		q: "What is the FIA Tank?",
+		a: "One shared FIA Tank on the house seat. FIA Plan includes 1,000 credits each period across the suite. Extra credit packs do not expire. Shared credits and one tank are the product intent. Rooms stay separate: conversations, files, matters, and memory are not shared across desks."
+	},
+	{
+		id: "credits",
+		q: "How do credits and packs work?",
+		a: FIA_PLAN.credits
+	},
+	{
+		id: "desk-seats",
+		q: "How does FIA Plan relate to a desk seat?",
+		a: `${FIA_PLAN.alternative} Operator, Counsel, and Chambers remain single-desk seats. FIA Plan is the other choice: the house seat for the live suite, with Federation on.`
+	},
+	{
+		id: "federated",
 		q: "What does “federated” mean here?",
-		a: "Not a single general model asked to impersonate eight professions. A federation of specialist systems, each with a domain, collaborating under arbitration. The architecture is built so that a conclusion can be cross-checked rather than merely restated with confidence."
+		a: "Not a single general model asked to impersonate seven professions. A federation of specialist systems, each with a domain, collaborating under arbitration. The architecture is built so that a conclusion can be cross-checked rather than merely restated with confidence."
 	},
 	{
+		id: "symbolic-arbitration",
 		q: "What is symbolic arbitration?",
 		a: "A second pass over a proposed answer using logic, domain rules, and precedent. It is how the system distinguishes a fluent continuation from a claim the record will support. Sequential reasoning then shows the steps."
 	},
 	{
+		id: "where-to-work",
 		q: "Where do I actually work?",
-		a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. CFO Sentinel is at cfosentinel.pro, and Cine-Novelist at cinenovelist.com. Each product has its own domain, accounts, and seats."
+		a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. Brandium is at brandium.pro. CFO Sentinel is at cfosentinel.pro. ExecMind is at execmind.app. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Cine-Novelist is at cinenovelist.com. Each desk has its own domain. FIA Plan is the house seat for the live suite — an alternative to a single-desk seat on Operator, Counsel, or Chambers."
 	},
 	{
-		q: "What about Brandium, ExecMind, and CarCounsel?",
-		a: "They belong to the federation and are named on this site. They are not public, not for sale, and not offered as chatbots. A desk ships when it can show working."
-	},
-	{
+		id: "training",
 		q: "Do you train on my files?",
-		a: "No. We do not train our models on your data. Session material is handled under the Privacy Policy. Legal Intel and Medical Intel keep files on the matter they belong to. Aquinian scopes saved work to the signed-in account."
+		a: "No. We do not train our models on your data. Session material is handled under the Privacy Policy. Conversations, files, matters, and memory stay per desk; only authorised FIA Briefs cross desks."
 	},
 	{
+		id: "advice",
 		q: "Is this a substitute for professional advice?",
-		a: "No. The apps are for informational, educational, and research use. They do not replace legal, medical, financial, pastoral, or mechanical advice. Outputs can be wrong. You are responsible for how they are used."
+		a: "No. The desks are specialists, not a generalist. They are for informational, educational, and research use. LIA is not legal advice. MIA does not replace clinical judgment. Outputs can be wrong. You are responsible for how they are used. Human judgment remains the authority."
 	}
 ];
 var ORGANIZATION_JSON_LD = {
@@ -432,7 +465,11 @@ var ORGANIZATION_JSON_LD = {
 		"@id": `${ORIGIN}/#org`,
 		name: "FIA Labs",
 		legalName: "Federated Intel AI LLC",
-		alternateName: ["Federated Intel AI", "FIA"],
+		alternateName: [
+			"Federated Intel AI",
+			"FederatedIntel",
+			"FIA"
+		],
 		url: ORIGIN,
 		email: "support@federatedintel.ai",
 		description: LAB.description,
@@ -459,7 +496,11 @@ var ORGANIZATION_JSON_LD = {
 			"https://federatedintel.substack.com",
 			"https://legalintel.ai",
 			"https://medicalintel.org",
-			"https://aquinian.com"
+			"https://brandium.pro",
+			"https://cfosentinel.pro",
+			"https://execmind.app",
+			"https://aquinian.com",
+			"https://cinenovelist.com"
 		]
 	}, {
 		"@type": "WebSite",
@@ -481,7 +522,7 @@ var LIA_SOFTWARE_JSON_LD = {
 	applicationCategory: "BusinessApplication",
 	operatingSystem: "Web",
 	url: "https://legalintel.ai",
-	description: "A governed reasoning desk for legal and forensic work. Evidence, inference, and gap stay distinct.",
+	description: "A governed reasoning desk for legal and forensic work. Evidence, inference, and gap stay distinct. Not legal advice.",
 	publisher: { "@id": `${ORIGIN}/#org` }
 };
 /** Desk page only. No Offer / price — MIA Pro seats live on medicalintel.org. */
@@ -512,4 +553,4 @@ var COMPANY_FAQ_JSON_LD = {
 	}))
 };
 //#endregion
-export { workPageCopy as _, FEATURED as a, MIA_SOFTWARE_JSON_LD as c, PAGE_COPY as d, PRINCIPLES as f, robotsForHost as g, pageHead as h, FAQS as i, NAV as l, getApp as m, ARTICLES as n, LAB as o, VOICES as p, COMPANY_FAQ_JSON_LD as r, LIA_SOFTWARE_JSON_LD as s, APPS as t, ORGANIZATION_JSON_LD as u };
+export { workPageCopy as _, FIA_PLAN as a, MIA_SOFTWARE_JSON_LD as c, PAGE_COPY as d, PRINCIPLES as f, robotsForHost as g, pageHead as h, FAQS as i, NAV as l, getApp as m, ARTICLES as n, LAB as o, VOICES as p, COMPANY_FAQ_JSON_LD as r, LIA_SOFTWARE_JSON_LD as s, APPS as t, ORGANIZATION_JSON_LD as u };

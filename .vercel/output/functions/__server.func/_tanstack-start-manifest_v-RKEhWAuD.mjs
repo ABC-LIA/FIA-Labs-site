@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-BFPrIFC3.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-RKEhWAuD.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/workspace/src/routes/__root.tsx",
@@ -18,36 +18,36 @@ var tsrStartManifest = () => ({ routes: {
 			"/work"
 		],
 		preloads: [
-			"/assets/index-DCOp7Vqc.js",
+			"/assets/index-BsN4hwMK.js",
 			"/assets/jsx-runtime-BkSabwWG.js",
 			"/assets/react-DHmoMYoq.js"
 		],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-DCOp7Vqc.js"
+			src: "/assets/index-BsN4hwMK.js"
 		} }]
 	},
 	"/": {
 		filePath: "/workspace/src/routes/index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/routes-Cs6Hwdze.js",
-			"/assets/arrow-right-CRTJYQHj.js",
-			"/assets/arrow-up-right-Ck6lyzHS.js",
+			"/assets/routes-CH-N6uiv.js",
+			"/assets/fia-plan-section-MbWmZGGp.js",
+			"/assets/arrow-up-right-BNqcxDr0.js",
 			"/assets/json-ld-BIdu6_6R.js"
 		]
 	},
 	"/africa": {
 		filePath: "/workspace/src/routes/africa.tsx",
 		children: void 0,
-		preloads: ["/assets/africa-CCJcj1aX.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/africa-tsE5_ofS.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/company": {
 		filePath: "/workspace/src/routes/company.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/company-BXLErDjd.js",
+			"/assets/company-DVg6F-AX.js",
 			"/assets/page-frame-DMIUMwIL.js",
 			"/assets/json-ld-BIdu6_6R.js"
 		]
@@ -55,44 +55,44 @@ var tsrStartManifest = () => ({ routes: {
 	"/contact": {
 		filePath: "/workspace/src/routes/contact.tsx",
 		children: void 0,
-		preloads: ["/assets/contact-Bdk0yGNl.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/contact-BdQAtaVs.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/method": {
 		filePath: "/workspace/src/routes/method.tsx",
 		children: void 0,
-		preloads: ["/assets/method-id44Q-85.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/method-DHKmwM6k.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/privacy": {
 		filePath: "/workspace/src/routes/privacy.tsx",
 		children: void 0,
-		preloads: ["/assets/privacy-Bdpp0vlt.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/privacy-Bhh9hGp2.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/research": {
 		filePath: "/workspace/src/routes/research.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/research-DSEPO0U4.js",
-			"/assets/arrow-up-right-Ck6lyzHS.js",
+			"/assets/research-CCE8g5iW.js",
+			"/assets/arrow-up-right-BNqcxDr0.js",
 			"/assets/page-frame-DMIUMwIL.js"
 		]
 	},
 	"/terms": {
 		filePath: "/workspace/src/routes/terms.tsx",
 		children: void 0,
-		preloads: ["/assets/terms-CloPP0-x.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/terms-ByjwNyq1.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/work": {
 		filePath: "/workspace/src/routes/work.tsx",
 		children: ["/work/$slug", "/work/"],
-		preloads: ["/assets/work-D5fTA73w.js"]
+		preloads: ["/assets/work-6wK6B-Gz.js"]
 	},
 	"/work/$slug": {
 		filePath: "/workspace/src/routes/work.$slug.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/work._slug-eI59SLD0.js",
-			"/assets/arrow-right-CRTJYQHj.js",
-			"/assets/arrow-up-right-Ck6lyzHS.js",
+			"/assets/work._slug-woKwdhC9.js",
+			"/assets/fia-plan-section-MbWmZGGp.js",
+			"/assets/arrow-up-right-BNqcxDr0.js",
 			"/assets/json-ld-BIdu6_6R.js"
 		]
 	},
@@ -100,8 +100,8 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "/workspace/src/routes/work.index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/work.index-Y3eMOiNK.js",
-			"/assets/arrow-right-CRTJYQHj.js",
+			"/assets/work.index-DRb91Iuy.js",
+			"/assets/fia-plan-section-MbWmZGGp.js",
 			"/assets/page-frame-DMIUMwIL.js"
 		]
 	}

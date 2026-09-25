@@ -17,6 +17,7 @@ export const LEGACY_REDIRECTS: Readonly<Record<string, string>> = {
   "/apps": "/work",
   "/pricing-philosophy": "/company",
   "/work/mira": "/work/mia",
+  "/work/carcounsel": "/work",
 };
 
 export function hostnameFromHostHeader(header?: string | null): string {

@@ -54,7 +54,7 @@ function ContactPage() {
     <PageFrame
       index="06 · Contact"
       title="Write to the lab."
-      dek="Legal work lives at legalintel.ai. Theological work lives at aquinian.com. Medical work lives at medicalintel.org. Letters for the lab itself go to the address that matches the subject."
+      dek="Legal work lives at legalintel.ai. Medical work lives at medicalintel.org. Theological work lives at aquinian.com. Brandium, CFO Sentinel, ExecMind, and Cine-Novelist are live on their own domains. Letters for the lab itself go to the address that matches the subject."
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-12 md:grid-cols-[0.85fr_1.15fr] md:px-8 md:py-16">
         <ul className="space-y-6">
@@ -72,15 +72,6 @@ function ContactPage() {
               >
                 legalintel.ai
               </a>
-              . Aquinian Studio is at{" "}
-              <a
-                href="https://aquinian.com"
-                target="_blank"
-                rel="noreferrer"
-                className="text-fg hover:text-accent"
-              >
-                aquinian.com
-              </a>
               . Medical Intel (MIA Pro) is at{" "}
               <a
                 href="https://medicalintel.org"
@@ -90,8 +81,52 @@ function ContactPage() {
               >
                 medicalintel.org
               </a>
-              . CFO Sentinel and Cine-Novelist are live on their own domains.
-              The full index is on{" "}
+              . Brandium is at{" "}
+              <a
+                href="https://brandium.pro"
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg hover:text-accent"
+              >
+                brandium.pro
+              </a>
+              . CFO Sentinel is at{" "}
+              <a
+                href="https://cfosentinel.pro"
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg hover:text-accent"
+              >
+                cfosentinel.pro
+              </a>
+              . ExecMind is at{" "}
+              <a
+                href="https://execmind.app"
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg hover:text-accent"
+              >
+                execmind.app
+              </a>
+              . Aquinian Studio is at{" "}
+              <a
+                href="https://aquinian.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg hover:text-accent"
+              >
+                aquinian.com
+              </a>
+              . Cine-Novelist is at{" "}
+              <a
+                href="https://cinenovelist.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg hover:text-accent"
+              >
+                cinenovelist.com
+              </a>
+              . The full index is on{" "}
               <Link to="/work" className="text-fg hover:text-accent">
                 Work
               </Link>
