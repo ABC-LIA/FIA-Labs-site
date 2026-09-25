@@ -18,19 +18,19 @@ export const PAGE_COPY = {
   lia: {
     title: "LegalIntel (LIA Pro) — FIA Labs",
     description:
-      "A governed reasoning desk for legal and forensic work. Evidence, inference and gap stay distinct. Not legal advice. Open the desk at legalintel.ai.",
+      "A governed reasoning desk for legal and forensic work. Evidence, inference and gap stay distinct. Not legal advice. Open the desk at pro.legalintel.ai.",
     path: "/work/lia",
   },
   aquinian: {
     title: "Aquinian Studio — FIA Labs",
     description:
-      "Theological and philosophical work at the studio. Open it at aquinian.com.",
+      "Theological and philosophical work at the studio. Open the studio at studio.aquinian.com.",
     path: "/work/aquinian",
   },
   mia: {
     title: "Medical Intel (MIA Pro) — FIA Labs",
     description:
-      "A medical AI research desk for literature, biotechnology, and the medico-legal file. Not medical advice. Human judgment remains the authority. Open the desk at medicalintel.org.",
+      "A medical AI research desk for literature, biotechnology, and the medico-legal file. Not medical advice. Human judgment remains the authority. Open the desk at mia.medicalintel.org.",
     path: "/work/mia",
   },
   brandium: {
@@ -96,10 +96,34 @@ export const NAV = [
   { href: "/company", label: "Company", index: "05" },
 ] as const;
 
-export type AppStatus = "live" | "forthcoming";
+export type AppStatus = "live";
+
+/** Live Pro hosts — the primary “Open the desk” destination. */
+export const DESK_HOSTS = {
+  lia: "https://pro.legalintel.ai",
+  mia: "https://mia.medicalintel.org",
+  brandium: "https://brandium.pro",
+  "cfo-sentinel": "https://cfosentinel.pro",
+  execmind: "https://execmind.app",
+  aquinian: "https://studio.aquinian.com",
+  "cine-novelist": "https://cinenovelist.com",
+} as const;
+
+/** Public marketing sites. Shown only when they differ from the Pro host. */
+export const MARKETING_HOSTS = {
+  lia: "https://legalintel.ai",
+  mia: "https://medicalintel.org",
+  brandium: "https://brandium.pro",
+  "cfo-sentinel": "https://cfosentinel.pro",
+  execmind: "https://execmind.app",
+  aquinian: "https://aquinian.com",
+  "cine-novelist": "https://cinenovelist.com",
+} as const;
+
+export type DeskSlug = keyof typeof DESK_HOSTS;
 
 export type LabApp = {
-  slug: string;
+  slug: DeskSlug;
   shortName: string;
   name: string;
   kicker: string;
@@ -108,10 +132,23 @@ export type LabApp = {
   points: string[];
   status: AppStatus;
   statusLabel: string;
-  marketingUrl?: string;
-  deskUrl?: string;
+  marketingUrl: string;
+  deskUrl: string;
   featured?: boolean;
 };
+
+export function deskOpenLabel(app: Pick<LabApp, "slug">) {
+  return app.slug === "aquinian" ? "Open the studio" : "Open the desk";
+}
+
+export function marketingHostLabel(url: string) {
+  return url.replace(/^https:\/\//, "").replace(/\/$/, "");
+}
+
+export function separateMarketingUrl(app: LabApp): string | undefined {
+  if (app.marketingUrl === app.deskUrl) return undefined;
+  return app.marketingUrl;
+}
 
 export const APPS: LabApp[] = [
   {
@@ -131,8 +168,8 @@ export const APPS: LabApp[] = [
     ],
     status: "live",
     statusLabel: "Live",
-    marketingUrl: "https://legalintel.ai",
-    deskUrl: "https://pro.legalintel.ai",
+    marketingUrl: MARKETING_HOSTS.lia,
+    deskUrl: DESK_HOSTS.lia,
     featured: true,
   },
   {
@@ -152,8 +189,8 @@ export const APPS: LabApp[] = [
     ],
     status: "live",
     statusLabel: "Live",
-    marketingUrl: "https://medicalintel.org",
-    deskUrl: "https://mia.medicalintel.org",
+    marketingUrl: MARKETING_HOSTS.mia,
+    deskUrl: DESK_HOSTS.mia,
     featured: true,
   },
   {
@@ -173,7 +210,8 @@ export const APPS: LabApp[] = [
     ],
     status: "live",
     statusLabel: "Live",
-    marketingUrl: "https://brandium.pro",
+    marketingUrl: MARKETING_HOSTS.brandium,
+    deskUrl: DESK_HOSTS.brandium,
     featured: true,
   },
   {
@@ -193,7 +231,8 @@ export const APPS: LabApp[] = [
     ],
     status: "live",
     statusLabel: "Live",
-    marketingUrl: "https://cfosentinel.pro",
+    marketingUrl: MARKETING_HOSTS["cfo-sentinel"],
+    deskUrl: DESK_HOSTS["cfo-sentinel"],
   },
   {
     slug: "execmind",
@@ -212,7 +251,8 @@ export const APPS: LabApp[] = [
     ],
     status: "live",
     statusLabel: "Live",
-    marketingUrl: "https://execmind.app",
+    marketingUrl: MARKETING_HOSTS.execmind,
+    deskUrl: DESK_HOSTS.execmind,
   },
   {
     slug: "aquinian",
@@ -231,8 +271,8 @@ export const APPS: LabApp[] = [
     ],
     status: "live",
     statusLabel: "Live",
-    marketingUrl: "https://aquinian.com",
-    deskUrl: "https://studio.aquinian.com",
+    marketingUrl: MARKETING_HOSTS.aquinian,
+    deskUrl: DESK_HOSTS.aquinian,
     featured: true,
   },
   {
@@ -252,7 +292,8 @@ export const APPS: LabApp[] = [
     ],
     status: "live",
     statusLabel: "Live",
-    marketingUrl: "https://cinenovelist.com",
+    marketingUrl: MARKETING_HOSTS["cine-novelist"],
+    deskUrl: DESK_HOSTS["cine-novelist"],
   },
 ];
 

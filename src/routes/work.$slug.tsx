@@ -7,8 +7,11 @@ import {
   APPS,
   LIA_SOFTWARE_JSON_LD,
   MIA_SOFTWARE_JSON_LD,
+  deskOpenLabel,
   getApp,
+  marketingHostLabel,
   pageHead,
+  separateMarketingUrl,
   workPageCopy,
 } from "@/lib/site";
 
@@ -47,6 +50,7 @@ function AppPage() {
   const index = APPS.findIndex((item) => item.slug === app.slug);
   const prev = APPS[(index - 1 + APPS.length) % APPS.length];
   const next = APPS[(index + 1) % APPS.length];
+  const marketing = separateMarketingUrl(app);
 
   return (
     <main id="content">
@@ -76,27 +80,10 @@ function AppPage() {
             {app.description}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            {app.marketingUrl ? (
-              <ExternalLink href={app.marketingUrl}>
-                {app.slug === "lia"
-                  ? "Open LegalIntel"
-                  : app.slug === "aquinian"
-                    ? "Open Aquinian"
-                    : app.slug === "mia"
-                      ? "Open Medical Intel"
-                      : app.marketingUrl.replace("https://", "")}
-              </ExternalLink>
-            ) : (
-              <Link
-                to="/method"
-                className="inline-flex h-11 items-center rounded-md border border-border px-5 text-sm text-fg"
-              >
-                How the method works
-              </Link>
-            )}
-            {app.deskUrl ? (
-              <ExternalLink href={app.deskUrl} quiet>
-                {app.slug === "aquinian" ? "Open the studio" : "Open the desk"}
+            <ExternalLink href={app.deskUrl}>{deskOpenLabel(app)}</ExternalLink>
+            {marketing ? (
+              <ExternalLink href={marketing} quiet>
+                {marketingHostLabel(marketing)}
               </ExternalLink>
             ) : null}
           </div>

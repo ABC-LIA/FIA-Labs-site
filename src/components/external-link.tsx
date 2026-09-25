@@ -14,7 +14,7 @@ export function ExternalLink({ href, children, className, quiet }: ExternalLinkP
     <a
       href={href}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className={cn(
         "inline-flex items-center gap-1.5 transition-opacity duration-150 hover:opacity-80",
         quiet

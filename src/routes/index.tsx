@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { DeskLinks, DeskTitleLink } from "@/components/desk-links";
 import { FederationField } from "@/components/federation-field";
 import { FiaPlanSection } from "@/components/fia-plan-section";
 import { JsonLd } from "@/components/json-ld";
@@ -89,48 +90,15 @@ function Home() {
                     {app.statusLabel}
                   </p>
                 </div>
-                <h3 className="mt-4 font-display text-2xl md:text-3xl">{app.name}</h3>
+                <h3 className="mt-4 font-display text-2xl md:text-3xl">
+                  <DeskTitleLink app={app} className="hover:text-accent">
+                    {app.name}
+                  </DeskTitleLink>
+                </h3>
                 <p className="mt-3 text-[0.95rem] leading-relaxed text-muted md:text-base">
                   {app.summary}
                 </p>
-                <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3">
-                  {app.marketingUrl ? (
-                    <a
-                      href={app.marketingUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm text-fg"
-                    >
-                      {app.slug === "lia"
-                        ? "Open LegalIntel"
-                        : app.slug === "aquinian"
-                          ? "Open Aquinian"
-                          : app.slug === "mia"
-                            ? "Open Medical Intel"
-                            : "Visit the site"}
-                      <ArrowUpRight className="size-3.5" />
-                    </a>
-                  ) : null}
-                  {app.deskUrl ? (
-                    <a
-                      href={app.deskUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-fg"
-                    >
-                      {app.slug === "aquinian" ? "Open the studio" : "Open the desk"}
-                      <ArrowUpRight className="size-3.5" />
-                    </a>
-                  ) : null}
-                  <Link
-                    to="/work/$slug"
-                    params={{ slug: app.slug }}
-                    className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-fg"
-                  >
-                    On this site
-                    <ArrowRight className="size-3.5" />
-                  </Link>
-                </div>
+                <DeskLinks app={app} className="mt-8" />
               </article>
             ))}
           </div>

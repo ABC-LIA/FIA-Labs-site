@@ -120,10 +120,45 @@ describe("24 Sep 2026 estate canon", () => {
 
   it("marks Brandium and ExecMind live with existing product domains", () => {
     assert.match(site, /slug: "brandium"[\s\S]*?status: "live"/);
-    assert.match(site, /marketingUrl: "https:\/\/brandium\.pro"/);
+    assert.match(site, /brandium: "https:\/\/brandium\.pro"/);
     assert.match(site, /slug: "execmind"[\s\S]*?status: "live"/);
-    assert.match(site, /marketingUrl: "https:\/\/execmind\.app"/);
+    assert.match(site, /execmind: "https:\/\/execmind\.app"/);
     assert.doesNotMatch(site, /status: "forthcoming"/);
+    assert.doesNotMatch(site, /"forthcoming"/);
+  });
+
+  it("points every live desk at its Pro host", () => {
+    assert.match(site, /lia: "https:\/\/pro\.legalintel\.ai"/);
+    assert.match(site, /mia: "https:\/\/mia\.medicalintel\.org"/);
+    assert.match(site, /brandium: "https:\/\/brandium\.pro"/);
+    assert.match(site, /"cfo-sentinel": "https:\/\/cfosentinel\.pro"/);
+    assert.match(site, /execmind: "https:\/\/execmind\.app"/);
+    assert.match(site, /aquinian: "https:\/\/studio\.aquinian\.com"/);
+    assert.match(site, /"cine-novelist": "https:\/\/cinenovelist\.com"/);
+    assert.match(site, /deskUrl: DESK_HOSTS\.lia/);
+    assert.match(site, /deskUrl: DESK_HOSTS\.mia/);
+    assert.match(site, /deskUrl: DESK_HOSTS\.brandium/);
+    assert.match(site, /deskUrl: DESK_HOSTS\["cfo-sentinel"\]/);
+    assert.match(site, /deskUrl: DESK_HOSTS\.execmind/);
+    assert.match(site, /deskUrl: DESK_HOSTS\.aquinian/);
+    assert.match(site, /deskUrl: DESK_HOSTS\["cine-novelist"\]/);
+    assert.match(site, /if \(app\.marketingUrl === app\.deskUrl\) return undefined/);
+    assert.match(site, /return app\.slug === "aquinian" \? "Open the studio" : "Open the desk"/);
+  });
+
+  it("sends home and work cards to the Pro host, with About this desk secondary", () => {
+    const home = read("src/routes/index.tsx");
+    const work = read("src/routes/work.index.tsx");
+    const detail = read("src/routes/work.$slug.tsx");
+    const links = read("src/components/desk-links.tsx");
+    assert.match(home, /<DeskLinks/);
+    assert.match(work, /<DeskLinks/);
+    assert.match(links, /About this desk/);
+    assert.match(links, /app\.deskUrl/);
+    assert.match(links, /noopener noreferrer/);
+    assert.match(detail, /href=\{app\.deskUrl\}/);
+    assert.match(detail, /deskOpenLabel\(app\)/);
+    assert.doesNotMatch(detail, /quiet>\s*\{deskOpenLabel/);
   });
 
   it("keeps parent identity and specialist posture", () => {
