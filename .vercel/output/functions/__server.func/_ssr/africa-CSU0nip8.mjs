@@ -1,7 +1,7 @@
-import { t as APPS } from "./site-BWQTIidw.mjs";
+import { t as APPS } from "./site-D21DOjWi.mjs";
 import { B as require_jsx_runtime, v as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/africa-F1_rrNML.js
+//#region node_modules/.nitro/vite/services/ssr/assets/africa-CSU0nip8.js
 var import_jsx_runtime = require_jsx_runtime();
 function AfricaPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {

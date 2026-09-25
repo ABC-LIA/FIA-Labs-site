@@ -1,8 +1,8 @@
-import { n as ARTICLES, o as LAB } from "./site-BWQTIidw.mjs";
+import { n as ARTICLES, o as LAB } from "./site-D21DOjWi.mjs";
 import { B as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { o as ArrowUpRight } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/research-C2ys5Z1l.js
+//#region node_modules/.nitro/vite/services/ssr/assets/research-BxKaNQIY.js
 var import_jsx_runtime = require_jsx_runtime();
 function ResearchPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageFrame, {
