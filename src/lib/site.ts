@@ -6,7 +6,7 @@ export const PAGE_COPY = {
   home: {
     title: "FIA Labs — Federated Intel AI",
     description:
-      "Expert systems for high-consequence work. Seven live Pro desks: Legal Intel, Medical Intel, Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine-Novelist. A record of how the answer was reached.",
+      "Expert systems for high-consequence work. Seven live Pro desks: Legal Intel, Medical Intel, Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine Novelist. A record of how the answer was reached.",
     path: "/",
   },
   work: {
@@ -52,9 +52,9 @@ export const PAGE_COPY = {
     path: "/work/execmind",
   },
   cineNovelist: {
-    title: "Cine-Novelist — FIA Labs",
+    title: "Cine Novelist — FIA Labs",
     description:
-      "Character, structure, theme, and scene — stories that can withstand revision. Open Cine-Novelist at cinenovelist.com.",
+      "Character, structure, theme, and scene — stories that can withstand revision. Open Cine Novelist at cinenovelist.com.",
     path: "/work/cine-novelist",
   },
   company: {
@@ -237,13 +237,13 @@ export const APPS: LabApp[] = [
   },
   {
     slug: "cine-novelist",
-    shortName: "Cine-Novelist",
-    name: "Cine-Novelist",
+    shortName: "Cine Novelist",
+    name: "Cine Novelist",
     kicker: "Narrative architecture",
     summary:
       "Character, structure, theme, and scene — stories that can withstand revision.",
     description:
-      "Cine-Novelist helps writers develop character, structure, theme, scene progression, and cinematic coherence. It supports the construction of stories that can withstand revision rather than merely generate pages. Coverage, production logic, and continuity sit beside the page.",
+      "Cine Novelist helps writers develop character, structure, theme, scene progression, and cinematic coherence. It supports the construction of stories that can withstand revision rather than merely generate pages. Coverage, production logic, and continuity sit beside the page.",
     points: [
       "Story development with genre, plausibility, and coherence in view.",
       "Script coverage that says what needs fixing — and whether it is worth fixing.",
@@ -255,6 +255,16 @@ export const APPS: LabApp[] = [
     marketingUrl: "https://cinenovelist.com",
   },
 ];
+
+/** Crawlable cross-links to each product site (SEO plan, Oct 2026). Plain <a href>, descriptive anchors. */
+export const PRODUCT_LINKS = [
+  { href: "https://aquinian.com", label: "Aquinian: Thomistic philosophy and the Summa Theologiae" },
+  { href: "https://cinenovelist.com", label: "Cine Novelist: script coverage and script analysis" },
+  { href: "https://legalintel.ai", label: "Legal Intel AI (LIA): legal AI for evidence and case analysis" },
+  { href: "https://medicalintel.org", label: "Medical Intel (MIA): medical research and medico-legal reports" },
+  { href: "https://cfosentinel.pro", label: "CFO Sentinel: AI CFO desk for LBO models and board reports" },
+  { href: "https://execmind.app", label: "ExecMind: AI decision support for executives" },
+] as const;
 
 export const FEATURED = APPS.filter((app) => app.featured);
 export const SUITE = APPS.filter((app) => !app.featured);
@@ -387,7 +397,7 @@ export const FIA_PLAN = {
   active: "Active",
   footerFact: "1,000 credits / period · one FIA Tank · Federation included",
   blurb:
-    "The house seat for FIA Labs. One plan for the suite: law (LIA), medical research (MIA), finance (CFO Sentinel), strategy (ExecMind), brand and marketing (Brandium), ethics and philosophy (Aquinian Studio), film and narrative (Cine-Novelist).",
+    "The house seat for FIA Labs. One plan for the suite: law (LIA), medical research (MIA), finance (CFO Sentinel), strategy (ExecMind), brand and marketing (Brandium), ethics and philosophy (Aquinian Studio), film and narrative (Cine Novelist).",
   deskScope:
     "You work at the desk that owns the question. Conversations, files, matters, and memory stay on that desk. Rooms are not shared. When a matter needs another discipline, you send an FIA Brief — a packet you authorise — and read the reply. Nothing else is shared.",
   credits:
@@ -400,7 +410,7 @@ export const FAQS = [
   {
     id: "what-is-fia-labs",
     q: "What is FIA Labs?",
-    a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. FederatedIntel / FIA Labs is the parent — Federated Intelligence Architecture — not an eighth app. fia-labs.com redirects to federatedintel.ai. We build specialist AI systems for high-consequence professional work. Seven Pro desks are live: Legal Intel (LIA Pro), Medical Intel (MIA Pro), Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine-Novelist.",
+    a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. FederatedIntel / FIA Labs is the parent — Federated Intelligence Architecture — not an eighth app. fia-labs.com redirects to federatedintel.ai. We build specialist AI systems for high-consequence professional work. Seven Pro desks are live: Legal Intel (LIA Pro), Medical Intel (MIA Pro), Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine Novelist.",
   },
   {
     id: "fia-plan",
@@ -440,7 +450,7 @@ export const FAQS = [
   {
     id: "where-to-work",
     q: "Where do I actually work?",
-    a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. Brandium is at brandium.pro. CFO Sentinel is at cfosentinel.pro. ExecMind is at execmind.app. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Cine-Novelist is at cinenovelist.com. Each desk has its own domain. FIA Plan is the house seat for the live suite — an alternative to a single-desk seat on Operator, Counsel, or Chambers.",
+    a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. Brandium is at brandium.pro. CFO Sentinel is at cfosentinel.pro. ExecMind is at execmind.app. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Cine Novelist is at cinenovelist.com. Each desk has its own domain. FIA Plan is the house seat for the live suite — an alternative to a single-desk seat on Operator, Counsel, or Chambers.",
   },
   {
     id: "training",

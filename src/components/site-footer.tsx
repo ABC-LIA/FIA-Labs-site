@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { FiaMark } from "@/components/mark";
-import { LAB, NAV } from "@/lib/site";
+import { LAB, NAV, PRODUCT_LINKS } from "@/lib/site";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.2fr_1fr_1fr] md:px-8 md:py-16">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.2fr_1.3fr_1fr_1fr] md:px-8 md:py-16">
         <div>
           <div className="flex items-center gap-2.5">
             <FiaMark className="size-7 text-fg" />
@@ -17,6 +17,21 @@ export function SiteFooter() {
           </p>
           <p className="mt-5 font-display text-lg italic text-fg/90">{LAB.slogan}</p>
         </div>
+
+        <nav aria-label="FIA Labs desks">
+          <p className="font-mono text-[10px] tracking-[0.2em] text-subtle uppercase">
+            Desks
+          </p>
+          <ul className="mt-4 space-y-2">
+            {PRODUCT_LINKS.map((item) => (
+              <li key={item.href}>
+                <a href={item.href} className="text-sm text-muted hover:text-fg">
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <div>
           <p className="font-mono text-[10px] tracking-[0.2em] text-subtle uppercase">
