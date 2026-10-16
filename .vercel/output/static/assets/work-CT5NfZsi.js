@@ -1,1 +1,0 @@
-import{_ as e,y as t}from"./index-pgUHGRiB.js";var n=t();function r(){return(0,n.jsx)(e,{})}export{r as component};
