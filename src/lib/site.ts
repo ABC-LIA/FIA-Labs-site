@@ -261,8 +261,8 @@ export const PRODUCT_LINKS = [
   { href: "https://aquinian.com", label: "Aquinian: Thomistic philosophy and the Summa Theologiae" },
   { href: "https://cinenovelist.com", label: "Cine Novelist: script coverage and script analysis" },
   { href: "https://legalintel.ai", label: "Legal Intel AI (LIA): legal AI for evidence and case analysis" },
-  { href: "https://medicalintel.org", label: "Medical Intel (MIA): medical research and medico-legal reports" },
-  { href: "https://cfosentinel.pro", label: "CFO Sentinel: AI CFO desk for LBO models and board reports" },
+  { href: "https://medicalintel.org", label: "Medical Intel (MIA): medical research and the medico-legal file" },
+  { href: "https://cfosentinel.pro", label: "CFO Sentinel: financial intelligence desk for cash, margins and runway" },
   { href: "https://execmind.app", label: "ExecMind: AI decision support for executives" },
 ] as const;
 
