@@ -1,4 +1,4 @@
-import { B as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { q as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/page-frame-DwFh0oLd.js
 var import_jsx_runtime = require_jsx_runtime();
 function PageFrame({ index, title, dek, aside, children }) {
