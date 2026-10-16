@@ -54,7 +54,7 @@ function ContactPage() {
     <PageFrame
       index="06 · Contact"
       title="Write to the lab."
-      dek="Legal work lives at legalintel.ai. Medical work lives at medicalintel.org. Theological work lives at aquinian.com. Brandium, CFO Sentinel, ExecMind, and Cine-Novelist are live on their own domains. Letters for the lab itself go to the address that matches the subject."
+      dek="Legal work lives at legalintel.ai. Medical work lives at medicalintel.org. Theological work lives at aquinian.com. Brandium, CFO Sentinel, ExecMind, and Cine Novelist are live on their own domains. Letters for the lab itself go to the address that matches the subject."
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-12 md:grid-cols-[0.85fr_1.15fr] md:px-8 md:py-16">
         <ul className="space-y-6">
@@ -117,7 +117,7 @@ function ContactPage() {
               >
                 aquinian.com
               </a>
-              . Cine-Novelist is at{" "}
+              . Cine Novelist is at{" "}
               <a
                 href="https://cinenovelist.com"
                 target="_blank"

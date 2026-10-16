@@ -25,7 +25,7 @@ function AfricaPage() {
             <p>
               Project Africa put the live Pro desks — Legal Intel, Medical
               Intel, Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and
-              Cine-Novelist — in reach of people who would otherwise meet a
+              Cine Novelist — in reach of people who would otherwise meet a
               paywall first. The work is legal empowerment, research, brand
               and enterprise, finance, governance, ethics, and craft. The
               same seven names, without a different product for a different

@@ -60,7 +60,7 @@ describe("FIA Plan house-seat copy", () => {
     );
     assert.match(
       site,
-      /The house seat for FIA Labs\. One plan for the suite: law \(LIA\), medical research \(MIA\), finance \(CFO Sentinel\), strategy \(ExecMind\), brand and marketing \(Brandium\), ethics and philosophy \(Aquinian Studio\), film and narrative \(Cine-Novelist\)\./,
+      /The house seat for FIA Labs\. One plan for the suite: law \(LIA\), medical research \(MIA\), finance \(CFO Sentinel\), strategy \(ExecMind\), brand and marketing \(Brandium\), ethics and philosophy \(Aquinian Studio\), film and narrative \(Cine Novelist\)\./,
     );
     assert.match(
       site,
