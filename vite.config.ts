@@ -176,6 +176,9 @@ export default defineConfig(({ command, isPreview }) => ({
           vercelEdgeRedirectsPlugin(),
           nitro({
             preset: "vercel",
+            // Pin the Vercel function runtime: Nitro otherwise derives it from
+            // the local Node version, and nodejs20.x is discontinued on Vercel.
+            vercel: { functions: { runtime: "nodejs22.x" } },
             // Auto-registers server/middleware/* (the PWA install page +
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
