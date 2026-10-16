@@ -14,7 +14,7 @@ This is the parent lab site. Products live on their own domains. FIA Labs does n
 - [CFO Sentinel](https://cfosentinel.pro): cash, margins, runway, and downside
 - [ExecMind](https://execmind.app): structured decision support for executives
 - [Aquinian Studio](https://aquinian.com): a virtual Thomistic intellect for theology, philosophy, doctrine, natural law, and cultural analysis. Studio: https://studio.aquinian.com
-- [Cine-Novelist](https://cinenovelist.com): character, structure, theme, and scene — stories that can withstand revision
+- [Cine Novelist](https://cinenovelist.com): character, structure, theme, and scene — stories that can withstand revision
 
 Human judgment remains the authority. These are specialists, not a generalist, and not substitutes for counsel, a physician, a priest, a CFO, or other licensed professionals.
 
