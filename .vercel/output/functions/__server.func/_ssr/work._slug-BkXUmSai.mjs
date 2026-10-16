@@ -2,9 +2,9 @@ import { c as MIA_SOFTWARE_JSON_LD, h as getApp, s as LIA_SOFTWARE_JSON_LD, t as
 import { K as notFound, q as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { c as ArrowLeft, o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { n as Route, r as cn } from "./router-BaB7DD26.mjs";
+import { n as Route, r as cn } from "./router-A_GtPiUS.mjs";
 import { t as FiaPlanDeskNote } from "./fia-plan-section-03qRuVHY.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-ByGtEE7d.js
+//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-BkXUmSai.js
 var import_jsx_runtime = require_jsx_runtime();
 function ExternalLink({ href, children, className, quiet }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
