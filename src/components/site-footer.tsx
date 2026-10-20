@@ -55,6 +55,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link to="/what-is-symbolic-ai" className="text-sm text-muted hover:text-fg">
+                What is symbolic AI?
+              </Link>
+            </li>
+            <li>
               <Link to="/contact" className="text-sm text-muted hover:text-fg">
                 Contact
               </Link>

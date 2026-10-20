@@ -156,6 +156,26 @@ function Home() {
               </article>
             ))}
           </div>
+          <div id="symbolic-ai" className="mt-12 max-w-3xl">
+            <h3 className="font-display text-2xl">What is symbolic AI, and why we use it</h3>
+            <p className="mt-4 text-sm leading-relaxed text-muted">
+              Symbolic AI represents knowledge as explicit facts and rules, and reaches a conclusion
+              in steps a person can follow. It is the tradition behind expert systems. Neural AI,
+              including large language models, learns patterns from data instead: it is fluent and
+              flexible, but its reasons are not stored as rules, so a confident answer can be
+              unsupported.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              High-consequence work needs both. Our desks use a generation engine to read the
+              record and propose, and a symbolic engine to test the proposal against domain rules,
+              logic and precedent. That is symbolic arbitration. Sequential reasoning keeps the
+              steps visible, and evidence, inference and gap stay on different lines. If a
+              conclusion cannot be reconstructed, it is not ready.
+            </p>
+            <Link to="/what-is-symbolic-ai" className="mt-3 inline-flex text-sm text-fg underline underline-offset-4">
+              What is symbolic AI? The longer answer
+            </Link>
+          </div>
           <Link
             to="/method"
             className="mt-8 inline-flex items-center gap-2 text-sm text-fg"
