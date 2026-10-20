@@ -1,8 +1,8 @@
-import { a as FIA_PLAN, i as FAQS, m as VOICES, o as LAB, r as COMPANY_FAQ_JSON_LD } from "./site-DRNngPjO.mjs";
+import { a as FIA_PLAN, i as FAQS, m as VOICES, o as LAB, r as COMPANY_FAQ_JSON_LD } from "./site-Dv3SXQ61.mjs";
 import { q as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/company-Dbjjutza.js
+//#region node_modules/.nitro/vite/services/ssr/assets/company-BMeS9XbV.js
 var import_jsx_runtime = require_jsx_runtime();
 function CompanyPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(PageFrame, {

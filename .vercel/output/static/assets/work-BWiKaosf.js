@@ -1,0 +1,1 @@
+import{_ as e,y as t}from"./index-BNH0SGEt.js";var n=t();function r(){return(0,n.jsx)(e,{})}export{r as component};

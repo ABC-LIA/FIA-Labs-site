@@ -1,7 +1,7 @@
-import { o as LAB } from "./site-DRNngPjO.mjs";
+import { o as LAB } from "./site-Dv3SXQ61.mjs";
 import { q as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/privacy-BJcFZ-9d.js
+//#region node_modules/.nitro/vite/services/ssr/assets/privacy-CaNm6N_t.js
 var import_jsx_runtime = require_jsx_runtime();
 var SECTIONS = [
 	{
