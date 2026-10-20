@@ -21,6 +21,7 @@ import { Route as PricingPhilosophyRouteImport } from './routes/pricing-philosop
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as WhatIsSymbolicAiRouteImport } from './routes/what-is-symbolic-ai'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as WorkIndexRouteImport } from './routes/work.index'
 import { Route as WorkSlugRouteImport } from './routes/work.$slug'
@@ -85,6 +86,11 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WhatIsSymbolicAiRoute = WhatIsSymbolicAiRouteImport.update({
+  id: '/what-is-symbolic-ai',
+  path: '/what-is-symbolic-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WorkRoute = WorkRouteImport.update({
   id: '/work',
   path: '/work',
@@ -114,6 +120,7 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
   '/terms': typeof TermsRoute
+  '/what-is-symbolic-ai': typeof WhatIsSymbolicAiRoute
   '/work': typeof WorkRouteWithChildren
   '/work/$slug': typeof WorkSlugRoute
   '/work/': typeof WorkIndexRoute
@@ -131,6 +138,7 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
   '/terms': typeof TermsRoute
+  '/what-is-symbolic-ai': typeof WhatIsSymbolicAiRoute
   '/work/$slug': typeof WorkSlugRoute
   '/work': typeof WorkIndexRoute
 }
@@ -148,6 +156,7 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/research': typeof ResearchRoute
   '/terms': typeof TermsRoute
+  '/what-is-symbolic-ai': typeof WhatIsSymbolicAiRoute
   '/work': typeof WorkRouteWithChildren
   '/work/$slug': typeof WorkSlugRoute
   '/work/': typeof WorkIndexRoute
@@ -167,6 +176,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/research'
     | '/terms'
+    | '/what-is-symbolic-ai'
     | '/work'
     | '/work/$slug'
     | '/work/'
@@ -184,6 +194,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/research'
     | '/terms'
+    | '/what-is-symbolic-ai'
     | '/work/$slug'
     | '/work'
   id:
@@ -200,6 +211,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/research'
     | '/terms'
+    | '/what-is-symbolic-ai'
     | '/work'
     | '/work/$slug'
     | '/work/'
@@ -218,6 +230,7 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   ResearchRoute: typeof ResearchRoute
   TermsRoute: typeof TermsRoute
+  WhatIsSymbolicAiRoute: typeof WhatIsSymbolicAiRoute
   WorkRoute: typeof WorkRouteWithChildren
 }
 
@@ -307,6 +320,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/what-is-symbolic-ai': {
+      id: '/what-is-symbolic-ai'
+      path: '/what-is-symbolic-ai'
+      fullPath: '/what-is-symbolic-ai'
+      preLoaderRoute: typeof WhatIsSymbolicAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work': {
       id: '/work'
       path: '/work'
@@ -356,6 +376,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   ResearchRoute: ResearchRoute,
   TermsRoute: TermsRoute,
+  WhatIsSymbolicAiRoute: WhatIsSymbolicAiRoute,
   WorkRoute: WorkRouteWithChildren,
 }
 export const routeTree = rootRouteImport

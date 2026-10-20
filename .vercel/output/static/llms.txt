@@ -30,6 +30,10 @@ Seven specialist systems. Two engines: a generation engine proposes; a symbolic 
 
 The patented federated system — seven specialists reasoning together under arbitration — is under development.
 
+## Guides
+
+- [What is symbolic AI?](https://federatedintel.ai/what-is-symbolic-ai): a definition, symbolic vs neural AI, and how FIA Labs uses symbolic arbitration.
+
 ## Site
 
 - Home: https://federatedintel.ai/
