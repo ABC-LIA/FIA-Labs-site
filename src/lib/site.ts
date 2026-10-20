@@ -4,7 +4,7 @@ export const ORIGIN = "https://federatedintel.ai";
 
 export const PAGE_COPY = {
   home: {
-    title: "FIA Labs — Federated Intel AI",
+    title: "FIA Labs — Federated Intel AI: expert systems and symbolic AI for high-consequence work",
     description:
       "Expert systems for high-consequence work. Seven live Pro desks: Legal Intel, Medical Intel, Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine Novelist. A record of how the answer was reached.",
     path: "/",

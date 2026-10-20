@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/site-DRNngPjO.js
+//#region node_modules/.nitro/vite/services/ssr/assets/site-Dv3SXQ61.js
 var CANONICAL_ORIGIN = "https://federatedintel.ai";
 var INDEX_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1";
 var NOINDEX_ROBOTS = "noindex, nofollow";
@@ -24,7 +24,7 @@ function canonicalUrl(path) {
 var ORIGIN = "https://federatedintel.ai";
 var PAGE_COPY = {
 	home: {
-		title: "FIA Labs — Federated Intel AI",
+		title: "FIA Labs — Federated Intel AI: expert systems and symbolic AI for high-consequence work",
 		description: "Expert systems for high-consequence work. Seven live Pro desks: Legal Intel, Medical Intel, Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine Novelist. A record of how the answer was reached.",
 		path: "/"
 	},

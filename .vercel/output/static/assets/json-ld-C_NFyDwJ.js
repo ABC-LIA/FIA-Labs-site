@@ -1,1 +1,0 @@
-import{y as e}from"./index-B1rg1qfM.js";var t=e();function n({data:e}){return(0,t.jsx)(`script`,{type:`application/ld+json`,dangerouslySetInnerHTML:{__html:JSON.stringify(e)}})}export{n as t};
