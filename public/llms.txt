@@ -38,6 +38,13 @@ The patented federated system — seven specialists reasoning together under arb
 
 - Home: https://federatedintel.ai/
 - Work: https://federatedintel.ai/work
+- LIA case study: https://federatedintel.ai/work/lia
+- MIA case study: https://federatedintel.ai/work/mia
+- CFO Sentinel case study: https://federatedintel.ai/work/cfo-sentinel
+- Brandium case study: https://federatedintel.ai/work/brandium
+- ExecMind case study: https://federatedintel.ai/work/execmind
+- Aquinian case study: https://federatedintel.ai/work/aquinian
+- Cine Novelist case study: https://federatedintel.ai/work/cine-novelist
 - Method: https://federatedintel.ai/method
 - Research: https://federatedintel.ai/research
 - Project Africa: https://federatedintel.ai/africa (an access grant, not a store)
