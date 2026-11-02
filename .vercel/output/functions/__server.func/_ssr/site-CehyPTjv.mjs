@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/site-Dv3SXQ61.js
+//#region node_modules/.nitro/vite/services/ssr/assets/site-CehyPTjv.js
 var CANONICAL_ORIGIN = "https://federatedintel.ai";
 var INDEX_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1";
 var NOINDEX_ROBOTS = "noindex, nofollow";
@@ -278,7 +278,9 @@ var PRODUCT_LINKS = [
 ];
 APPS.filter((app) => app.featured);
 APPS.filter((app) => !app.featured);
-APPS.filter((app) => app.status === "live");
+var LIVE_DESKS = APPS.filter((app) => app.status === "live");
+/** Homepage line. Starter credits only — no seat math. */
+var STARTER_CREDITS_LINE = "Every desk starts with 150 free credits, no card.";
 function getApp(slug) {
 	return APPS.find((app) => app.slug === slug);
 }
@@ -539,6 +541,27 @@ var ORGANIZATION_JSON_LD = {
 		inLanguage: "en"
 	}]
 };
+/** Live desks only, built from APPS. Name, url, and a short description. */
+function liveDeskSoftwareApplications() {
+	return APPS.filter((app) => app.status === "live").map((app) => ({
+		"@type": "SoftwareApplication",
+		name: app.name,
+		url: app.marketingUrl ?? `https://federatedintel.ai/work/${app.slug}`,
+		description: app.summary
+	}));
+}
+var LIVE_DESKS_ITEM_LIST_JSON_LD = {
+	"@context": "https://schema.org",
+	"@type": "ItemList",
+	"@id": `${ORIGIN}/#desks`,
+	name: "Live desks",
+	numberOfItems: LIVE_DESKS.length,
+	itemListElement: liveDeskSoftwareApplications().map((item, index) => ({
+		"@type": "ListItem",
+		position: index + 1,
+		item
+	}))
+};
 /** Desk page only. No Offer / price — LIA Pro seats live on legalintel.ai. */
 var LIA_SOFTWARE_JSON_LD = {
 	"@context": "https://schema.org",
@@ -580,4 +603,4 @@ var COMPANY_FAQ_JSON_LD = {
 	}))
 };
 //#endregion
-export { robotsForHost as _, FIA_PLAN as a, MIA_SOFTWARE_JSON_LD as c, PAGE_COPY as d, PRINCIPLES as f, pageHead as g, getApp as h, FAQS as i, NAV as l, VOICES as m, ARTICLES as n, LAB as o, PRODUCT_LINKS as p, COMPANY_FAQ_JSON_LD as r, LIA_SOFTWARE_JSON_LD as s, APPS as t, ORGANIZATION_JSON_LD as u, workPageCopy as v };
+export { getApp as _, FIA_PLAN as a, workPageCopy as b, LIVE_DESKS_ITEM_LIST_JSON_LD as c, ORGANIZATION_JSON_LD as d, PAGE_COPY as f, VOICES as g, STARTER_CREDITS_LINE as h, FAQS as i, MIA_SOFTWARE_JSON_LD as l, PRODUCT_LINKS as m, ARTICLES as n, LAB as o, PRINCIPLES as p, COMPANY_FAQ_JSON_LD as r, LIA_SOFTWARE_JSON_LD as s, APPS as t, NAV as u, pageHead as v, robotsForHost as y };

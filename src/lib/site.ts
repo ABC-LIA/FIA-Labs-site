@@ -270,6 +270,10 @@ export const FEATURED = APPS.filter((app) => app.featured);
 export const SUITE = APPS.filter((app) => !app.featured);
 export const LIVE_DESKS = APPS.filter((app) => app.status === "live");
 
+/** Homepage line. Starter credits only — no seat math. */
+export const STARTER_CREDITS_LINE =
+  "Every desk starts with 150 free credits, no card.";
+
 export function getApp(slug: string) {
   return APPS.find((app) => app.slug === slug);
 }
@@ -516,6 +520,29 @@ export const ORGANIZATION_JSON_LD = {
       inLanguage: "en",
     },
   ],
+};
+
+/** Live desks only, built from APPS. Name, url, and a short description. */
+export function liveDeskSoftwareApplications() {
+  return APPS.filter((app) => app.status === "live").map((app) => ({
+    "@type": "SoftwareApplication" as const,
+    name: app.name,
+    url: app.marketingUrl ?? `${ORIGIN}/work/${app.slug}`,
+    description: app.summary,
+  }));
+}
+
+export const LIVE_DESKS_ITEM_LIST_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${ORIGIN}/#desks`,
+  name: "Live desks",
+  numberOfItems: LIVE_DESKS.length,
+  itemListElement: liveDeskSoftwareApplications().map((item, index) => ({
+    "@type": "ListItem" as const,
+    position: index + 1,
+    item,
+  })),
 };
 
 /** Desk page only. No Offer / price — LIA Pro seats live on legalintel.ai. */

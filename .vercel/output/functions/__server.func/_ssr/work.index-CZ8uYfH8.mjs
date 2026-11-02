@@ -1,9 +1,9 @@
-import { t as APPS } from "./site-Dv3SXQ61.mjs";
+import { t as APPS } from "./site-CehyPTjv.mjs";
 import { q as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { n as FiaPlanSection } from "./fia-plan-section-C1Xyv-0K.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.index-DQ0Ko0nQ.js
+import { n as FiaPlanSection } from "./fia-plan-section-BY7BUTp7.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.index-CZ8uYfH8.js
 var import_jsx_runtime = require_jsx_runtime();
 function WorkPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(PageFrame, {
