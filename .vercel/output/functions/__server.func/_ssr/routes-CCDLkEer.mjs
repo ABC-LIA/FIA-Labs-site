@@ -1,12 +1,12 @@
 import { i as __toESM } from "../_runtime.mjs";
-import { f as PRINCIPLES, n as ARTICLES, o as LAB, t as APPS, u as ORGANIZATION_JSON_LD } from "./site-Dv3SXQ61.mjs";
+import { c as LIVE_DESKS_ITEM_LIST_JSON_LD, d as ORGANIZATION_JSON_LD, h as STARTER_CREDITS_LINE, n as ARTICLES, o as LAB, p as PRINCIPLES, t as APPS } from "./site-CehyPTjv.mjs";
 import { q as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { r as cn } from "./router-lrfzteAg.mjs";
-import { n as FiaPlanSection } from "./fia-plan-section-C1Xyv-0K.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BaYjcST1.js
+import { r as cn } from "./router-CbiXd0An.mjs";
+import { n as FiaPlanSection } from "./fia-plan-section-BY7BUTp7.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CCDLkEer.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var CX = 200;
@@ -115,6 +115,7 @@ function Home() {
 		id: "content",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(JsonLd, { data: ORGANIZATION_JSON_LD }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(JsonLd, { data: LIVE_DESKS_ITEM_LIST_JSON_LD }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 				className: "border-b border-border",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -140,6 +141,10 @@ function Home() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg",
 								children: "Expert systems for high-consequence work. Seven live Pro desks. Two engines. A record of how the answer was reached — so a professional can still decide."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-4 max-w-xl text-sm leading-relaxed text-muted",
+								children: STARTER_CREDITS_LINE
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "mt-8 flex flex-wrap gap-3",

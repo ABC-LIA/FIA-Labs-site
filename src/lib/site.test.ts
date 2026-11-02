@@ -162,3 +162,43 @@ describe("24 Sep 2026 estate canon", () => {
     assert.match(read("src/routes/privacy.tsx"), /CarCounsel/);
   });
 });
+
+describe("homepage starter credits and live-desk JSON-LD", () => {
+  const site = read("src/lib/site.ts");
+  const home = read("src/routes/index.tsx");
+
+  it("states the 150-credit start on the homepage", () => {
+    assert.match(
+      site,
+      /Every desk starts with 150 free credits, no card\./,
+    );
+    assert.match(home, /STARTER_CREDITS_LINE/);
+    assert.doesNotMatch(site, /markup|pricing method/i);
+    assert.doesNotMatch(home, /markup|pricing method/i);
+  });
+
+  it("keeps Organization JSON-LD for Federated Intel AI LLC (FIA Labs)", () => {
+    assert.match(site, /"@type": "Organization"/);
+    assert.match(site, /name: "FIA Labs"/);
+    assert.match(site, /legalName: "Federated Intel AI LLC"/);
+    assert.match(home, /ORGANIZATION_JSON_LD/);
+  });
+
+  it("builds an ItemList of SoftwareApplications from live APPS only", () => {
+    assert.match(site, /export function liveDeskSoftwareApplications/);
+    assert.match(
+      site,
+      /return APPS\.filter\(\(app\) => app\.status === "live"\)/,
+    );
+    assert.match(site, /"@type": "ItemList"/);
+    assert.match(site, /"@type": "SoftwareApplication"/);
+    assert.match(site, /name: app\.name/);
+    assert.match(site, /url: app\.marketingUrl/);
+    assert.match(site, /description: app\.summary/);
+    assert.match(home, /LIVE_DESKS_ITEM_LIST_JSON_LD/);
+    assert.doesNotMatch(
+      site.slice(site.indexOf("liveDeskSoftwareApplications")),
+      /"@type": "Offer"|markup|pricing method/i,
+    );
+  });
+});

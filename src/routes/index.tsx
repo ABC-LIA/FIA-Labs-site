@@ -7,9 +7,11 @@ import {
   APPS,
   ARTICLES,
   LAB,
+  LIVE_DESKS_ITEM_LIST_JSON_LD,
   ORGANIZATION_JSON_LD,
   PAGE_COPY,
   PRINCIPLES,
+  STARTER_CREDITS_LINE,
   pageHead,
 } from "@/lib/site";
 
@@ -23,6 +25,7 @@ function Home() {
   return (
     <main id="content">
       <JsonLd data={ORGANIZATION_JSON_LD} />
+      <JsonLd data={LIVE_DESKS_ITEM_LIST_JSON_LD} />
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.15fr_0.85fr] md:px-8 md:py-20 lg:py-24">
           <div className="fia-rise">
@@ -37,6 +40,9 @@ function Home() {
               Expert systems for high-consequence work. Seven live Pro desks.
               Two engines. A record of how the answer was reached — so a
               professional can still decide.
+            </p>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
+              {STARTER_CREDITS_LINE}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
