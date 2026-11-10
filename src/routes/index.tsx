@@ -6,6 +6,9 @@ import { JsonLd } from "@/components/json-ld";
 import {
   APPS,
   ARTICLES,
+  HOME_ANSWER,
+  HOME_FAQS,
+  HOME_FAQ_JSON_LD,
   LAB,
   LIVE_DESKS_ITEM_LIST_JSON_LD,
   ORGANIZATION_JSON_LD,
@@ -26,6 +29,7 @@ function Home() {
     <main id="content">
       <JsonLd data={ORGANIZATION_JSON_LD} />
       <JsonLd data={LIVE_DESKS_ITEM_LIST_JSON_LD} />
+      <JsonLd data={HOME_FAQ_JSON_LD} />
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 md:grid-cols-[1.15fr_0.85fr] md:px-8 md:py-20 lg:py-24">
           <div className="fia-rise">
@@ -36,7 +40,10 @@ function Home() {
               We don’t just predict outcomes.
               <span className="mt-2 block italic text-accent">We reason them.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-fg md:text-lg">
+              {HOME_ANSWER}
+            </p>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
               Expert systems for high-consequence work. Seven live Pro desks.
               Two engines. A record of how the answer was reached — so a
               professional can still decide.
@@ -231,6 +238,23 @@ function Home() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="border-b border-border" id="faq">
+        <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-16">
+          <p className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">
+            Questions
+          </p>
+          <h2 className="mt-3 font-display text-3xl md:text-4xl">About FIA Labs</h2>
+          <dl className="mt-8 max-w-3xl divide-y divide-border border-y border-border">
+            {HOME_FAQS.map((item) => (
+              <div key={item.id} id={item.id} className="py-5">
+                <dt className="font-display text-xl">{item.q}</dt>
+                <dd className="mt-2 text-sm leading-relaxed text-muted">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
