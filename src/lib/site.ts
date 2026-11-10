@@ -86,7 +86,29 @@ export const LAB = {
   privacyEmail: "privacy@federatedintel.ai",
   legalEmail: "legal@federatedintel.ai",
   substack: "https://federatedintel.substack.com",
+  linkedin: "https://www.linkedin.com/company/fia-labs",
 } as const;
+
+export const FIA_ORG_ID = `${ORIGIN}/#org`;
+
+/**
+ * The seven app sites. Each app site defines its own WebSite
+ * (https://<domain>/#website) and SoftwareApplication (https://<domain>/#app),
+ * both pointing back to FIA_ORG_ID. Keep these @ids in step with those sites.
+ */
+export const APP_SITES = [
+  { desk: "lia", name: "LIA Pro (Legal Intel AI)", url: "https://legalintel.ai" },
+  { desk: "mia", name: "MIA Pro (Medical Intel)", url: "https://medicalintel.org" },
+  { desk: "brandium", name: "Brandium Pro", url: "https://brandium.pro" },
+  { desk: "cfo-sentinel", name: "CFO Sentinel Pro", url: "https://cfosentinel.pro" },
+  { desk: "execmind", name: "ExecMind Pro", url: "https://execmind.app" },
+  { desk: "aquinian", name: "Aquinian Studio", url: "https://aquinian.com" },
+  { desk: "cine-novelist", name: "Cine Novelist", url: "https://cinenovelist.com" },
+].map((app) => ({
+  ...app,
+  appId: `${app.url}/#app`,
+  websiteId: `${app.url}/#website`,
+}));
 
 export const NAV = [
   { href: "/work", label: "Work", index: "01" },
@@ -498,21 +520,24 @@ export const ORGANIZATION_JSON_LD = {
         "@type": "Organization",
         name: "Unison Pictures Pty Ltd",
       },
-      sameAs: [
-        "https://fia-labs.com",
-        "https://federatedintel.substack.com",
-        "https://legalintel.ai",
-        "https://medicalintel.org",
-        "https://brandium.pro",
-        "https://cfosentinel.pro",
-        "https://execmind.app",
-        "https://aquinian.com",
-        "https://cinenovelist.com",
-      ],
+      // Only profiles verified as FIA Labs' own (fetched 10 Nov 2026).
+      // The seven app sites are not sameAs: they are products FIA Labs
+      // offers, listed in makesOffer by their own @id.
+      sameAs: [LAB.substack, LAB.linkedin],
+      makesOffer: APP_SITES.map((app) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "SoftwareApplication",
+          "@id": app.appId,
+          name: app.name,
+          url: app.url,
+        },
+        url: app.url,
+      })),
     },
     {
       "@type": "WebSite",
-      "@id": `${ORIGIN}/#site`,
+      "@id": `${ORIGIN}/#website`,
       url: ORIGIN,
       name: "FIA Labs",
       description: LAB.description,
@@ -522,13 +547,20 @@ export const ORGANIZATION_JSON_LD = {
   ],
 };
 
+function appIdFor(slug: string) {
+  const site = APP_SITES.find((entry) => entry.desk === slug);
+  return site ? { "@id": site.appId } : {};
+}
+
 /** Live desks only, built from APPS. Name, url, and a short description. */
 export function liveDeskSoftwareApplications() {
   return APPS.filter((app) => app.status === "live").map((app) => ({
     "@type": "SoftwareApplication" as const,
+    ...appIdFor(app.slug),
     name: app.name,
     url: app.marketingUrl ?? `${ORIGIN}/work/${app.slug}`,
     description: app.summary,
+    publisher: { "@id": FIA_ORG_ID },
   }));
 }
 
@@ -551,13 +583,14 @@ export const LIA_SOFTWARE_JSON_LD = {
   "@type": "SoftwareApplication",
   "@id": "https://legalintel.ai/#app",
   name: "LIA Pro",
-  alternateName: ["LegalIntel", "Legal Intel"],
+  alternateName: ["Legal Intel AI", "LegalIntel", "Legal Intel"],
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   url: "https://legalintel.ai",
   description:
     "A governed reasoning desk for legal and forensic work. Evidence, inference, and gap stay distinct. Not legal advice.",
   publisher: { "@id": `${ORIGIN}/#org` },
+  provider: { "@id": `${ORIGIN}/#org` },
 };
 
 /** Desk page only. No Offer / price — MIA Pro seats live on medicalintel.org. */
@@ -573,6 +606,118 @@ export const MIA_SOFTWARE_JSON_LD = {
   description:
     "A medical AI research desk for literature, biotechnology, and the medico-legal file. Not medical advice.",
   publisher: { "@id": `${ORIGIN}/#org` },
+  provider: { "@id": `${ORIGIN}/#org` },
+};
+
+/** Answer-first opening under the homepage H1 (AEO plan, Nov 2026). */
+export const HOME_ANSWER =
+  "FIA Labs, a DBA of Federated Intel AI LLC in Washington, D.C., builds expert-system desks for high-consequence work in law, medicine, finance, executive decisions, brand strategy, theology and film. Each desk pairs a generation engine with a symbolic engine that tests its proposals against domain rules, logic and precedent, and keeps evidence, inference and gap on separate lines, so a conclusion can be reconstructed and checked. Human judgment remains the authority.";
+
+export const HOME_FAQS = [
+  {
+    id: "home-what-is-fia-labs",
+    q: "What is FIA Labs?",
+    a: "FIA Labs is the lab behind seven live Pro desks: LIA Pro (Legal Intel AI) at legalintel.ai, MIA Pro (Medical Intel) at medicalintel.org, Brandium at brandium.pro, CFO Sentinel at cfosentinel.pro, ExecMind at execmind.app, Aquinian Studio at aquinian.com and Cine Novelist at cinenovelist.com. Each desk has its own site.",
+  },
+  {
+    id: "home-same-company",
+    q: "Is FIA Labs the same company as Federated Intel AI?",
+    a: "Yes. FIA Labs is a DBA of Federated Intel AI LLC, registered in Washington, D.C., USA, and wholly owned by Unison Pictures Pty Ltd. fia-labs.com redirects to federatedintel.ai.",
+  },
+  {
+    id: "home-symbolic-arbitration",
+    q: "What is symbolic arbitration?",
+    a: "A second pass over a proposed answer using logic, domain rules and precedent. A generation engine reads the record and proposes; a symbolic engine tests the proposal. It is how a desk refuses a plausible answer the record will not bear.",
+  },
+  {
+    id: "home-advice",
+    q: "Do the desks give legal or medical advice?",
+    a: "No. The desks support professionals and show their working. LIA is not a law firm and does not give legal advice. MIA is not medical advice and does not replace clinical judgment. Human judgment remains the authority.",
+  },
+  {
+    id: "home-try",
+    q: "How do I try a desk?",
+    a: "Open the desk you need from its own site. Every desk starts with 150 free credits, no card.",
+  },
+] as const;
+
+/** Answer-first opening on /method (AEO plan, Nov 2026). */
+export const METHOD_ANSWER =
+  "FIA Labs desks reason in four disciplines. Federated specialists each own one domain. Dual engines split the work: a generation engine reads the record and proposes, and a symbolic engine tests the proposal against domain rules, logic and precedent. That second pass is symbolic arbitration. Sequential reasoning shows the steps, and evidence, inference and gap stay on separate lines, so a conclusion can be reconstructed before anyone relies on it.";
+
+export const METHOD_FAQS = [
+  {
+    id: "method-symbolic-arbitration",
+    q: "What is symbolic arbitration?",
+    a: "A second pass over a proposed answer using logic, domain rules and precedent. It is how the system tells a fluent continuation from a claim the record will support, and how it refuses a plausible answer the record will not bear.",
+  },
+  {
+    id: "method-dual-engines",
+    q: "Why use two engines instead of one model?",
+    a: "A generation engine is fluent and flexible, but its reasons are not stored as rules, so a confident answer can be unsupported. A symbolic engine tests what the first proposes. The second pass is the difference between a fluent paragraph and a claim that can survive inspection.",
+  },
+  {
+    id: "method-evidence-inference-gap",
+    q: "What are evidence, inference and gap?",
+    a: "Evidence is what the record establishes. Inference is what may reasonably be drawn from it. Gap is what the record does not establish, or what material is absent. The desks keep the three on different lines, because a plausible reading is not a finding.",
+  },
+  {
+    id: "method-federated",
+    q: "What does federated mean here?",
+    a: "Not one general model asked to impersonate seven professions. Each desk is a specialist with its own domain. The patented federated system, with specialists reasoning together under arbitration, is under development; the live desks already carry the same discipline.",
+  },
+  {
+    id: "method-human-judgment",
+    q: "Who makes the final decision?",
+    a: "The professional in the chair. The desks do not replace counsel, a physician, a priest or a CFO. Human judgment remains the authority.",
+  },
+] as const;
+
+function faqPageJsonLd(path: string, items: readonly { q: string; a: string }[]) {
+  const url = path === "/" ? `${ORIGIN}/` : `${ORIGIN}${path}`;
+  return {
+    "@type": "FAQPage",
+    "@id": `${url}#faq`,
+    url,
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+}
+
+export const HOME_FAQ_JSON_LD = {
+  "@context": "https://schema.org",
+  ...faqPageJsonLd("/", HOME_FAQS),
+};
+
+export const METHOD_JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${ORIGIN}/method#webpage`,
+      url: `${ORIGIN}/method`,
+      name: "Method — FIA Labs",
+      description: METHOD_ANSWER,
+      inLanguage: "en",
+      isPartOf: { "@id": `${ORIGIN}/#website` },
+      publisher: { "@id": FIA_ORG_ID },
+      about: [
+        { "@type": "Thing", name: "Symbolic arbitration" },
+        { "@type": "Thing", name: "Evidence, inference and gap" },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "FIA Labs", item: ORIGIN },
+        { "@type": "ListItem", position: 2, name: "Method", item: `${ORIGIN}/method` },
+      ],
+    },
+    faqPageJsonLd("/method", METHOD_FAQS),
+  ],
 };
 
 export const COMPANY_FAQ_JSON_LD = {

@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { JsonLd } from "@/components/json-ld";
 import { PageFrame } from "@/components/page-frame";
-import { PRINCIPLES, pageHead } from "@/lib/site";
+import { METHOD_ANSWER, METHOD_FAQS, METHOD_JSON_LD, PRINCIPLES, pageHead } from "@/lib/site";
 
 export const Route = createFileRoute("/method")({
   component: MethodPage,
@@ -19,7 +20,11 @@ function MethodPage() {
       title="Federation, not costume."
       dek="A general model asked to sound like a lawyer is still a general model. FIA is a set of specialists, a second engine that tests what the first proposes, and a rule that the working has to be showable."
     >
+      <JsonLd data={METHOD_JSON_LD} />
       <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+        <p className="mb-10 max-w-3xl text-base leading-relaxed text-fg md:text-lg">
+          {METHOD_ANSWER}
+        </p>
         <ol className="divide-y divide-border border-y border-border">
           {PRINCIPLES.map((item) => (
             <li
@@ -34,6 +39,18 @@ function MethodPage() {
             </li>
           ))}
         </ol>
+
+        <section className="mt-14 max-w-3xl" id="faq">
+          <h2 className="font-display text-3xl">Questions about the method</h2>
+          <dl className="mt-6 divide-y divide-border border-y border-border">
+            {METHOD_FAQS.map((item) => (
+              <div key={item.id} id={item.id} className="py-5">
+                <dt className="font-display text-xl">{item.q}</dt>
+                <dd className="mt-2 text-[0.95rem] leading-relaxed text-muted">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
 
         <aside className="mt-14 max-w-3xl border border-border bg-surface p-6 md:p-8">
           <p className="font-mono text-[11px] tracking-[0.18em] text-subtle uppercase">

@@ -1,0 +1,1 @@
+import{D as e,T as t}from"./index-BaPPnTUs.js";var n=e();function r(){return(0,n.jsx)(t,{})}export{r as component};
