@@ -1,5 +1,5 @@
 /**
- * Single source of truth for platform head chrome (PWA, extensions.js, OG),
+ * Single source of truth for platform head chrome (PWA, OG),
  * shared by the Vite plugin and Nitro middleware. Plain ESM so `node --test`
  * and the Nitro bundler can both consume it.
  */
@@ -227,18 +227,13 @@ export function grokXCreatorHeadTags(creator = readXCreator(), creatorId = readX
   ];
 }
 
-/** Platform "Created with Grok" banner — injected into every HTML document. */
+/** Previously injected the Grok app-builder extensions.js banner. That script is unused and is no longer loaded. */
 export function grokExtensionsHeadTags(projectId = readGrokProjectId()) {
   const id = escapeHtml(projectId);
   const tags = [];
   if (projectId) {
     tags.push(`<meta name="grok-project-id" content="${id}">`);
   }
-  tags.push(
-    `<script src="${GROK_EXTENSIONS_SCRIPT_SRC}"${
-      projectId ? ` data-project-id="${id}"` : ""
-    } defer></script>`,
-  );
   return tags;
 }
 
@@ -447,9 +442,7 @@ export function injectGrokPwaHead(html, ctx = {}) {
     grokOgHeadTags({ host, appName, site, documentTitle, cwd }).join(""),
   );
 
-  if (!next.includes("/grok-app-builder/extensions.js")) {
-    missing.push(...grokExtensionsHeadTags(projectId));
-  } else if (projectId && !next.includes('name="grok-project-id"')) {
+  if (projectId && !next.includes('name="grok-project-id"')) {
     missing.push(`<meta name="grok-project-id" content="${escapeHtml(projectId)}">`);
   }
   if (
