@@ -14,6 +14,7 @@ import { Route as AfricaRouteImport } from './routes/africa'
 import { Route as AppsRouteImport } from './routes/apps'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CookiesPolicyRouteImport } from './routes/cookies-policy'
 import { Route as LiaRouteImport } from './routes/lia'
 import { Route as MethodRouteImport } from './routes/method'
 import { Route as PricingRouteImport } from './routes/pricing'
@@ -49,6 +50,11 @@ const CompanyRoute = CompanyRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesPolicyRoute = CookiesPolicyRouteImport.update({
+  id: '/cookies-policy',
+  path: '/cookies-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LiaRoute = LiaRouteImport.update({
@@ -113,6 +119,7 @@ export interface FileRoutesByFullPath {
   '/apps': typeof AppsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/cookies-policy': typeof CookiesPolicyRoute
   '/lia': typeof LiaRoute
   '/method': typeof MethodRoute
   '/pricing': typeof PricingRoute
@@ -131,6 +138,7 @@ export interface FileRoutesByTo {
   '/apps': typeof AppsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/cookies-policy': typeof CookiesPolicyRoute
   '/lia': typeof LiaRoute
   '/method': typeof MethodRoute
   '/pricing': typeof PricingRoute
@@ -149,6 +157,7 @@ export interface FileRoutesById {
   '/apps': typeof AppsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
+  '/cookies-policy': typeof CookiesPolicyRoute
   '/lia': typeof LiaRoute
   '/method': typeof MethodRoute
   '/pricing': typeof PricingRoute
@@ -169,6 +178,7 @@ export interface FileRouteTypes {
     | '/apps'
     | '/company'
     | '/contact'
+    | '/cookies-policy'
     | '/lia'
     | '/method'
     | '/pricing'
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
     | '/apps'
     | '/company'
     | '/contact'
+    | '/cookies-policy'
     | '/lia'
     | '/method'
     | '/pricing'
@@ -204,6 +215,7 @@ export interface FileRouteTypes {
     | '/apps'
     | '/company'
     | '/contact'
+    | '/cookies-policy'
     | '/lia'
     | '/method'
     | '/pricing'
@@ -223,6 +235,7 @@ export interface RootRouteChildren {
   AppsRoute: typeof AppsRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
+  CookiesPolicyRoute: typeof CookiesPolicyRoute
   LiaRoute: typeof LiaRoute
   MethodRoute: typeof MethodRoute
   PricingRoute: typeof PricingRoute
@@ -269,6 +282,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies-policy': {
+      id: '/cookies-policy'
+      path: '/cookies-policy'
+      fullPath: '/cookies-policy'
+      preLoaderRoute: typeof CookiesPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lia': {
@@ -369,6 +389,7 @@ const rootRouteChildren: RootRouteChildren = {
   AppsRoute: AppsRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
+  CookiesPolicyRoute: CookiesPolicyRoute,
   LiaRoute: LiaRoute,
   MethodRoute: MethodRoute,
   PricingRoute: PricingRoute,

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageFrame } from "@/components/page-frame";
 import { LAB, pageHead } from "@/lib/site";
 
@@ -87,6 +87,13 @@ function PrivacyPage() {
           Individual products may publish a more specific note — for example,
           Legal Intel’s file-holding page. Where they do, the stricter statement
           governs that product.
+        </p>
+        <p className="text-sm text-subtle">
+          Cookies and browser storage this site actually sets are listed on the{" "}
+          <Link to="/cookies-policy" className="underline-offset-4 hover:underline">
+            Cookies
+          </Link>{" "}
+          page. We do not run advertising cookies.
         </p>
       </div>
     </PageFrame>

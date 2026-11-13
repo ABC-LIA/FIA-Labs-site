@@ -83,6 +83,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link to="/cookies-policy" className="text-sm text-muted hover:text-fg">
+                Cookies
+              </Link>
+            </li>
+            <li>
               <a
                 href={`mailto:${LAB.email}`}
                 className="text-sm text-muted hover:text-fg"
