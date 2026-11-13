@@ -55,6 +55,20 @@
       }
     },
     {
+      "src": "^/cookies/?$",
+      "status": 308,
+      "headers": {
+        "Location": "/cookies-policy"
+      }
+    },
+    {
+      "src": "^/cookie-policy/?$",
+      "status": 308,
+      "headers": {
+        "Location": "/cookies-policy"
+      }
+    },
+    {
       "handle": "filesystem"
     },
     {

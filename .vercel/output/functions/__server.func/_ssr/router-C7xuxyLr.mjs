@@ -6,7 +6,7 @@ import { a as Menu, i as Moon, n as TriangleAlert, r as Sun, t as X } from "../_
 import { n as clsx } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-BRZEwwt7.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-C7xuxyLr.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var __defProp = Object.defineProperty;
@@ -190,6 +190,11 @@ function SiteFooter() {
 							to: "/terms",
 							className: "text-sm text-muted hover:text-fg",
 							children: "Terms"
+						}) }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/cookies-policy",
+							className: "text-sm text-muted hover:text-fg",
+							children: "Cookies"
 						}) }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 							href: `mailto:${LAB.email}`,
@@ -635,7 +640,7 @@ function AuthProvider({ children }) {
 }
 var styles_default = "/assets/styles-DotbItPd.css";
 var APP_NAME = "FIA Labs";
-var Route$16 = createRootRoute({
+var Route$17 = createRootRoute({
 	head: () => ({
 		meta: [
 			{ charSet: "utf-8" },
@@ -763,31 +768,36 @@ function NotFound() {
 		]
 	});
 }
-var $$splitComponentImporter$11 = () => import("./routes-BhAHWoGn.mjs");
-var Route$15 = createFileRoute("/")({
-	component: lazyRouteComponent($$splitComponentImporter$11, "component"),
+var $$splitComponentImporter$12 = () => import("./routes-1-eM9z37.mjs");
+var Route$16 = createFileRoute("/")({
+	component: lazyRouteComponent($$splitComponentImporter$12, "component"),
 	head: () => pageHead(PAGE_COPY.home.title, PAGE_COPY.home.description, PAGE_COPY.home.path)
 });
-var $$splitComponentImporter$10 = () => import("./africa-aTswFocQ.mjs");
-var Route$14 = createFileRoute("/africa")({
-	component: lazyRouteComponent($$splitComponentImporter$10, "component"),
+var $$splitComponentImporter$11 = () => import("./africa-aTswFocQ.mjs");
+var Route$15 = createFileRoute("/africa")({
+	component: lazyRouteComponent($$splitComponentImporter$11, "component"),
 	head: () => pageHead("Project Africa", "An access grant across Africa. Not a product for sale.", "/africa")
 });
-var Route$13 = createFileRoute("/apps")({ beforeLoad: () => {
+var Route$14 = createFileRoute("/apps")({ beforeLoad: () => {
 	throw redirect({
 		to: "/work",
 		statusCode: 308
 	});
 } });
-var $$splitComponentImporter$9 = () => import("./company-B43o1igE.mjs");
-var Route$12 = createFileRoute("/company")({
-	component: lazyRouteComponent($$splitComponentImporter$9, "component"),
+var $$splitComponentImporter$10 = () => import("./company-B43o1igE.mjs");
+var Route$13 = createFileRoute("/company")({
+	component: lazyRouteComponent($$splitComponentImporter$10, "component"),
 	head: () => pageHead(PAGE_COPY.company.title, PAGE_COPY.company.description, PAGE_COPY.company.path)
 });
-var $$splitComponentImporter$8 = () => import("./contact-CxkiiZq7.mjs");
-var Route$11 = createFileRoute("/contact")({
-	component: lazyRouteComponent($$splitComponentImporter$8, "component"),
+var $$splitComponentImporter$9 = () => import("./contact-BpJ7D99V.mjs");
+var Route$12 = createFileRoute("/contact")({
+	component: lazyRouteComponent($$splitComponentImporter$9, "component"),
 	head: () => pageHead(PAGE_COPY.contact.title, PAGE_COPY.contact.description, PAGE_COPY.contact.path)
+});
+var $$splitComponentImporter$8 = () => import("./cookies-policy-r5D3K7fF.mjs");
+var Route$11 = createFileRoute("/cookies-policy")({
+	component: lazyRouteComponent($$splitComponentImporter$8, "component"),
+	head: () => pageHead("Cookies", "Cookies and browser storage the FIA Labs site actually sets on federatedintel.ai.", "/cookies-policy")
 });
 var Route$10 = createFileRoute("/lia")({ beforeLoad: () => {
 	throw redirect({
@@ -813,7 +823,7 @@ var Route$7 = createFileRoute("/pricing-philosophy")({ beforeLoad: () => {
 		statusCode: 308
 	});
 } });
-var $$splitComponentImporter$6 = () => import("./privacy-DUHqkyRo.mjs");
+var $$splitComponentImporter$6 = () => import("./privacy-Cw0X1m_A.mjs");
 var Route$6 = createFileRoute("/privacy")({
 	component: lazyRouteComponent($$splitComponentImporter$6, "component"),
 	head: () => pageHead("Privacy", "How FIA Labs collects, uses, and holds data.", "/privacy")
@@ -841,7 +851,7 @@ var Route$1 = createFileRoute("/work/")({
 	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
 	head: () => pageHead(PAGE_COPY.work.title, PAGE_COPY.work.description, PAGE_COPY.work.path)
 });
-var $$splitComponentImporter = () => import("./work._slug-BJTGi61L.mjs");
+var $$splitComponentImporter = () => import("./work._slug-DvzA5jQh.mjs");
 var Route = createFileRoute("/work/$slug")({
 	component: lazyRouteComponent($$splitComponentImporter, "component"),
 	beforeLoad: ({ params }) => {
@@ -862,75 +872,80 @@ var Route = createFileRoute("/work/$slug")({
 		return pageHead(app?.name ?? "Work", app?.summary, `/work/${params.slug}`);
 	}
 });
-var IndexRoute = Route$15.update({
+var IndexRoute = Route$16.update({
 	id: "/",
 	path: "/",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
-var AfricaRoute = Route$14.update({
+var AfricaRoute = Route$15.update({
 	id: "/africa",
 	path: "/africa",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
-var AppsRoute = Route$13.update({
+var AppsRoute = Route$14.update({
 	id: "/apps",
 	path: "/apps",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
-var CompanyRoute = Route$12.update({
+var CompanyRoute = Route$13.update({
 	id: "/company",
 	path: "/company",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
-var ContactRoute = Route$11.update({
+var ContactRoute = Route$12.update({
 	id: "/contact",
 	path: "/contact",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
+});
+var CookiesPolicyRoute = Route$11.update({
+	id: "/cookies-policy",
+	path: "/cookies-policy",
+	getParentRoute: () => Route$17
 });
 var LiaRoute = Route$10.update({
 	id: "/lia",
 	path: "/lia",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
 var MethodRoute = Route$9.update({
 	id: "/method",
 	path: "/method",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
 var PricingRoute = Route$8.update({
 	id: "/pricing",
 	path: "/pricing",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
 var PricingPhilosophyRoute = Route$7.update({
 	id: "/pricing-philosophy",
 	path: "/pricing-philosophy",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
 var PrivacyRoute = Route$6.update({
 	id: "/privacy",
 	path: "/privacy",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
 var ResearchRoute = Route$5.update({
 	id: "/research",
 	path: "/research",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
 var TermsRoute = Route$4.update({
 	id: "/terms",
 	path: "/terms",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
 var WhatIsSymbolicAiRoute = Route$3.update({
 	id: "/what-is-symbolic-ai",
 	path: "/what-is-symbolic-ai",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
 var WorkRoute = Route$2.update({
 	id: "/work",
 	path: "/work",
-	getParentRoute: () => Route$16
+	getParentRoute: () => Route$17
 });
 var WorkIndexRoute = Route$1.update({
 	id: "/",
@@ -951,6 +966,7 @@ var rootRouteChildren = {
 	AppsRoute,
 	CompanyRoute,
 	ContactRoute,
+	CookiesPolicyRoute,
 	LiaRoute,
 	MethodRoute,
 	PricingRoute,
@@ -961,7 +977,7 @@ var rootRouteChildren = {
 	WhatIsSymbolicAiRoute,
 	WorkRoute: WorkRoute._addFileChildren(WorkRouteChildren)
 };
-var routeTree = Route$16._addFileChildren(rootRouteChildren)._addFileTypes();
+var routeTree = Route$17._addFileChildren(rootRouteChildren)._addFileTypes();
 var router_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 function getRouter() {
 	return createRouter({

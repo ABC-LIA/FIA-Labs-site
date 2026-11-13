@@ -30,6 +30,18 @@ export const LEGACY_PATH_REDIRECTS = [
   { from: "/work/carcounsel", to: "/work" },
 ];
 
+/** Conventional cookie URLs. vercel.json redirects are not merged into the
+ *  Vercel Build Output API config; they must be injected here, ahead of the
+ *  /(.*) → __server catch-all, or TanStack renders the in-app 404. */
+export const COOKIE_PATH_REDIRECTS = [
+  { from: "/cookies", to: "/cookies-policy" },
+  { from: "/cookie-policy", to: "/cookies-policy" },
+];
+
+export function allPathRedirects() {
+  return [...LEGACY_PATH_REDIRECTS, ...COOKIE_PATH_REDIRECTS];
+}
+
 export const WWW_HOST = "www.federatedintel.ai";
 export const APEX_ORIGIN = "https://federatedintel.ai";
 
@@ -39,7 +51,7 @@ function escapeRegex(path) {
 
 /** Exact path + optional trailing slash. Anchored so /work/lia is not /lia. */
 export function legacyPathRedirectRoutes() {
-  return LEGACY_PATH_REDIRECTS.map(({ from, to }) => ({
+  return allPathRedirects().map(({ from, to }) => ({
     src: `^${escapeRegex(from)}/?$`,
     status: 308,
     headers: { Location: to },
@@ -85,7 +97,7 @@ export function isLegacyPathRedirect(route) {
 /** Nitro emits `/lia` (unanchored). As a regex that also matches /work/lia. */
 export function isUnanchoredLegacyPathRedirect(route) {
   if (!route || typeof route.src !== "string") return false;
-  for (const { from } of LEGACY_PATH_REDIRECTS) {
+  for (const { from } of allPathRedirects()) {
     if (route.src === from || route.src === `${from}/`) return true;
   }
   return false;

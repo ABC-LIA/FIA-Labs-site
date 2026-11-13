@@ -218,7 +218,7 @@ var grokOgIdentity = { "site": {
 //#endregion
 //#region scripts/grok-pwa-shared.mjs
 /**
-* Single source of truth for platform head chrome (PWA, extensions.js, OG),
+* Single source of truth for platform head chrome (PWA, OG),
 * shared by the Vite plugin and Nitro middleware. Plain ESM so `node --test`
 * and the Nitro bundler can both consume it.
 */
@@ -342,7 +342,6 @@ function grokPwaHeadTags(appName = DEFAULT_APP_NAME) {
 		["theme-color", "<meta name=\"theme-color\" content=\"#000000\">"]
 	];
 }
-var GROK_EXTENSIONS_SCRIPT_SRC = "https://grok.com/grok-app-builder/extensions.js";
 function readGrokProjectId() {
 	const fromProcess = typeof process !== "undefined" ? process.env?.VITE_PROJECT_ID : "";
 	return String(fromProcess ?? "").trim();
@@ -360,14 +359,6 @@ function grokXCreatorHeadTags(creator = readXCreator(), creatorId = readXCreator
 	const id = String(creatorId ?? "").trim();
 	if (!name || !id) return [];
 	return [`<meta property="x:creator" content="${escapeHtml(name)}">`, `<meta property="x:creator:id" content="${escapeHtml(id)}">`];
-}
-/** Platform "Created with Grok" banner — injected into every HTML document. */
-function grokExtensionsHeadTags(projectId = readGrokProjectId()) {
-	const id = escapeHtml(projectId);
-	const tags = [];
-	if (projectId) tags.push(`<meta name="grok-project-id" content="${id}">`);
-	tags.push(`<script src="${GROK_EXTENSIONS_SCRIPT_SRC}"${projectId ? ` data-project-id="${id}"` : ""} defer><\/script>`);
-	return tags;
 }
 function readOgSite(cwd = process.cwd()) {
 	try {
@@ -512,8 +503,7 @@ function injectGrokPwaHead(html, ctx = {}) {
 		documentTitle,
 		cwd
 	}).join(""));
-	if (!next.includes("/grok-app-builder/extensions.js")) missing.push(...grokExtensionsHeadTags(projectId));
-	else if (projectId && !next.includes("name=\"grok-project-id\"")) missing.push(`<meta name="grok-project-id" content="${escapeHtml(projectId)}">`);
+	if (projectId && !next.includes("name=\"grok-project-id\"")) missing.push(`<meta name="grok-project-id" content="${escapeHtml(projectId)}">`);
 	if (projectId && !next.includes("property=\"grok:app_id\"") && !next.includes("property='grok:app_id'")) missing.push(`<meta property="grok:app_id" content="${escapeHtml(projectId)}">`);
 	const creatorTags = grokXCreatorHeadTags(creator, creatorId);
 	if (creatorTags.length > 0) {
@@ -734,11 +724,11 @@ var findRouteRules = /* @__PURE__ */ (() => {
 		return r;
 	};
 })();
-var _lazy_BrXYR9 = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
+var _lazy_7GFRKp = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
 var findRoute = /* @__PURE__ */ (() => {
 	const data = {
 		route: "/**",
-		handler: _lazy_BrXYR9
+		handler: _lazy_7GFRKp
 	};
 	return ((_m, p) => {
 		return {

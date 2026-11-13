@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
@@ -50,3 +50,36 @@ test("conventional cookie URLs permanently redirect to /cookies-policy", () => {
   }
 });
 
+
+test("edge routing injects /cookies and /cookie-policy ahead of the server catch-all", async () => {
+  const { COOKIE_PATH_REDIRECTS, allPathRedirects, legacyPathRedirectRoutes } =
+    await import("./vercel-edge-redirects.mjs");
+  assert.deepEqual(COOKIE_PATH_REDIRECTS, [
+    { from: "/cookies", to: "/cookies-policy" },
+    { from: "/cookie-policy", to: "/cookies-policy" },
+  ]);
+  const srcs = legacyPathRedirectRoutes().map((r) => r.src);
+  assert.ok(srcs.includes("^/cookies/?$"));
+  assert.ok(srcs.includes("^/cookie-policy/?$"));
+  assert.ok(allPathRedirects().some((r) => r.from === "/cookies"));
+});
+
+test("committed Vercel output includes the cookies-policy route and cookie redirects", () => {
+  const config = JSON.parse(read(".vercel/output/config.json"));
+  const routes = config.routes ?? [];
+  const catchAllAt = routes.findIndex(
+    (r) => typeof r.dest === "string" && /__server/.test(r.dest),
+  );
+  assert.ok(catchAllAt > 0, "missing __server catch-all");
+  for (const src of ["^/cookies/?$", "^/cookie-policy/?$"]) {
+    const at = routes.findIndex((r) => r.src === src && r.status === 308);
+    assert.ok(at >= 0, `missing edge redirect ${src}`);
+    assert.ok(at < catchAllAt, `${src} must sit before the __server catch-all`);
+    assert.equal(routes[at].headers.Location, "/cookies-policy");
+  }
+  const ssr = readdirSync(join(root, ".vercel/output/functions/__server.func/_ssr"));
+  assert.ok(
+    ssr.some((name) => name.startsWith("cookies-policy-")),
+    "committed server output is missing a cookies-policy SSR chunk; refresh .vercel/output after adding the route",
+  );
+});
