@@ -1,7 +1,7 @@
 import { l as LAB } from "./site-kq08MEqS.mjs";
-import { q as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
+import { q as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/privacy-DUHqkyRo.js
+//#region node_modules/.nitro/vite/services/ssr/assets/privacy-Cw0X1m_A.js
 var import_jsx_runtime = require_jsx_runtime();
 var SECTIONS = [
 	{
@@ -53,16 +53,33 @@ function PrivacyPage() {
 		dek: `Last updated 21 October 2025. ${LAB.legalName} (“FIA,” “we,” “our,” or “us”) respects your privacy. This policy covers FIA Labs applications, including LIA Pro, MIA Pro, CFO Sentinel, Aquinian, Brandium, CarCounsel, Cine Novelist, and ExecMind.`,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-3xl space-y-10 px-5 py-12 md:px-8 md:py-16",
-			children: [SECTIONS.map((section) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-				className: "font-display text-2xl",
-				children: section.title
-			}), section.body.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-3 text-[0.95rem] leading-relaxed text-muted",
-				children: p
-			}, p))] }, section.title)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "text-sm text-subtle",
-				children: "Individual products may publish a more specific note — for example, Legal Intel’s file-holding page. Where they do, the stricter statement governs that product."
-			})]
+			children: [
+				SECTIONS.map((section) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					className: "font-display text-2xl",
+					children: section.title
+				}), section.body.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-3 text-[0.95rem] leading-relaxed text-muted",
+					children: p
+				}, p))] }, section.title)),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-sm text-subtle",
+					children: "Individual products may publish a more specific note — for example, Legal Intel’s file-holding page. Where they do, the stricter statement governs that product."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+					className: "text-sm text-subtle",
+					children: [
+						"Cookies and browser storage this site actually sets are listed on the",
+						" ",
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/cookies-policy",
+							className: "underline-offset-4 hover:underline",
+							children: "Cookies"
+						}),
+						" ",
+						"page. We do not run advertising cookies."
+					]
+				})
+			]
 		})
 	});
 }
