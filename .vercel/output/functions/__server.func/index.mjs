@@ -724,11 +724,11 @@ var findRouteRules = /* @__PURE__ */ (() => {
 		return r;
 	};
 })();
-var _lazy_7GFRKp = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
+var _lazy_rYhWtp = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
 var findRoute = /* @__PURE__ */ (() => {
 	const data = {
 		route: "/**",
-		handler: _lazy_7GFRKp
+		handler: _lazy_rYhWtp
 	};
 	return ((_m, p) => {
 		return {
