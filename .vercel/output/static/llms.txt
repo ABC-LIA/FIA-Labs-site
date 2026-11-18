@@ -9,6 +9,9 @@ This is the parent lab site. Products live on their own domains. FIA Labs does n
 ## Live Pro desks (seven)
 
 - [Legal Intel (LIA Pro)](https://legalintel.ai): governed legal and forensic reasoning. Not legal advice. Desk: https://pro.legalintel.ai
+
+Legal Intel is also offered as [LIA SC](https://sc.legalintel.ai) (LIA Pro SC), which includes LIA Pro, and as [LIA Chambers](https://chambers.legalintel.ai), the multi-lawyer firm line. Digital Case Manager is live on every LIA seat. Product page: https://federatedintel.ai/work/lia
+
 - [Medical Intel (MIA Pro)](https://medicalintel.org): medical AI research for literature, biotechnology, and the medico-legal file. Not medical advice. Does not replace clinical judgment. Desk: https://mia.medicalintel.org
 - [Brandium Pro](https://brandium.pro): positioning, creative strategy, and acquisition under unit economics
 - [CFO Sentinel](https://cfosentinel.pro): cash, margins, runway, and downside
@@ -20,7 +23,7 @@ Human judgment remains the authority. These are specialists, not a generalist, a
 
 ## FIA Plan
 
-FIA Plan is the house seat: $50/month, an alternative to a single-desk Operator, Counsel, or Chambers seat — not an add-on. It includes 1,000 credits per period across the suite, held in one shared FIA Tank. Extra credit packs do not expire.
+FIA Plan is the house seat: $50/month. FIA Plan is an alternative to a single-desk seat, not an extra charge on top of LIA Pro or LIA SC. It includes LIA SC; it does not include LIA Chambers. It includes 1,000 credits per period across the suite, held in one shared FIA Tank. Extra credit packs do not expire.
 
 Rooms stay separate. Conversations, files, matters, and memory are not shared across desks. The only cross-desk object is a user-authorised FIA Brief.
 
@@ -38,7 +41,7 @@ The patented federated system — seven specialists reasoning together under arb
 
 - Home: https://federatedintel.ai/
 - Work: https://federatedintel.ai/work
-- LIA case study: https://federatedintel.ai/work/lia
+- LIA product page: https://federatedintel.ai/work/lia
 - MIA case study: https://federatedintel.ai/work/mia
 - CFO Sentinel case study: https://federatedintel.ai/work/cfo-sentinel
 - Brandium case study: https://federatedintel.ai/work/brandium

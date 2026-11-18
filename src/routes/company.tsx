@@ -52,7 +52,8 @@ function CompanyPage() {
               that think in the posture of lawyers, physicians, CFOs,
               strategists, and researchers. Seven Pro desks are live: Legal
               Intel, Medical Intel, Brandium, CFO Sentinel, ExecMind,
-              Aquinian Studio, and Cine Novelist.
+              Aquinian Studio, and Cine Novelist. Legal Intel is offered as
+              LIA Pro, LIA SC and LIA Chambers.
             </p>
             <p>
               Specialists, not a generalist. Rooms stay separate. The only
