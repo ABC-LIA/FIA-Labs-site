@@ -72,7 +72,7 @@ describe("FIA Plan house-seat copy", () => {
     );
     assert.match(
       site,
-      /FIA Plan is an alternative to a single-desk seat, not an extra charge on top of Operator, Counsel, or Chambers\./,
+      /FIA Plan is an alternative to a single-desk seat, not an extra charge on top of LIA Pro or LIA SC\. It includes LIA SC; it does not include LIA Chambers\./,
     );
     assert.doesNotMatch(site, /\bauthorize[d]?\b/);
   });
@@ -239,5 +239,56 @@ describe("LIA family copy on /work/lia", () => {
     assert.match(page, /LiaLineSection/);
     assert.match(page, /Open the Pro desk/);
     assert.doesNotMatch(page, /autoplay/i);
+  });
+});
+
+describe("November 2026 LIA line and FIA Plan wording", () => {
+  const site = read("src/lib/site.ts");
+
+  it("drops Operator and Counsel seat names from live marketing copy", () => {
+    const exempt = new Set(["src/routes/terms.tsx", "src/routes/privacy.tsx"]);
+    for (const file of MARKETING_FILES) {
+      if (exempt.has(file)) continue;
+      const source = read(file);
+      assert.doesNotMatch(
+        source,
+        /Operator, Counsel/,
+        `${file} still names Operator and Counsel seats`,
+      );
+      assert.doesNotMatch(
+        source,
+        /single-desk Operator/,
+        `${file} still names a single-desk Operator seat`,
+      );
+    }
+    assert.doesNotMatch(site, /Operator, Counsel, and Chambers remain single-desk seats/);
+    assert.match(read("public/llms.txt"), /It includes LIA SC; it does not include LIA Chambers/);
+  });
+
+  it("presents LIA SC and LIA Chambers as LIA lines, not extra Pro desks", () => {
+    assert.match(site, /Legal Intel is offered as LIA Pro, LIA SC and LIA Chambers/);
+    assert.match(site, /export const LIA_LINE_SITES/);
+    assert.match(site, /url: "https:\/\/sc\.legalintel\.ai"/);
+    assert.match(site, /url: "https:\/\/chambers\.legalintel\.ai"/);
+    assert.match(site, /makesOffer: \[\.\.\.APP_SITES, \.\.\.LIA_LINE_SITES\]/);
+    const slugs = [...site.matchAll(/slug: "([^"]+)"/g)].map((m) => m[1]);
+    assert.deepEqual(slugs, [...LIVE_SLUGS]);
+    assert.match(
+      read("src/routes/contact.tsx"),
+      /Legal work lives at legalintel\.ai — LIA Pro, LIA SC, and LIA Chambers/,
+    );
+    assert.match(read("src/routes/contact.tsx"), /chambers\.legalintel\.ai/);
+    assert.match(read("src/routes/company.tsx"), /LIA Pro, LIA SC and LIA Chambers/);
+    assert.match(read("src/routes/work.index.tsx"), /LIA Pro, LIA SC and LIA Chambers/);
+    assert.match(read("public/llms.txt"), /LIA Chambers/);
+  });
+
+  it("lists Brandium and LIA Chambers in the footer product links", () => {
+    assert.match(site, /href: "https:\/\/brandium\.pro"/);
+    assert.match(
+      site,
+      /label: "Brandium: positioning, creative strategy, and acquisition under unit economics"/,
+    );
+    assert.match(site, /href: "https:\/\/chambers\.legalintel\.ai"/);
   });
 });

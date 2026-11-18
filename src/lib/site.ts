@@ -12,7 +12,7 @@ export const PAGE_COPY = {
   work: {
     title: "The desks — FIA Labs",
     description:
-      "FIA Plan is the house seat for the suite — one plan, Federation included. Seven live Pro desks. Conversations, files, matters, and memory stay on the desk that owns them. Only authorised FIA Briefs cross desks.",
+      "FIA Plan is the house seat for the suite — one plan, Federation included. Seven live Pro desks. Legal Intel is offered as LIA Pro, LIA SC and LIA Chambers. Conversations, files, matters, and memory stay on the desk that owns them. Only authorised FIA Briefs cross desks.",
     path: "/work",
   },
   lia: {
@@ -66,7 +66,7 @@ export const PAGE_COPY = {
   contact: {
     title: "Contact — FIA Labs",
     description:
-      "Contact FIA Labs. Legal work lives at legalintel.ai. Medical work lives at medicalintel.org. Theological work lives at aquinian.com. The full suite is on Work.",
+      "Contact FIA Labs. Legal work lives at legalintel.ai — LIA Pro, LIA SC, and LIA Chambers. Medical work lives at medicalintel.org. Theological work lives at aquinian.com. The full suite is on Work.",
     path: "/contact",
   },
 } as const;
@@ -110,6 +110,16 @@ export const APP_SITES = [
   websiteId: `${app.url}/#website`,
 }));
 
+/** LIA product lines that are not additional Pro desks. @ids follow each product site's #app convention. */
+export const LIA_LINE_SITES = [
+  { desk: "lia-sc", name: "LIA SC (LIA Pro SC)", url: "https://sc.legalintel.ai" },
+  { desk: "lia-chambers", name: "LIA Chambers", url: "https://chambers.legalintel.ai" },
+].map((app) => ({
+  ...app,
+  appId: `${app.url}/#app`,
+  websiteId: `${app.url}/#website`,
+}));
+
 export const NAV = [
   { href: "/work", label: "Work", index: "01" },
   { href: "/method", label: "Method", index: "02" },
@@ -142,7 +152,7 @@ export const APPS: LabApp[] = [
     name: "Legal Intel",
     kicker: "Governed legal reasoning",
     summary:
-      "A desk for the file in front of you. Evidence, inference, and gap stay on different lines.",
+      "A desk for the file in front of you. Evidence, inference, and gap stay on different lines. Offered as LIA Pro, LIA SC and LIA Chambers.",
     description:
       "LIA — Legal Intel — is a governed reasoning desk for legal and forensic work. It is not a chatbot for brainstorming, and it is not legal advice. The practice is three products: LIA Pro, LIA SC, and LIA Chambers. LIA Pro and LIA SC are both dual-engine desks, and their answers and workings differ. Digital Case Manager is live on every seat. Human judgment remains the authority.",
     points: [
@@ -282,8 +292,10 @@ export const APPS: LabApp[] = [
 export const PRODUCT_LINKS = [
   { href: "https://aquinian.com", label: "Aquinian: Thomistic philosophy and the Summa Theologiae" },
   { href: "https://cinenovelist.com", label: "Cine Novelist: script coverage and script analysis" },
-  { href: "https://legalintel.ai", label: "Legal Intel AI (LIA): legal AI for evidence and case analysis" },
+  { href: "https://legalintel.ai", label: "Legal Intel AI (LIA Pro and LIA SC): legal AI for evidence and case analysis" },
+  { href: "https://chambers.legalintel.ai", label: "LIA Chambers: the multi-lawyer firm line, including LIA Pro and LIA SC" },
   { href: "https://medicalintel.org", label: "Medical Intel (MIA): medical research and the medico-legal file" },
+  { href: "https://brandium.pro", label: "Brandium: positioning, creative strategy, and acquisition under unit economics" },
   { href: "https://cfosentinel.pro", label: "CFO Sentinel: financial intelligence desk for cash, margins and runway" },
   { href: "https://execmind.app", label: "ExecMind: AI decision support for executives" },
 ] as const;
@@ -465,14 +477,14 @@ export const FIA_PLAN = {
   credits:
     "Includes 1,000 credits each billing period across the suite, held in one shared FIA Tank. Extra credit packs do not expire. Shared credits and one tank are the product intent — rooms stay separate.",
   alternative:
-    "FIA Plan is an alternative to a single-desk seat, not an extra charge on top of Operator, Counsel, or Chambers.",
+    "FIA Plan is an alternative to a single-desk seat, not an extra charge on top of LIA Pro or LIA SC. It includes LIA SC; it does not include LIA Chambers.",
 } as const;
 
 export const FAQS = [
   {
     id: "what-is-fia-labs",
     q: "What is FIA Labs?",
-    a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. FederatedIntel / FIA Labs is the parent — Federated Intelligence Architecture — not an eighth app. fia-labs.com redirects to federatedintel.ai. We build specialist AI systems for high-consequence professional work. Seven Pro desks are live: Legal Intel (LIA Pro), Medical Intel (MIA Pro), Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine Novelist.",
+    a: "FIA Labs is a DBA of Federated Intel AI LLC, a privately owned company in Washington, D.C., wholly owned by Unison Pictures Pty Ltd. FederatedIntel / FIA Labs is the parent — Federated Intelligence Architecture — not an eighth app. fia-labs.com redirects to federatedintel.ai. We build specialist AI systems for high-consequence professional work. Seven Pro desks are live: Legal Intel (LIA Pro), Medical Intel (MIA Pro), Brandium, CFO Sentinel, ExecMind, Aquinian Studio, and Cine Novelist. Legal Intel is offered as LIA Pro, LIA SC and LIA Chambers.",
   },
   {
     id: "fia-plan",
@@ -497,7 +509,7 @@ export const FAQS = [
   {
     id: "desk-seats",
     q: "How does FIA Plan relate to a desk seat?",
-    a: `${FIA_PLAN.alternative} Operator, Counsel, and Chambers remain single-desk seats. FIA Plan is the other choice: the house seat for the live suite, with Federation on.`,
+    a: `${FIA_PLAN.alternative} LIA Pro and LIA SC remain single-desk seats. FIA Plan is the other choice: the house seat for the live suite, with Federation on.`,
   },
   {
     id: "federated",
@@ -512,7 +524,7 @@ export const FAQS = [
   {
     id: "where-to-work",
     q: "Where do I actually work?",
-    a: "Legal work lives at legalintel.ai — open the desk at pro.legalintel.ai. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. Brandium is at brandium.pro. CFO Sentinel is at cfosentinel.pro. ExecMind is at execmind.app. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Cine Novelist is at cinenovelist.com. Each desk has its own domain. FIA Plan is the house seat for the live suite — an alternative to a single-desk seat on Operator, Counsel, or Chambers.",
+    a: "Legal work lives at legalintel.ai — LIA Pro at pro.legalintel.ai, LIA SC at sc.legalintel.ai, and LIA Chambers at chambers.legalintel.ai. Medical work lives at medicalintel.org — open the desk at mia.medicalintel.org. Brandium is at brandium.pro. CFO Sentinel is at cfosentinel.pro. ExecMind is at execmind.app. Theological and philosophical work lives at aquinian.com — open the studio at studio.aquinian.com. Cine Novelist is at cinenovelist.com. Each desk has its own domain. FIA Plan is the house seat for the live suite — an alternative to a single-desk seat on LIA Pro or LIA SC. It includes LIA SC; it does not include LIA Chambers.",
   },
   {
     id: "training",
@@ -557,10 +569,11 @@ export const ORGANIZATION_JSON_LD = {
         name: "Unison Pictures Pty Ltd",
       },
       // Only profiles verified as FIA Labs' own (fetched 10 Nov 2026).
-      // The seven app sites are not sameAs: they are products FIA Labs
-      // offers, listed in makesOffer by their own @id.
+      // The seven app sites, plus the LIA SC and LIA Chambers lines, are
+      // not sameAs: they are products FIA Labs offers, listed in makesOffer
+      // by their own @id.
       sameAs: [LAB.substack, LAB.linkedin],
-      makesOffer: APP_SITES.map((app) => ({
+      makesOffer: [...APP_SITES, ...LIA_LINE_SITES].map((app) => ({
         "@type": "Offer",
         itemOffered: {
           "@type": "SoftwareApplication",
@@ -660,7 +673,7 @@ export const HOME_FAQS = [
   {
     id: "home-what-is-fia-labs",
     q: "What is FIA Labs?",
-    a: "FIA Labs is the lab behind seven live Pro desks: LIA Pro (Legal Intel AI) at legalintel.ai, MIA Pro (Medical Intel) at medicalintel.org, Brandium at brandium.pro, CFO Sentinel at cfosentinel.pro, ExecMind at execmind.app, Aquinian Studio at aquinian.com and Cine Novelist at cinenovelist.com. Each desk has its own site.",
+    a: "FIA Labs is the lab behind seven live Pro desks: LIA Pro (Legal Intel AI) at legalintel.ai, MIA Pro (Medical Intel) at medicalintel.org, Brandium at brandium.pro, CFO Sentinel at cfosentinel.pro, ExecMind at execmind.app, Aquinian Studio at aquinian.com and Cine Novelist at cinenovelist.com. Each desk has its own site. Legal Intel is offered as LIA Pro, LIA SC and LIA Chambers, at legalintel.ai and chambers.legalintel.ai.",
   },
   {
     id: "home-same-company",

@@ -54,7 +54,7 @@ function ContactPage() {
     <PageFrame
       index="06 · Contact"
       title="Write to the lab."
-      dek="Legal work lives at legalintel.ai. Medical work lives at medicalintel.org. Theological work lives at aquinian.com. Brandium, CFO Sentinel, ExecMind, and Cine Novelist are live on their own domains. Letters for the lab itself go to the address that matches the subject."
+      dek="Legal work lives at legalintel.ai — LIA Pro, LIA SC, and LIA Chambers. Medical work lives at medicalintel.org. Theological work lives at aquinian.com. Brandium, CFO Sentinel, ExecMind, and Cine Novelist are live on their own domains. Letters for the lab itself go to the address that matches the subject."
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-12 md:grid-cols-[0.85fr_1.15fr] md:px-8 md:py-16">
         <ul className="space-y-6">
@@ -63,7 +63,7 @@ function ContactPage() {
               Desks
             </p>
             <p className="mt-2 text-sm text-muted">
-              LegalIntel (LIA Pro) is at{" "}
+              Legal Intel — LIA Pro, LIA SC and LIA Chambers — is at{" "}
               <a
                 href="https://legalintel.ai"
                 target="_blank"
@@ -71,6 +71,16 @@ function ContactPage() {
                 className="text-fg hover:text-accent"
               >
                 legalintel.ai
+              </a>
+              {" "}
+              and{" "}
+              <a
+                href="https://chambers.legalintel.ai"
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg hover:text-accent"
+              >
+                chambers.legalintel.ai
               </a>
               . Medical Intel (MIA Pro) is at{" "}
               <a
