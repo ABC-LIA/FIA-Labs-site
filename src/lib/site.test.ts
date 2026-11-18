@@ -157,14 +157,22 @@ describe("24 Sep 2026 estate canon", () => {
     }
   });
 
-  it("marks CarCounsel retired in Terms and Privacy and lists the live LIA line", () => {
+  it("keeps CarCounsel as a current app in Terms and Privacy and lists the live LIA line", () => {
     const terms = read("src/routes/terms.tsx");
     const privacy = read("src/routes/privacy.tsx");
-    assert.match(terms, /LIA Pro \(Legal Intel\), LIA SC, LIA Chambers/);
-    assert.match(terms, /CarCounsel is retired and is no longer offered/);
+    assert.match(
+      terms,
+      /LIA Pro \(Legal Intel\), LIA SC, LIA Chambers, MIA Pro \(Medical Intel\), Aquinian, Cine Novelist, CarCounsel, Brandium, ExecMind, and CFO Sentinel/,
+    );
+    assert.doesNotMatch(terms, /retired|no longer offered/i);
+    assert.doesNotMatch(terms, /CarCounsel \(Lite\)|CarCounsel Lite|CarCounsel Pro/i);
     assert.match(terms, /Last updated 18 November 2026/);
-    assert.match(privacy, /including LIA Pro, LIA SC, LIA Chambers/);
-    assert.match(privacy, /retired products, including CarCounsel/);
+    assert.match(
+      privacy,
+      /including LIA Pro, LIA SC, LIA Chambers, MIA Pro, CFO Sentinel, Aquinian, Brandium, CarCounsel, Cine Novelist, and ExecMind/,
+    );
+    assert.doesNotMatch(privacy, /retired products/i);
+    assert.doesNotMatch(privacy, /CarCounsel \(Lite\)|CarCounsel Lite|CarCounsel Pro/i);
     assert.match(privacy, /Last updated 18 November 2026/);
   });
 });
