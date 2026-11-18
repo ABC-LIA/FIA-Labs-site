@@ -157,9 +157,21 @@ describe("24 Sep 2026 estate canon", () => {
     }
   });
 
-  it("leaves Terms and Privacy for Adrian legal review", () => {
-    assert.match(read("src/routes/terms.tsx"), /CarCounsel/);
-    assert.match(read("src/routes/privacy.tsx"), /CarCounsel/);
+  it("lists LIA SC and LIA Chambers in Terms and Privacy and does not name CarCounsel", () => {
+    const terms = read("src/routes/terms.tsx");
+    const privacy = read("src/routes/privacy.tsx");
+    assert.match(
+      terms,
+      /LIA Pro \(Legal Intel\), LIA SC, LIA Chambers, MIA Pro \(Medical Intel\), Aquinian, Cine Novelist, Brandium, ExecMind, and CFO Sentinel/,
+    );
+    assert.doesNotMatch(terms, /carcounsel/i);
+    assert.match(terms, /Last updated 18 November 2026/);
+    assert.match(
+      privacy,
+      /including LIA Pro, LIA SC, LIA Chambers, MIA Pro, CFO Sentinel, Aquinian, Brandium, Cine Novelist, and ExecMind/,
+    );
+    assert.doesNotMatch(privacy, /carcounsel/i);
+    assert.match(privacy, /Last updated 18 November 2026/);
   });
 });
 
