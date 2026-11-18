@@ -6,7 +6,7 @@ import { a as Menu, i as Moon, n as TriangleAlert, r as Sun, t as X } from "../_
 import { n as clsx } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-GhCwHDC7.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CA8EesM3.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var __defProp = Object.defineProperty;
@@ -768,7 +768,7 @@ function NotFound() {
 		]
 	});
 }
-var $$splitComponentImporter$12 = () => import("./routes-CwVkfBFX.mjs");
+var $$splitComponentImporter$12 = () => import("./routes-B34xtqPp.mjs");
 var Route$16 = createFileRoute("/")({
 	component: lazyRouteComponent($$splitComponentImporter$12, "component"),
 	head: () => pageHead(PAGE_COPY.home.title, PAGE_COPY.home.description, PAGE_COPY.home.path)
@@ -789,7 +789,7 @@ var Route$13 = createFileRoute("/company")({
 	component: lazyRouteComponent($$splitComponentImporter$10, "component"),
 	head: () => pageHead(PAGE_COPY.company.title, PAGE_COPY.company.description, PAGE_COPY.company.path)
 });
-var $$splitComponentImporter$9 = () => import("./contact-CbncgrW3.mjs");
+var $$splitComponentImporter$9 = () => import("./contact-D88HPwfH.mjs");
 var Route$12 = createFileRoute("/contact")({
 	component: lazyRouteComponent($$splitComponentImporter$9, "component"),
 	head: () => pageHead(PAGE_COPY.contact.title, PAGE_COPY.contact.description, PAGE_COPY.contact.path)
@@ -823,7 +823,7 @@ var Route$7 = createFileRoute("/pricing-philosophy")({ beforeLoad: () => {
 		statusCode: 308
 	});
 } });
-var $$splitComponentImporter$6 = () => import("./privacy-BwS_AwHK.mjs");
+var $$splitComponentImporter$6 = () => import("./privacy-BKIQ70B4.mjs");
 var Route$6 = createFileRoute("/privacy")({
 	component: lazyRouteComponent($$splitComponentImporter$6, "component"),
 	head: () => pageHead("Privacy", "How FIA Labs collects, uses, and holds data.", "/privacy")
@@ -833,7 +833,7 @@ var Route$5 = createFileRoute("/research")({
 	component: lazyRouteComponent($$splitComponentImporter$5, "component"),
 	head: () => pageHead("Research", "Truth infrastructure: essays on evidence, inference, and the architecture of institutional AI.", "/research")
 });
-var $$splitComponentImporter$4 = () => import("./terms-IWI_qMdW.mjs");
+var $$splitComponentImporter$4 = () => import("./terms-hAtgutdy.mjs");
 var Route$4 = createFileRoute("/terms")({
 	component: lazyRouteComponent($$splitComponentImporter$4, "component"),
 	head: () => pageHead("Terms", "Terms of use for FIA Labs applications and this site.", "/terms")
@@ -851,7 +851,7 @@ var Route$1 = createFileRoute("/work/")({
 	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
 	head: () => pageHead(PAGE_COPY.work.title, PAGE_COPY.work.description, PAGE_COPY.work.path)
 });
-var $$splitComponentImporter = () => import("./work._slug-CDAzaMy6.mjs");
+var $$splitComponentImporter = () => import("./work._slug-DuFK2f8M.mjs");
 var Route = createFileRoute("/work/$slug")({
 	component: lazyRouteComponent($$splitComponentImporter, "component"),
 	beforeLoad: ({ params }) => {
