@@ -10,7 +10,7 @@ export const Route = createFileRoute("/terms")({
 const SECTIONS = [
   {
     title: "1. The lab",
-    body: `These Terms govern access to FIA Labs applications and services, a DBA of ${LAB.legalName}, registered in ${LAB.city}, ${LAB.country}, and wholly owned by ${LAB.owner}. The apps include LIA Pro (Legal Intel), MIA Pro (Medical Intel), Aquinian, Cine Novelist, CarCounsel, Brandium, ExecMind, and CFO Sentinel.`,
+    body: `These Terms govern access to FIA Labs applications and services, a DBA of ${LAB.legalName}, registered in ${LAB.city}, ${LAB.country}, and wholly owned by ${LAB.owner}. The apps include LIA Pro (Legal Intel), LIA SC, LIA Chambers, MIA Pro (Medical Intel), Aquinian, Cine Novelist, Brandium, ExecMind, and CFO Sentinel. CarCounsel is retired and is no longer offered.`,
   },
   {
     title: "2. What the apps are",
@@ -51,7 +51,7 @@ function TermsPage() {
     <PageFrame
       index="Terms"
       title="Terms of service"
-      dek={`Last updated 21 October 2025. If you do not agree, do not use the apps.`}
+      dek={`Last updated 18 November 2026. If you do not agree, do not use the apps.`}
     >
       <div className="mx-auto max-w-3xl space-y-10 px-5 py-12 md:px-8 md:py-16">
         {SECTIONS.map((section) => (

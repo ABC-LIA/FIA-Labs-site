@@ -157,9 +157,15 @@ describe("24 Sep 2026 estate canon", () => {
     }
   });
 
-  it("leaves Terms and Privacy for Adrian legal review", () => {
-    assert.match(read("src/routes/terms.tsx"), /CarCounsel/);
-    assert.match(read("src/routes/privacy.tsx"), /CarCounsel/);
+  it("marks CarCounsel retired in Terms and Privacy and lists the live LIA line", () => {
+    const terms = read("src/routes/terms.tsx");
+    const privacy = read("src/routes/privacy.tsx");
+    assert.match(terms, /LIA Pro \(Legal Intel\), LIA SC, LIA Chambers/);
+    assert.match(terms, /CarCounsel is retired and is no longer offered/);
+    assert.match(terms, /Last updated 18 November 2026/);
+    assert.match(privacy, /including LIA Pro, LIA SC, LIA Chambers/);
+    assert.match(privacy, /retired products, including CarCounsel/);
+    assert.match(privacy, /Last updated 18 November 2026/);
   });
 });
 
