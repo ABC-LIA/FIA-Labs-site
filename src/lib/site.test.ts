@@ -202,3 +202,42 @@ describe("homepage starter credits and live-desk JSON-LD", () => {
     );
   });
 });
+
+describe("LIA family copy on /work/lia", () => {
+  it("covers Pro, SC, Chambers and live DCM without implying a single-engine desk", () => {
+    const site = read("src/lib/site.ts");
+    const page = read("src/routes/work.$slug.tsx");
+    const lia = site.slice(site.indexOf('slug: "lia"'), site.indexOf('slug: "mia"'));
+    assert.match(
+      site,
+      /The practice is three products: LIA Pro, LIA SC, and LIA Chambers/,
+    );
+    assert.match(
+      site,
+      /LIA Pro and LIA SC are both dual-engine desks, and their answers and workings differ/,
+    );
+    assert.match(site, /Digital Case Manager is live on every seat/);
+    assert.match(
+      site,
+      /LIA Pro SC is a dual-engine desk whose answers and workings differ from Pro/,
+    );
+    assert.match(site, /LIA SC opens with an LIA SC plan or the FIA Plan/);
+    assert.match(site, /The multi-lawyer firm line/);
+    assert.match(site, /There is no seat cap/);
+    assert.match(site, /email intake/);
+    assert.match(site, /append-only audit record/);
+    assert.match(
+      site,
+      /FIA Plan includes LIA SC; it does not include LIA Chambers/,
+    );
+    assert.match(site, /https:\/\/sc\.legalintel\.ai/);
+    assert.match(site, /https:\/\/chambers\.legalintel\.ai/);
+    assert.match(site, /https:\/\/legalintel\.ai\/dcm/);
+    assert.match(lia, /dual-engine/);
+    assert.doesNotMatch(lia, /single-engine|basic desk/i);
+    assert.match(page, /LIA_LINE/);
+    assert.match(page, /LiaLineSection/);
+    assert.match(page, /Open the Pro desk/);
+    assert.doesNotMatch(page, /autoplay/i);
+  });
+});
