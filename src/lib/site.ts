@@ -16,9 +16,9 @@ export const PAGE_COPY = {
     path: "/work",
   },
   lia: {
-    title: "LegalIntel (LIA Pro) — FIA Labs",
+    title: "Legal Intel (LIA Pro, LIA SC, LIA Chambers) — FIA Labs",
     description:
-      "A governed reasoning desk for legal and forensic work. Evidence, inference and gap stay distinct. Not legal advice. Open the desk at legalintel.ai.",
+      "LIA Pro, LIA SC and LIA Chambers: dual-engine legal desks and the firm line, with Digital Case Manager live on every seat. Not legal advice. Open the desks at legalintel.ai and chambers.legalintel.ai.",
     path: "/work/lia",
   },
   aquinian: {
@@ -144,7 +144,7 @@ export const APPS: LabApp[] = [
     summary:
       "A desk for the file in front of you. Evidence, inference, and gap stay on different lines.",
     description:
-      "LIA Pro — Legal Intel — is a governed reasoning desk for legal and forensic work. It is not a chatbot for brainstorming, and it is not legal advice. Review evidence, test competing interpretations, identify gaps, and preserve the reasoning behind important decisions. Human judgment remains the authority.",
+      "LIA — Legal Intel — is a governed reasoning desk for legal and forensic work. It is not a chatbot for brainstorming, and it is not legal advice. The practice is three products: LIA Pro, LIA SC, and LIA Chambers. LIA Pro and LIA SC are both dual-engine desks, and their answers and workings differ. Digital Case Manager is live on every seat. Human judgment remains the authority.",
     points: [
       "Conversations for testing an idea; matters for building a file.",
       "The ledger classifies material as evidence, inference, or gap.",
@@ -299,6 +299,42 @@ export const STARTER_CREDITS_LINE =
 export function getApp(slug: string) {
   return APPS.find((app) => app.slug === slug);
 }
+
+/** Copy for /work/lia only. Facts follow legalintel.ai and chambers.legalintel.ai. */
+export const LIA_LINE = {
+  kicker: "The products",
+  products: [
+    {
+      name: "LIA Pro",
+      body: "A dual-engine desk for one lawyer. The full instrument for your own matters.",
+      href: "https://pro.legalintel.ai",
+      hrefLabel: "Open the Pro desk",
+    },
+    {
+      name: "LIA SC",
+      body: "LIA Pro SC is a dual-engine desk whose answers and workings differ from Pro. It includes LIA Pro. LIA SC opens with an LIA SC plan or the FIA Plan.",
+      href: "https://sc.legalintel.ai",
+      hrefLabel: "Open the SC desk",
+    },
+    {
+      name: "LIA Chambers",
+      body: "The multi-lawyer firm line. It includes LIA Pro and LIA SC, a shared firm credit tank, shared matters, and DCM orchestration. Add lawyers as the firm needs them. There is no seat cap. SC work stays private to the individual lawyer.",
+      href: "https://chambers.legalintel.ai",
+      hrefLabel: "Open LIA Chambers",
+    },
+    {
+      name: "Digital Case Manager",
+      body: "Digital Case Manager is the operational layer inside LIA for organising legal matters, intake, tasks, deadlines, assignments, next actions and human confirmation. It is live on every seat. On LIA Pro and LIA SC it works on the lawyer's private matters, including email intake. On LIA Chambers it works on shared firm matters with defined roles and an append-only audit record.",
+      href: "https://legalintel.ai/dcm",
+      hrefLabel: "What is DCM?",
+    },
+  ],
+  pricingNote: "FIA Plan includes LIA SC; it does not include LIA Chambers.",
+  pricingHref: "https://legalintel.ai/pricing",
+  pricingLabel: "Legal Intel pricing",
+  chambersPricingHref: "https://chambers.legalintel.ai/pricing",
+  chambersPricingLabel: "LIA Chambers pricing",
+} as const;
 
 export function workPageCopy(slug: string) {
   return Object.values(PAGE_COPY).find((page) => page.path === `/work/${slug}`);
@@ -577,18 +613,25 @@ export const LIVE_DESKS_ITEM_LIST_JSON_LD = {
   })),
 };
 
-/** Desk page only. No Offer / price — LIA Pro seats live on legalintel.ai. */
+/** Desk page only. No Offer / price — LIA seats live on legalintel.ai and chambers.legalintel.ai. */
 export const LIA_SOFTWARE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "@id": "https://legalintel.ai/#app",
-  name: "LIA Pro",
-  alternateName: ["Legal Intel AI", "LegalIntel", "Legal Intel"],
+  name: "Legal Intel",
+  alternateName: [
+    "LIA Pro",
+    "Legal Intel AI",
+    "LegalIntel",
+    "LIA SC",
+    "LIA Pro SC",
+    "LIA Chambers",
+  ],
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   url: "https://legalintel.ai",
   description:
-    "A governed reasoning desk for legal and forensic work. Evidence, inference, and gap stay distinct. Not legal advice.",
+    "LIA Pro, LIA SC and LIA Chambers: dual-engine legal desks and the firm line, with Digital Case Manager live on every seat. Not legal advice.",
   publisher: { "@id": `${ORIGIN}/#org` },
   provider: { "@id": `${ORIGIN}/#org` },
 };

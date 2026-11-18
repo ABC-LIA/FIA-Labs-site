@@ -5,6 +5,7 @@ import { FiaPlanDeskNote } from "@/components/fia-plan-section";
 import { JsonLd } from "@/components/json-ld";
 import {
   APPS,
+  LIA_LINE,
   LIA_SOFTWARE_JSON_LD,
   MIA_SOFTWARE_JSON_LD,
   getApp,
@@ -96,9 +97,22 @@ function AppPage() {
             )}
             {app.deskUrl ? (
               <ExternalLink href={app.deskUrl} quiet>
-                {app.slug === "aquinian" ? "Open the studio" : "Open the desk"}
+                {app.slug === "aquinian"
+                  ? "Open the studio"
+                  : app.slug === "lia"
+                    ? "Open the Pro desk"
+                    : "Open the desk"}
               </ExternalLink>
             ) : null}
+            {app.slug === "lia"
+              ? LIA_LINE.products
+                  .filter((item) => item.name === "LIA SC" || item.name === "LIA Chambers")
+                  .map((item) => (
+                    <ExternalLink key={item.href} href={item.href} quiet>
+                      {item.hrefLabel}
+                    </ExternalLink>
+                  ))
+              : null}
           </div>
         </div>
       </header>
@@ -120,6 +134,8 @@ function AppPage() {
           </ol>
         </div>
       </section>
+
+      {app.slug === "lia" ? <LiaLineSection /> : null}
 
       <FiaPlanDeskNote />
 
@@ -155,5 +171,50 @@ function AppPage() {
         </Link>
       </nav>
     </main>
+  );
+}
+
+function LiaLineSection() {
+  return (
+    <section className="border-b border-border">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+        <p className="font-mono text-[11px] tracking-[0.18em] text-subtle uppercase">
+          {LIA_LINE.kicker}
+        </p>
+        <div className="mt-8 grid gap-px bg-border sm:grid-cols-2">
+          {LIA_LINE.products.map((item, i) => (
+            <article key={item.name} className="bg-bg p-6 md:p-8">
+              <p className="font-mono text-[11px] text-subtle">{String(i + 1).padStart(2, "0")}</p>
+              <h2 className="mt-3 font-display text-xl">{item.name}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted">{item.body}</p>
+              <ExternalLink href={item.href} quiet className="mt-5">
+                {item.hrefLabel}
+              </ExternalLink>
+            </article>
+          ))}
+        </div>
+        <p className="mt-10 max-w-2xl text-sm leading-relaxed text-muted">
+          Plans and packs are on{" "}
+          <a
+            href={LIA_LINE.pricingHref}
+            target="_blank"
+            rel="noreferrer"
+            className="text-fg underline underline-offset-4"
+          >
+            {LIA_LINE.pricingLabel}
+          </a>
+          , and on{" "}
+          <a
+            href={LIA_LINE.chambersPricingHref}
+            target="_blank"
+            rel="noreferrer"
+            className="text-fg underline underline-offset-4"
+          >
+            {LIA_LINE.chambersPricingLabel}
+          </a>
+          . {LIA_LINE.pricingNote}
+        </p>
+      </div>
+    </section>
   );
 }
