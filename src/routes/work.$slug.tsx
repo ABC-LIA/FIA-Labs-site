@@ -12,6 +12,7 @@ import {
   pageHead,
   workPageCopy,
 } from "@/lib/site";
+import { getProductMeta } from "@/lib/product-metadata";
 
 export const Route = createFileRoute("/work/$slug")({
   component: AppPage,
@@ -44,6 +45,7 @@ function AppPage() {
   const { slug } = Route.useParams();
   const app = getApp(slug);
   if (!app) throw notFound();
+  const meta = getProductMeta(slug);
 
   const index = APPS.findIndex((item) => item.slug === app.slug);
   const prev = APPS[(index - 1 + APPS.length) % APPS.length];
@@ -117,6 +119,8 @@ function AppPage() {
         </div>
       </header>
 
+      {meta ? <PricingSection meta={meta} /> : null}
+
       <section className="border-b border-border">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-[0.4fr_1fr] md:px-8 md:py-16">
           <p className="font-mono text-[11px] tracking-[0.18em] text-subtle uppercase">
@@ -171,6 +175,32 @@ function AppPage() {
         </Link>
       </nav>
     </main>
+  );
+}
+
+function PricingSection({ meta }: { meta: ReturnType<typeof getProductMeta> }) {
+  if (!meta) return null;
+  return (
+    <section className="border-b border-border">
+      <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+        <p className="font-mono text-[11px] tracking-[0.18em] text-subtle uppercase">
+          Entry plan
+        </p>
+        <div className="mt-6 flex flex-wrap items-baseline gap-6">
+          <p className="font-display text-3xl">${meta.monthlyPriceUsd}<span className="text-lg text-muted">/mo</span></p>
+          <p className="text-sm text-muted">{meta.monthlyCredits.toLocaleString()} credits per month</p>
+          <p className="text-sm text-muted">{meta.starterCredits} free starter credits, no card</p>
+        </div>
+        <div className="mt-6 flex flex-wrap gap-3">
+          {meta.deskUrl ? (
+            <ExternalLink href={meta.deskUrl}>Open the desk</ExternalLink>
+          ) : null}
+          <ExternalLink href={meta.marketingUrl} quiet>
+            Pricing and plans
+          </ExternalLink>
+        </div>
+      </div>
+    </section>
   );
 }
 
