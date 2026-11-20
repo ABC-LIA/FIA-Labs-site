@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generate public/openai-products.csv from the shared product metadata.
+ * Generate public/openai-products.csv (and .csv.gz) from the shared product metadata.
  *
  * Single source of truth: src/lib/product-metadata.json
  * Run directly, or as part of `npm run build`.
@@ -9,20 +9,25 @@
  * Required fields (OpenAI product feed spec):
  *   item_id, title, description, url, brand, seller_name,
  *   image_url, availability, price
+ *
+ * target_countries is serialized as a JSON array string per the spec
+ * (quoted JSON in the CSV cell).
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { gzipSync } from "node:zlib";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const META_PATH = join(ROOT, "src/lib/product-metadata.json");
 const OUT_PATH = join(ROOT, "public/openai-products.csv");
+const OUT_GZ_PATH = join(ROOT, "public/openai-products.csv.gz");
 
 const SITE = "https://federatedintel.ai";
 const SELLER_NAME = "FIA Labs";
 const SELLER_URL = "https://federatedintel.ai/";
 const STORE_COUNTRY = "US";
-const TARGET_COUNTRIES = "US,AU,GB,NZ,CA";
+const TARGET_COUNTRIES = ["US", "AU", "GB", "NZ", "CA"];
 
 const COLUMNS = [
   "item_id",
@@ -70,7 +75,7 @@ export function buildFeedRows(products) {
     is_eligible_checkout: "false",
     product_category: p.productCategory,
     condition: "new",
-    target_countries: TARGET_COUNTRIES,
+    target_countries: JSON.stringify(TARGET_COUNTRIES),
     store_country: STORE_COUNTRY,
     seller_url: SELLER_URL,
   }));
@@ -92,8 +97,10 @@ function main() {
   const rows = buildFeedRows(products);
   const csv = toCsv(rows);
   writeFileSync(OUT_PATH, csv);
+  const gz = gzipSync(Buffer.from(csv, "utf8"));
+  writeFileSync(OUT_GZ_PATH, gz);
   console.log(
-    `[generate-openai-feed] wrote ${rows.length} products to public/openai-products.csv`,
+    `[generate-openai-feed] wrote ${rows.length} products to public/openai-products.csv and .csv.gz`,
   );
 }
 
