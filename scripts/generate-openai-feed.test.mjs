@@ -24,7 +24,7 @@ test("feed rows come from shared product metadata", () => {
     assert.equal(r.url, `https://federatedintel.ai${p.workPath}`);
     assert.equal(r.availability, "in_stock");
     assert.equal(r.is_digital, "true");
-    assert.equal(r.target_countries, "US,AU,GB,NZ,CA");
+    assert.equal(r.target_countries, JSON.stringify(["US", "AU", "GB", "NZ", "CA"]));
     assert.match(r.description, /\S/);
   }
 });
@@ -46,4 +46,6 @@ test("csv serialises every required OpenAI field", () => {
     assert.ok(header.split(",").includes(field), `missing ${field}`);
   }
   assert.equal(lines.length, products.length);
+  // target_countries appears as quoted JSON array
+  assert.match(csv, /"\[\"\"US\"\",\"\"AU\"\",\"\"GB\"\",\"\"NZ\"\",\"\"CA\"\"\]"/);
 });
