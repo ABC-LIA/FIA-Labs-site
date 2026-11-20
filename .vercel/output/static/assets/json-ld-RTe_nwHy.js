@@ -1,0 +1,1 @@
+import{O as e}from"./index-D2pnBrnz.js";var t=e();function n({data:e}){return(0,t.jsx)(`script`,{type:`application/ld+json`,dangerouslySetInnerHTML:{__html:JSON.stringify(e)}})}export{n as t};

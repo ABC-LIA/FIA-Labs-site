@@ -6,7 +6,7 @@ import { a as Menu, i as Moon, n as TriangleAlert, r as Sun, t as X } from "../_
 import { n as clsx } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-CA8EesM3.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-B3RatIIj.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var __defProp = Object.defineProperty;
@@ -768,7 +768,7 @@ function NotFound() {
 		]
 	});
 }
-var $$splitComponentImporter$12 = () => import("./routes-B34xtqPp.mjs");
+var $$splitComponentImporter$12 = () => import("./routes-DD7p2p8W.mjs");
 var Route$16 = createFileRoute("/")({
 	component: lazyRouteComponent($$splitComponentImporter$12, "component"),
 	head: () => pageHead(PAGE_COPY.home.title, PAGE_COPY.home.description, PAGE_COPY.home.path)
@@ -789,7 +789,7 @@ var Route$13 = createFileRoute("/company")({
 	component: lazyRouteComponent($$splitComponentImporter$10, "component"),
 	head: () => pageHead(PAGE_COPY.company.title, PAGE_COPY.company.description, PAGE_COPY.company.path)
 });
-var $$splitComponentImporter$9 = () => import("./contact-D88HPwfH.mjs");
+var $$splitComponentImporter$9 = () => import("./contact-CMcak6BX.mjs");
 var Route$12 = createFileRoute("/contact")({
 	component: lazyRouteComponent($$splitComponentImporter$9, "component"),
 	head: () => pageHead(PAGE_COPY.contact.title, PAGE_COPY.contact.description, PAGE_COPY.contact.path)
@@ -851,7 +851,7 @@ var Route$1 = createFileRoute("/work/")({
 	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
 	head: () => pageHead(PAGE_COPY.work.title, PAGE_COPY.work.description, PAGE_COPY.work.path)
 });
-var $$splitComponentImporter = () => import("./work._slug-DuFK2f8M.mjs");
+var $$splitComponentImporter = () => import("./work._slug-uv8OcB0v.mjs");
 var Route = createFileRoute("/work/$slug")({
 	component: lazyRouteComponent($$splitComponentImporter, "component"),
 	beforeLoad: ({ params }) => {
