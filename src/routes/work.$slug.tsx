@@ -8,6 +8,11 @@ import {
   LIA_LINE,
   LIA_SOFTWARE_JSON_LD,
   MIA_SOFTWARE_JSON_LD,
+  BRANDIUM_SOFTWARE_JSON_LD,
+  CFO_SENTINEL_SOFTWARE_JSON_LD,
+  EXECMIND_SOFTWARE_JSON_LD,
+  AQUINIAN_SOFTWARE_JSON_LD,
+  CINE_NOVELIST_SOFTWARE_JSON_LD,
   getApp,
   pageHead,
   workPageCopy,
@@ -55,6 +60,11 @@ function AppPage() {
     <main id="content">
       {app.slug === "lia" ? <JsonLd data={LIA_SOFTWARE_JSON_LD} /> : null}
       {app.slug === "mia" ? <JsonLd data={MIA_SOFTWARE_JSON_LD} /> : null}
+      {app.slug === "brandium" ? <JsonLd data={BRANDIUM_SOFTWARE_JSON_LD} /> : null}
+      {app.slug === "cfo-sentinel" ? <JsonLd data={CFO_SENTINEL_SOFTWARE_JSON_LD} /> : null}
+      {app.slug === "execmind" ? <JsonLd data={EXECMIND_SOFTWARE_JSON_LD} /> : null}
+      {app.slug === "aquinian" ? <JsonLd data={AQUINIAN_SOFTWARE_JSON_LD} /> : null}
+      {app.slug === "cine-novelist" ? <JsonLd data={CINE_NOVELIST_SOFTWARE_JSON_LD} /> : null}
       <header className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
           <Link
@@ -140,6 +150,22 @@ function AppPage() {
       </section>
 
       {app.slug === "lia" ? <LiaLineSection /> : null}
+
+      {app.slug === "cine-novelist" ? (
+        <section className="border-b border-border">
+          <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+            <p className="font-mono text-[11px] tracking-[0.18em] text-subtle uppercase">
+              Credit consumption
+            </p>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-fg/90">
+              In an internal FIA Labs test, Cine Novelist completed professional coverage of a complex 131-page screenplay using approximately 20 credits. Actual credit consumption varies with document length, complexity and analytical mode. This observed result is not a guaranteed per-screenplay tariff.
+            </p>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+              Every desk starts with 150 free starter credits, no card required.
+            </p>
+          </div>
+        </section>
+      ) : null}
 
       <FiaPlanDeskNote />
 

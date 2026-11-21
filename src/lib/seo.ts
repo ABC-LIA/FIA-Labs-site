@@ -3,7 +3,7 @@ export const CANONICAL_ORIGIN = "https://federatedintel.ai";
 export const INDEX_ROBOTS =
   "index, follow, max-image-preview:large, max-snippet:-1";
 export const NOINDEX_ROBOTS = "noindex, nofollow";
-export const OG_IMAGE = `${CANONICAL_ORIGIN}/og.jpg`;
+export const OG_IMAGE = `${CANONICAL_ORIGIN}/images/fia-labs-og-1200x630.png`;
 
 export const PRODUCTION_HOSTS = new Set([
   "federatedintel.ai",

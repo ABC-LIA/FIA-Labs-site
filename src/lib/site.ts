@@ -665,6 +665,82 @@ export const MIA_SOFTWARE_JSON_LD = {
   provider: { "@id": `${ORIGIN}/#org` },
 };
 
+/** Desk page only. No Offer / price — seats live on the specialist domains. */
+export const BRANDIUM_SOFTWARE_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://brandium.pro/#app",
+  name: "Brandium",
+  alternateName: ["Brandium Pro"],
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://brandium.pro",
+  description:
+    "Positioning, creative strategy, and acquisition governed by the numbers that constrain growth. Not financial advice.",
+  publisher: { "@id": `${ORIGIN}/#org` },
+  provider: { "@id": `${ORIGIN}/#org` },
+};
+
+export const CFO_SENTINEL_SOFTWARE_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://cfosentinel.pro/#app",
+  name: "CFO Sentinel",
+  alternateName: ["CFO Sentinel Pro"],
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://cfosentinel.pro",
+  description:
+    "Financial intelligence desk for cash, margins, runway and downside. Not an audit, tax opinion or investment recommendation.",
+  publisher: { "@id": `${ORIGIN}/#org` },
+  provider: { "@id": `${ORIGIN}/#org` },
+};
+
+export const EXECMIND_SOFTWARE_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://execmind.app/#app",
+  name: "ExecMind",
+  alternateName: ["ExecMind Pro"],
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  url: "https://execmind.app",
+  description:
+    "Institutional decision desk for executives. Frames options, tests assumptions, and maintains an evidence ledger. Not legal or financial advice.",
+  publisher: { "@id": `${ORIGIN}/#org` },
+  provider: { "@id": `${ORIGIN}/#org` },
+};
+
+export const AQUINIAN_SOFTWARE_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://aquinian.com/#app",
+  name: "Aquinian Studio",
+  alternateName: ["Aquinian"],
+  applicationCategory: "EducationalApplication",
+  operatingSystem: "Web",
+  url: "https://aquinian.com",
+  description:
+    "AI environment for disciplined inquiry in theology and philosophy, structured by the Thomistic method. Not an ecclesial authority.",
+  publisher: { "@id": `${ORIGIN}/#org` },
+  provider: { "@id": `${ORIGIN}/#org` },
+};
+
+export const CINE_NOVELIST_SOFTWARE_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://cinenovelist.com/#app",
+  name: "Cine Novelist",
+  alternateName: ["Cine-Novelist"],
+  applicationCategory: "CreativeWorkApplication",
+  operatingSystem: "Web",
+  url: "https://cinenovelist.com",
+  description:
+    "Professional screenplay coverage, Script Doctor analysis, story development and film packaging. The writer's judgment remains the authority.",
+  publisher: { "@id": `${ORIGIN}/#org` },
+  provider: { "@id": `${ORIGIN}/#org` },
+};
+
 /** Answer-first opening under the homepage H1 (AEO plan, Nov 2026). */
 export const HOME_ANSWER =
   "FIA Labs, a DBA of Federated Intel AI LLC in Washington, D.C., builds expert-system desks for high-consequence work in law, medicine, finance, executive decisions, brand strategy, theology and film. Each desk pairs a generation engine with a symbolic engine that tests its proposals against domain rules, logic and precedent, and keeps evidence, inference and gap on separate lines, so a conclusion can be reconstructed and checked. Human judgment remains the authority.";
