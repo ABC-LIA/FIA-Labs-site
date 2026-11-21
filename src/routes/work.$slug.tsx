@@ -208,6 +208,13 @@ function AppPage() {
                   >
                     AICU media
                   </a>
+                  .{" "}
+                  <Link
+                    to="/news/fia-labs-aicu-2026-finalists"
+                    className="text-fg underline underline-offset-4"
+                  >
+                    Corporate announcement
+                  </Link>
                   .
                 </>
               )}

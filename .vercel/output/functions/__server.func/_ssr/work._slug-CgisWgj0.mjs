@@ -2,9 +2,9 @@ import { a as CFO_SENTINEL_SOFTWARE_JSON_LD, c as EXECMIND_SOFTWARE_JSON_LD, g a
 import { K as notFound, q as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { c as ArrowLeft, o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { n as Route, r as cn } from "./router-5d_-ZFuj.mjs";
+import { n as Route, r as cn } from "./router-BTL5fSDX.mjs";
 import { t as FiaPlanDeskNote } from "./fia-plan-section-BiuoNbqq.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-B-IpuxVY.js
+//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-CgisWgj0.js
 var import_jsx_runtime = require_jsx_runtime();
 function ExternalLink({ href, children, className, quiet }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
@@ -287,6 +287,13 @@ function AppPage() {
 									rel: "noreferrer",
 									className: "text-fg underline underline-offset-4",
 									children: "AICU media"
+								}),
+								".",
+								" ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+									to: "/news/fia-labs-aicu-2026-finalists",
+									className: "text-fg underline underline-offset-4",
+									children: "Corporate announcement"
 								}),
 								"."
 							] })
