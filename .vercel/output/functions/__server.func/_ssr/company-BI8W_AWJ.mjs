@@ -2,7 +2,7 @@ import { O as VOICES, l as FAQS, m as LAB, s as COMPANY_FAQ_JSON_LD, u as FIA_PL
 import { q as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/company-DpXt49us.js
+//#region node_modules/.nitro/vite/services/ssr/assets/company-BI8W_AWJ.js
 var import_jsx_runtime = require_jsx_runtime();
 function CompanyPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(PageFrame, {
@@ -35,6 +35,39 @@ function CompanyPage() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "font-display text-xl italic text-fg",
 								children: LAB.tagline
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+								className: "text-sm leading-relaxed text-muted",
+								children: [
+									"LIA Pro and Cine Novelist were finalists in the 2026 International AI Creator Award. Neither won. Aquinian was also covered in AICU editorial. Official references:",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+										href: "https://aicu.ai/award/2026/gallery/?w=26G26&lang=en",
+										target: "_blank",
+										rel: "noreferrer",
+										className: "text-fg underline underline-offset-4",
+										children: "LIA Pro gallery"
+									}),
+									",",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+										href: "https://aicu.ai/award/2026/gallery/?lang=en&w=26G27",
+										target: "_blank",
+										rel: "noreferrer",
+										className: "text-fg underline underline-offset-4",
+										children: "Cine Novelist gallery"
+									}),
+									",",
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+										href: "https://aicu.ai/media/261111/en",
+										target: "_blank",
+										rel: "noreferrer",
+										className: "text-fg underline underline-offset-4",
+										children: "AICU editorial"
+									}),
+									"."
+								]
 							})
 						]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dl", {

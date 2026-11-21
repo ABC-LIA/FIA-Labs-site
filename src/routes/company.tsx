@@ -66,6 +66,12 @@ function CompanyPage() {
             <p className="font-display text-xl italic text-fg">
               {LAB.tagline}
             </p>
+            <p className="text-sm leading-relaxed text-muted">
+              LIA Pro and Cine Novelist were finalists in the 2026 International AI Creator Award. Neither won. Aquinian was also covered in AICU editorial. Official references:{" "}
+              <a href="https://aicu.ai/award/2026/gallery/?w=26G26&lang=en" target="_blank" rel="noreferrer" className="text-fg underline underline-offset-4">LIA Pro gallery</a>,{" "}
+              <a href="https://aicu.ai/award/2026/gallery/?lang=en&w=26G27" target="_blank" rel="noreferrer" className="text-fg underline underline-offset-4">Cine Novelist gallery</a>,{" "}
+              <a href="https://aicu.ai/media/261111/en" target="_blank" rel="noreferrer" className="text-fg underline underline-offset-4">AICU editorial</a>.
+            </p>
           </div>
           <dl className="grid gap-6 sm:grid-cols-2">
             {[

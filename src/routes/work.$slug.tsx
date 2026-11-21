@@ -167,6 +167,55 @@ function AppPage() {
         </section>
       ) : null}
 
+      {(app.slug === "lia" || app.slug === "cine-novelist" || app.slug === "aquinian") ? (
+        <section className="border-b border-border">
+          <div className="mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16">
+            <p className="font-mono text-[11px] tracking-[0.18em] text-subtle uppercase">
+              Recognition
+            </p>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-fg/90">
+              {app.slug === "lia" && (
+                <>LIA Pro was a finalist in the 2026 International AI Creator Award (Game, Tool and App category). Neither LIA Pro nor Cine Novelist won. Official gallery entry:{" "}</>
+              )}
+              {app.slug === "cine-novelist" && (
+                <>Cine Novelist was a finalist in the 2026 International AI Creator Award (Game, Tool and App category). Neither Cine Novelist nor LIA Pro won. Official gallery entry:{" "}</>
+              )}
+              {app.slug === "aquinian" && (
+                <>Aquinian was included in AICU editorial coverage of FIA Labs applications submitted to the 2026 International AI Creator Award. Official coverage:{" "}</>
+              )}
+              <a
+                href={
+                  app.slug === "lia"
+                    ? "https://aicu.ai/award/2026/gallery/?w=26G26&lang=en"
+                    : app.slug === "cine-novelist"
+                      ? "https://aicu.ai/award/2026/gallery/?lang=en&w=26G27"
+                      : "https://aicu.ai/media/261111/en"
+                }
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg underline underline-offset-4"
+              >
+                {app.slug === "aquinian" ? "AICU editorial" : "AICU gallery entry"}
+              </a>
+              {app.slug !== "aquinian" && (
+                <>
+                  . Editorial coverage of the three applications:{" "}
+                  <a
+                    href="https://aicu.ai/media/261111/en"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-fg underline underline-offset-4"
+                  >
+                    AICU media
+                  </a>
+                  .
+                </>
+              )}
+            </p>
+          </div>
+        </section>
+      ) : null}
+
       <FiaPlanDeskNote />
 
       <nav

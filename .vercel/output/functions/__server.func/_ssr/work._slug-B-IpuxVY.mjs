@@ -2,9 +2,9 @@ import { a as CFO_SENTINEL_SOFTWARE_JSON_LD, c as EXECMIND_SOFTWARE_JSON_LD, g a
 import { K as notFound, q as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
 import { c as ArrowLeft, o as ArrowUpRight, s as ArrowRight } from "../_libs/lucide-react.mjs";
-import { n as Route, r as cn } from "./router-CIuQ0h8r.mjs";
+import { n as Route, r as cn } from "./router-5d_-ZFuj.mjs";
 import { t as FiaPlanDeskNote } from "./fia-plan-section-BiuoNbqq.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-CyZW5gKf.js
+//#region node_modules/.nitro/vite/services/ssr/assets/work._slug-B-IpuxVY.js
 var import_jsx_runtime = require_jsx_runtime();
 function ExternalLink({ href, children, className, quiet }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
@@ -256,6 +256,42 @@ function AppPage() {
 							children: "Every desk starts with 150 free starter credits, no card required."
 						})
 					]
+				})
+			}) : null,
+			app.slug === "lia" || app.slug === "cine-novelist" || app.slug === "aquinian" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+				className: "border-b border-border",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mx-auto max-w-6xl px-5 py-12 md:px-8 md:py-16",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "font-mono text-[11px] tracking-[0.18em] text-subtle uppercase",
+						children: "Recognition"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+						className: "mt-6 max-w-2xl text-base leading-relaxed text-fg/90",
+						children: [
+							app.slug === "lia" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["LIA Pro was a finalist in the 2026 International AI Creator Award (Game, Tool and App category). Neither LIA Pro nor Cine Novelist won. Official gallery entry:", " "] }),
+							app.slug === "cine-novelist" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Cine Novelist was a finalist in the 2026 International AI Creator Award (Game, Tool and App category). Neither Cine Novelist nor LIA Pro won. Official gallery entry:", " "] }),
+							app.slug === "aquinian" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Aquinian was included in AICU editorial coverage of FIA Labs applications submitted to the 2026 International AI Creator Award. Official coverage:", " "] }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: app.slug === "lia" ? "https://aicu.ai/award/2026/gallery/?w=26G26&lang=en" : app.slug === "cine-novelist" ? "https://aicu.ai/award/2026/gallery/?lang=en&w=26G27" : "https://aicu.ai/media/261111/en",
+								target: "_blank",
+								rel: "noreferrer",
+								className: "text-fg underline underline-offset-4",
+								children: app.slug === "aquinian" ? "AICU editorial" : "AICU gallery entry"
+							}),
+							app.slug !== "aquinian" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+								". Editorial coverage of the three applications:",
+								" ",
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+									href: "https://aicu.ai/media/261111/en",
+									target: "_blank",
+									rel: "noreferrer",
+									className: "text-fg underline underline-offset-4",
+									children: "AICU media"
+								}),
+								"."
+							] })
+						]
+					})]
 				})
 			}) : null,
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FiaPlanDeskNote, {}),
