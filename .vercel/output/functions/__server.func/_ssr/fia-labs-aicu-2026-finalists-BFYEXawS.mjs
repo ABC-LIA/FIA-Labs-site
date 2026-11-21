@@ -1,7 +1,7 @@
 import { q as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/fia-labs-aicu-2026-finalists-D5NoaQSG.js
+//#region node_modules/.nitro/vite/services/ssr/assets/fia-labs-aicu-2026-finalists-BFYEXawS.js
 var import_jsx_runtime = require_jsx_runtime();
 var NEWS_JSON_LD = {
 	"@context": "https://schema.org",
@@ -23,14 +23,14 @@ var NEWS_JSON_LD = {
 		}
 	},
 	mainEntityOfPage: "https://federatedintel.ai/news/fia-labs-aicu-2026-finalists",
-	description: "LIA Pro and Cine Novelist, specialist AI applications developed by FIA Labs, have been named finalists in the 2026 International AI Creator Award. Neither application won.",
+	description: "LIA Pro and Cine Novelist, specialist AI applications developed by FIA Labs, are 2026 International AI Creator Award Finalists.",
 	image: "https://federatedintel.ai/images/fia-labs-og-1200x630.png"
 };
 function NewsArticlePage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(PageFrame, {
 		index: "News",
 		title: "Two FIA Labs Applications Named Finalists in the 2026 International AI Creator Award",
-		dek: "LIA Pro and Cine Novelist were named finalists. Neither application won.",
+		dek: "LIA Pro and Cine Novelist — 2026 International AI Creator Award Finalists.",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(JsonLd, { data: NEWS_JSON_LD }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("article", {
 			className: "mx-auto max-w-3xl px-5 py-12 md:px-8 md:py-16 text-base leading-relaxed text-fg/90",
 			children: [
@@ -141,7 +141,7 @@ function NewsArticlePage() {
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 text-sm text-muted",
-					children: "Neither LIA Pro nor Cine Novelist won the award. Aquinian Studio was featured in editorial coverage; finalist status for Aquinian has not been separately confirmed."
+					children: "Aquinian Studio was featured in AICU editorial coverage. Finalist status for Aquinian has not been separately confirmed."
 				})
 			]
 		})]

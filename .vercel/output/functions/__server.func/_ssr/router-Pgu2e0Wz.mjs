@@ -6,7 +6,7 @@ import { a as Menu, i as Moon, n as TriangleAlert, r as Sun, t as X } from "../_
 import { n as clsx } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-BTL5fSDX.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-Pgu2e0Wz.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var __defProp = Object.defineProperty;
@@ -768,7 +768,7 @@ function NotFound() {
 		]
 	});
 }
-var $$splitComponentImporter$13 = () => import("./routes-gY_wo02U.mjs");
+var $$splitComponentImporter$13 = () => import("./routes-CH8Q7_5_.mjs");
 var Route$17 = createFileRoute("/")({
 	component: lazyRouteComponent($$splitComponentImporter$13, "component"),
 	head: () => pageHead(PAGE_COPY.home.title, PAGE_COPY.home.description, PAGE_COPY.home.path)
@@ -784,12 +784,12 @@ var Route$15 = createFileRoute("/apps")({ beforeLoad: () => {
 		statusCode: 308
 	});
 } });
-var $$splitComponentImporter$11 = () => import("./company-JytAeB2K.mjs");
+var $$splitComponentImporter$11 = () => import("./company-_zMzcWcO.mjs");
 var Route$14 = createFileRoute("/company")({
 	component: lazyRouteComponent($$splitComponentImporter$11, "component"),
 	head: () => pageHead(PAGE_COPY.company.title, PAGE_COPY.company.description, PAGE_COPY.company.path)
 });
-var $$splitComponentImporter$10 = () => import("./contact-BBFspDIa.mjs");
+var $$splitComponentImporter$10 = () => import("./contact-D3Ql1Xz6.mjs");
 var Route$13 = createFileRoute("/contact")({
 	component: lazyRouteComponent($$splitComponentImporter$10, "component"),
 	head: () => pageHead(PAGE_COPY.contact.title, PAGE_COPY.contact.description, PAGE_COPY.contact.path)
@@ -846,17 +846,17 @@ var Route$4 = createFileRoute("/what-is-symbolic-ai")({
 });
 var $$splitComponentImporter$3 = () => import("./work-DIsLTtWr.mjs");
 var Route$3 = createFileRoute("/work")({ component: lazyRouteComponent($$splitComponentImporter$3, "component") });
-var $$splitComponentImporter$2 = () => import("./fia-labs-aicu-2026-finalists-D5NoaQSG.mjs");
+var $$splitComponentImporter$2 = () => import("./fia-labs-aicu-2026-finalists-BFYEXawS.mjs");
 var Route$2 = createFileRoute("/news/fia-labs-aicu-2026-finalists")({
 	component: lazyRouteComponent($$splitComponentImporter$2, "component"),
-	head: () => pageHead("Two FIA Labs Applications Named Finalists in the 2026 International AI Creator Award", "LIA Pro and Cine Novelist, specialist AI applications developed by FIA Labs, have been named finalists in the 2026 International AI Creator Award. Neither application won.", "/news/fia-labs-aicu-2026-finalists")
+	head: () => pageHead("Two FIA Labs Applications Named Finalists in the 2026 International AI Creator Award", "LIA Pro and Cine Novelist, specialist AI applications developed by FIA Labs, are 2026 International AI Creator Award Finalists.", "/news/fia-labs-aicu-2026-finalists")
 });
 var $$splitComponentImporter$1 = () => import("./work.index-5MVBrs25.mjs");
 var Route$1 = createFileRoute("/work/")({
 	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
 	head: () => pageHead(PAGE_COPY.work.title, PAGE_COPY.work.description, PAGE_COPY.work.path)
 });
-var $$splitComponentImporter = () => import("./work._slug-CgisWgj0.mjs");
+var $$splitComponentImporter = () => import("./work._slug-BlPerrIC.mjs");
 var Route = createFileRoute("/work/$slug")({
 	component: lazyRouteComponent($$splitComponentImporter, "component"),
 	beforeLoad: ({ params }) => {

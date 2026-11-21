@@ -175,10 +175,10 @@ function AppPage() {
             </p>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-fg/90">
               {app.slug === "lia" && (
-                <>LIA Pro was a finalist in the 2026 International AI Creator Award (Game, Tool and App category). Neither LIA Pro nor Cine Novelist won. Official gallery entry:{" "}</>
+                <>LIA Pro — 2026 International AI Creator Award Finalist. Official gallery entry:{" "}</>
               )}
               {app.slug === "cine-novelist" && (
-                <>Cine Novelist was a finalist in the 2026 International AI Creator Award (Game, Tool and App category). Neither Cine Novelist nor LIA Pro won. Official gallery entry:{" "}</>
+                <>Cine Novelist — 2026 International AI Creator Award Finalist. Official gallery entry:{" "}</>
               )}
               {app.slug === "aquinian" && (
                 <>Aquinian was included in AICU editorial coverage of FIA Labs applications submitted to the 2026 International AI Creator Award. Official coverage:{" "}</>

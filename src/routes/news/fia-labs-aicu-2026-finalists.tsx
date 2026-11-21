@@ -24,7 +24,7 @@ const NEWS_JSON_LD = {
   },
   mainEntityOfPage: "https://federatedintel.ai/news/fia-labs-aicu-2026-finalists",
   description:
-    "LIA Pro and Cine Novelist, specialist AI applications developed by FIA Labs, have been named finalists in the 2026 International AI Creator Award. Neither application won.",
+    "LIA Pro and Cine Novelist, specialist AI applications developed by FIA Labs, are 2026 International AI Creator Award Finalists.",
   image: "https://federatedintel.ai/images/fia-labs-og-1200x630.png",
 };
 
@@ -33,7 +33,7 @@ export const Route = createFileRoute("/news/fia-labs-aicu-2026-finalists")({
   head: () =>
     pageHead(
       "Two FIA Labs Applications Named Finalists in the 2026 International AI Creator Award",
-      "LIA Pro and Cine Novelist, specialist AI applications developed by FIA Labs, have been named finalists in the 2026 International AI Creator Award. Neither application won.",
+      "LIA Pro and Cine Novelist, specialist AI applications developed by FIA Labs, are 2026 International AI Creator Award Finalists.",
       "/news/fia-labs-aicu-2026-finalists",
     ),
 });
@@ -43,7 +43,7 @@ function NewsArticlePage() {
     <PageFrame
       index="News"
       title="Two FIA Labs Applications Named Finalists in the 2026 International AI Creator Award"
-      dek="LIA Pro and Cine Novelist were named finalists. Neither application won."
+      dek="LIA Pro and Cine Novelist — 2026 International AI Creator Award Finalists."
     >
       <JsonLd data={NEWS_JSON_LD} />
       <article className="mx-auto max-w-3xl px-5 py-12 md:px-8 md:py-16 text-base leading-relaxed text-fg/90">
@@ -116,7 +116,7 @@ function NewsArticlePage() {
           </li>
         </ul>
         <p className="mt-6 text-sm text-muted">
-          Neither LIA Pro nor Cine Novelist won the award. Aquinian Studio was featured in editorial coverage; finalist status for Aquinian has not been separately confirmed.
+          Aquinian Studio was featured in AICU editorial coverage. Finalist status for Aquinian has not been separately confirmed.
         </p>
       </article>
     </PageFrame>
