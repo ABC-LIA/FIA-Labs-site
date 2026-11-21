@@ -1,1 +1,0 @@
-import{E as e,O as t}from"./index-D2pnBrnz.js";var n=t();function r(){return(0,n.jsx)(e,{})}export{r as component};

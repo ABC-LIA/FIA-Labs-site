@@ -36,7 +36,7 @@ function isPathInScope(pathname, base) {
 var CANONICAL_ORIGIN = "https://federatedintel.ai";
 var INDEX_ROBOTS = "index, follow, max-image-preview:large, max-snippet:-1";
 var NOINDEX_ROBOTS = "noindex, nofollow";
-var OG_IMAGE = `${CANONICAL_ORIGIN}/og.jpg`;
+var OG_IMAGE = `${CANONICAL_ORIGIN}/images/fia-labs-og-1200x630.png`;
 var PRODUCTION_HOSTS = /* @__PURE__ */ new Set(["federatedintel.ai", "www.federatedintel.ai"]);
 /** Retired IA → current desks. Permanent (301/308). Do not add these to the sitemap. */
 var LEGACY_REDIRECTS = {
@@ -724,11 +724,11 @@ var findRouteRules = /* @__PURE__ */ (() => {
 		return r;
 	};
 })();
-var _lazy_vxZkiN = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
+var _lazy_zZpBB8 = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
 var findRoute = /* @__PURE__ */ (() => {
 	const data = {
 		route: "/**",
-		handler: _lazy_vxZkiN
+		handler: _lazy_zZpBB8
 	};
 	return ((_m, p) => {
 		return {
