@@ -77,6 +77,9 @@ function MethodPage() {
             <Link to="/research" className="text-sm text-muted hover:text-fg">
               Truth infrastructure
             </Link>
+            <Link to="/audit-ai-agent-decisions" className="text-sm text-muted hover:text-fg">
+              For a practical audit guide: how to audit AI agent decisions
+            </Link>
           </div>
         </aside>
       </div>

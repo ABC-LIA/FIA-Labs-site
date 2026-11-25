@@ -60,6 +60,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link to="/audit-ai-agent-decisions" className="text-sm text-muted hover:text-fg">
+                How to audit AI agent decisions
+              </Link>
+            </li>
+            <li>
               <Link to="/contact" className="text-sm text-muted hover:text-fg">
                 Contact
               </Link>
