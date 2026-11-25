@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AfricaRouteImport } from './routes/africa'
 import { Route as AppsRouteImport } from './routes/apps'
+import { Route as AuditAiAgentDecisionsRouteImport } from './routes/audit-ai-agent-decisions'
 import { Route as CompanyRouteImport } from './routes/company'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CookiesPolicyRouteImport } from './routes/cookies-policy'
@@ -24,6 +25,7 @@ import { Route as ResearchRouteImport } from './routes/research'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WhatIsSymbolicAiRouteImport } from './routes/what-is-symbolic-ai'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as NewsFiaLabsAicu2026FinalistsRouteImport } from './routes/news/fia-labs-aicu-2026-finalists'
 import { Route as WorkIndexRouteImport } from './routes/work.index'
 import { Route as WorkSlugRouteImport } from './routes/work.$slug'
 
@@ -40,6 +42,11 @@ const AfricaRoute = AfricaRouteImport.update({
 const AppsRoute = AppsRouteImport.update({
   id: '/apps',
   path: '/apps',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuditAiAgentDecisionsRoute = AuditAiAgentDecisionsRouteImport.update({
+  id: '/audit-ai-agent-decisions',
+  path: '/audit-ai-agent-decisions',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompanyRoute = CompanyRouteImport.update({
@@ -102,6 +109,12 @@ const WorkRoute = WorkRouteImport.update({
   path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NewsFiaLabsAicu2026FinalistsRoute =
+  NewsFiaLabsAicu2026FinalistsRouteImport.update({
+    id: '/news/fia-labs-aicu-2026-finalists',
+    path: '/news/fia-labs-aicu-2026-finalists',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WorkIndexRoute = WorkIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -117,6 +130,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/africa': typeof AfricaRoute
   '/apps': typeof AppsRoute
+  '/audit-ai-agent-decisions': typeof AuditAiAgentDecisionsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/cookies-policy': typeof CookiesPolicyRoute
@@ -129,6 +143,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/what-is-symbolic-ai': typeof WhatIsSymbolicAiRoute
   '/work': typeof WorkRouteWithChildren
+  '/news/fia-labs-aicu-2026-finalists': typeof NewsFiaLabsAicu2026FinalistsRoute
   '/work/$slug': typeof WorkSlugRoute
   '/work/': typeof WorkIndexRoute
 }
@@ -136,6 +151,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/africa': typeof AfricaRoute
   '/apps': typeof AppsRoute
+  '/audit-ai-agent-decisions': typeof AuditAiAgentDecisionsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/cookies-policy': typeof CookiesPolicyRoute
@@ -147,6 +163,7 @@ export interface FileRoutesByTo {
   '/research': typeof ResearchRoute
   '/terms': typeof TermsRoute
   '/what-is-symbolic-ai': typeof WhatIsSymbolicAiRoute
+  '/news/fia-labs-aicu-2026-finalists': typeof NewsFiaLabsAicu2026FinalistsRoute
   '/work/$slug': typeof WorkSlugRoute
   '/work': typeof WorkIndexRoute
 }
@@ -155,6 +172,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/africa': typeof AfricaRoute
   '/apps': typeof AppsRoute
+  '/audit-ai-agent-decisions': typeof AuditAiAgentDecisionsRoute
   '/company': typeof CompanyRoute
   '/contact': typeof ContactRoute
   '/cookies-policy': typeof CookiesPolicyRoute
@@ -167,6 +185,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/what-is-symbolic-ai': typeof WhatIsSymbolicAiRoute
   '/work': typeof WorkRouteWithChildren
+  '/news/fia-labs-aicu-2026-finalists': typeof NewsFiaLabsAicu2026FinalistsRoute
   '/work/$slug': typeof WorkSlugRoute
   '/work/': typeof WorkIndexRoute
 }
@@ -176,6 +195,7 @@ export interface FileRouteTypes {
     | '/'
     | '/africa'
     | '/apps'
+    | '/audit-ai-agent-decisions'
     | '/company'
     | '/contact'
     | '/cookies-policy'
@@ -188,6 +208,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/what-is-symbolic-ai'
     | '/work'
+    | '/news/fia-labs-aicu-2026-finalists'
     | '/work/$slug'
     | '/work/'
   fileRoutesByTo: FileRoutesByTo
@@ -195,6 +216,7 @@ export interface FileRouteTypes {
     | '/'
     | '/africa'
     | '/apps'
+    | '/audit-ai-agent-decisions'
     | '/company'
     | '/contact'
     | '/cookies-policy'
@@ -206,6 +228,7 @@ export interface FileRouteTypes {
     | '/research'
     | '/terms'
     | '/what-is-symbolic-ai'
+    | '/news/fia-labs-aicu-2026-finalists'
     | '/work/$slug'
     | '/work'
   id:
@@ -213,6 +236,7 @@ export interface FileRouteTypes {
     | '/'
     | '/africa'
     | '/apps'
+    | '/audit-ai-agent-decisions'
     | '/company'
     | '/contact'
     | '/cookies-policy'
@@ -225,6 +249,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/what-is-symbolic-ai'
     | '/work'
+    | '/news/fia-labs-aicu-2026-finalists'
     | '/work/$slug'
     | '/work/'
   fileRoutesById: FileRoutesById
@@ -233,6 +258,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AfricaRoute: typeof AfricaRoute
   AppsRoute: typeof AppsRoute
+  AuditAiAgentDecisionsRoute: typeof AuditAiAgentDecisionsRoute
   CompanyRoute: typeof CompanyRoute
   ContactRoute: typeof ContactRoute
   CookiesPolicyRoute: typeof CookiesPolicyRoute
@@ -245,6 +271,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   WhatIsSymbolicAiRoute: typeof WhatIsSymbolicAiRoute
   WorkRoute: typeof WorkRouteWithChildren
+  NewsFiaLabsAicu2026FinalistsRoute: typeof NewsFiaLabsAicu2026FinalistsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -268,6 +295,13 @@ declare module '@tanstack/react-router' {
       path: '/apps'
       fullPath: '/apps'
       preLoaderRoute: typeof AppsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/audit-ai-agent-decisions': {
+      id: '/audit-ai-agent-decisions'
+      path: '/audit-ai-agent-decisions'
+      fullPath: '/audit-ai-agent-decisions'
+      preLoaderRoute: typeof AuditAiAgentDecisionsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/company': {
@@ -354,6 +388,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/news/fia-labs-aicu-2026-finalists': {
+      id: '/news/fia-labs-aicu-2026-finalists'
+      path: '/news/fia-labs-aicu-2026-finalists'
+      fullPath: '/news/fia-labs-aicu-2026-finalists'
+      preLoaderRoute: typeof NewsFiaLabsAicu2026FinalistsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work/': {
       id: '/work/'
       path: '/'
@@ -387,6 +428,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AfricaRoute: AfricaRoute,
   AppsRoute: AppsRoute,
+  AuditAiAgentDecisionsRoute: AuditAiAgentDecisionsRoute,
   CompanyRoute: CompanyRoute,
   ContactRoute: ContactRoute,
   CookiesPolicyRoute: CookiesPolicyRoute,
@@ -399,6 +441,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   WhatIsSymbolicAiRoute: WhatIsSymbolicAiRoute,
   WorkRoute: WorkRouteWithChildren,
+  NewsFiaLabsAicu2026FinalistsRoute: NewsFiaLabsAicu2026FinalistsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

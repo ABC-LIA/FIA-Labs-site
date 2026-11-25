@@ -103,6 +103,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://federatedintel.ai/audit-ai-agent-decisions</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://federatedintel.ai/cookies-policy</loc>
     <lastmod>2026-11-13</lastmod>
   </url>
