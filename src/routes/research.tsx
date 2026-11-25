@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { PageFrame } from "@/components/page-frame";
 import { ARTICLES, LAB, pageHead } from "@/lib/site";
@@ -65,6 +65,13 @@ function ResearchPage() {
             </li>
           ))}
         </ol>
+        <p className="mt-10 max-w-2xl text-sm leading-relaxed text-muted">
+          For the method in practice, read{" "}
+          <Link to="/audit-ai-agent-decisions" className="text-fg underline underline-offset-4">
+            how to audit AI agent decisions
+          </Link>
+          .
+        </p>
       </div>
     </PageFrame>
   );

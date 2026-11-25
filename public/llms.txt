@@ -36,6 +36,7 @@ The patented federated system — seven specialists reasoning together under arb
 ## Guides
 
 - [What is symbolic AI?](https://federatedintel.ai/what-is-symbolic-ai): a definition, symbolic vs neural AI, and how FIA Labs uses symbolic arbitration.
+- [How to audit AI agent decisions](https://federatedintel.ai/audit-ai-agent-decisions): reconstruct an agent's decision, test the record with evidence, inference and gap, and design human approvals that hold up.
 
 ## Site
 
