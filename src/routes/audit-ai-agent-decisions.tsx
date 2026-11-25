@@ -1,7 +1,7 @@
 // New guide page from brief AEO-2026-11-23-13 (draft, awaiting Adrian's OK).
-// SLUG IS PROVISIONAL: /audit-ai-agent-decisions awaits Adrian's confirmation.
-// Do not present "approval decay" as FIA's own term or link concept papers as FIA work
-// unless Adrian confirms authorship. Framework lines await a practitioner check.
+// Slug /audit-ai-agent-decisions confirmed by Adrian (25 Nov 2026).
+// "Approval decay" is attributed to Adrian Bertino-Clarke's published writing (book and
+// Substack essays linked below); do not overstate it beyond that. Framework lines await a practitioner check.
 import { createFileRoute, Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { JsonLd } from "@/components/json-ld";
@@ -227,6 +227,20 @@ function AuditAiAgentDecisionsPage() {
           It should stop covering the action when the inputs change, when the scope widens, or when
           enough time has passed that the circumstances may have moved. Set the lapse condition when
           the approval is given, and record it with the approval.
+        </P>
+        <P>
+          Adrian Bertino-Clarke, FIA Labs' founder, has written about this problem as "approval
+          decay": an approval is historical, but the action runs in the present, so the record of
+          an approval does not show that its conditions still held when the agent acted. See his
+          field guide <em>From Advice to Authority</em> and the essays{" "}
+          <A href="https://federatedintel.substack.com/p/yesterdays-permission-todays-consequence">
+            Yesterday's Permission, Today's Consequence
+          </A>{" "}
+          and{" "}
+          <A href="https://federatedintel.substack.com/p/the-missing-moment-in-ai-governance">
+            The Missing Moment in AI Governance
+          </A>
+          .
         </P>
         <H3>Where to put the gate</H3>
         <P>

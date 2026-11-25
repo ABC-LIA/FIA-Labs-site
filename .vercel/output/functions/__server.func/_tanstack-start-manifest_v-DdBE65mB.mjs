@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-Du0t3kP0.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-DdBE65mB.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/__root.tsx",
@@ -22,7 +22,7 @@ var tsrStartManifest = () => ({ routes: {
 			"/news/fia-labs-aicu-2026-finalists"
 		],
 		preloads: [
-			"/assets/index-xqKFjM1C.js",
+			"/assets/index-wpcki7lz.js",
 			"/assets/jsx-runtime-BkSabwWG.js",
 			"/assets/matchContext-Dd6IFjTf.js",
 			"/assets/link-BzB7UVEo.js"
@@ -30,29 +30,29 @@ var tsrStartManifest = () => ({ routes: {
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-xqKFjM1C.js"
+			src: "/assets/index-wpcki7lz.js"
 		} }]
 	},
 	"/": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/routes-C_qfFASW.js",
-			"/assets/fia-plan-section-BDr7HSiu.js",
-			"/assets/arrow-up-right-C6SIiFI9.js",
+			"/assets/routes-D49kcIkl.js",
+			"/assets/fia-plan-section-5cb8zX6g.js",
+			"/assets/arrow-up-right-CXkdxmut.js",
 			"/assets/json-ld-BIdu6_6R.js"
 		]
 	},
 	"/africa": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/africa.tsx",
 		children: void 0,
-		preloads: ["/assets/africa-Dk7CTjb6.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/africa-CJDGIQHS.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/audit-ai-agent-decisions": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/audit-ai-agent-decisions.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/audit-ai-agent-decisions-D1aTex8M.js",
+			"/assets/audit-ai-agent-decisions-Dq_VeB0w.js",
 			"/assets/page-frame-DMIUMwIL.js",
 			"/assets/json-ld-BIdu6_6R.js"
 		]
@@ -61,7 +61,7 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/company.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/company-2vTt5lHL.js",
+			"/assets/company-B_8v07sa.js",
 			"/assets/page-frame-DMIUMwIL.js",
 			"/assets/json-ld-BIdu6_6R.js"
 		]
@@ -69,18 +69,18 @@ var tsrStartManifest = () => ({ routes: {
 	"/contact": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/contact.tsx",
 		children: void 0,
-		preloads: ["/assets/contact-CK7mQzZT.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/contact-CO9T02jx.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/cookies-policy": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/cookies-policy.tsx",
 		children: void 0,
-		preloads: ["/assets/cookies-policy-BBBWu3SS.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/cookies-policy-CTsVX6aS.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/method": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/method.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/method-BdrIRT9H.js",
+			"/assets/method-UPxJ3OXY.js",
 			"/assets/page-frame-DMIUMwIL.js",
 			"/assets/json-ld-BIdu6_6R.js"
 		]
@@ -88,21 +88,21 @@ var tsrStartManifest = () => ({ routes: {
 	"/privacy": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/privacy.tsx",
 		children: void 0,
-		preloads: ["/assets/privacy-DmZoNtGO.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/privacy-Bj62zjvi.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/research": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/research.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/research-CmJEgd98.js",
-			"/assets/arrow-up-right-C6SIiFI9.js",
+			"/assets/research-Ovnt8SW_.js",
+			"/assets/arrow-up-right-CXkdxmut.js",
 			"/assets/page-frame-DMIUMwIL.js"
 		]
 	},
 	"/terms": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/terms.tsx",
 		children: void 0,
-		preloads: ["/assets/terms-B6oCQ9tc.js", "/assets/page-frame-DMIUMwIL.js"]
+		preloads: ["/assets/terms-DkuKH7Pu.js", "/assets/page-frame-DMIUMwIL.js"]
 	},
 	"/what-is-symbolic-ai": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/what-is-symbolic-ai.tsx",
@@ -112,7 +112,7 @@ var tsrStartManifest = () => ({ routes: {
 	"/work": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/work.tsx",
 		children: ["/work/$slug", "/work/"],
-		preloads: ["/assets/work-_T4ZyD8c.js"]
+		preloads: ["/assets/work-CDpr554Y.js"]
 	},
 	"/news/fia-labs-aicu-2026-finalists": {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/news/fia-labs-aicu-2026-finalists.tsx",
@@ -127,9 +127,9 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/work.$slug.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/work._slug-Cj0JktWM.js",
-			"/assets/fia-plan-section-BDr7HSiu.js",
-			"/assets/arrow-up-right-C6SIiFI9.js",
+			"/assets/work._slug-Dyve9N2B.js",
+			"/assets/fia-plan-section-5cb8zX6g.js",
+			"/assets/arrow-up-right-CXkdxmut.js",
 			"/assets/json-ld-BIdu6_6R.js"
 		]
 	},
@@ -137,8 +137,8 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "/workspace/seo-drafts/FIA-Labs-site/src/routes/work.index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/work.index-DMzfe0JF.js",
-			"/assets/fia-plan-section-BDr7HSiu.js",
+			"/assets/work.index-CaTGBIZE.js",
+			"/assets/fia-plan-section-5cb8zX6g.js",
 			"/assets/page-frame-DMIUMwIL.js"
 		]
 	}

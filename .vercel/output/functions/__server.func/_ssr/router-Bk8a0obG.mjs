@@ -6,7 +6,7 @@ import { a as Menu, i as Moon, n as TriangleAlert, r as Sun, t as X } from "../_
 import { n as clsx } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-CtbgqIrj.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-Bk8a0obG.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var __defProp = Object.defineProperty;
@@ -773,7 +773,7 @@ function NotFound() {
 		]
 	});
 }
-var $$splitComponentImporter$14 = () => import("./routes-aElABsP_.mjs");
+var $$splitComponentImporter$14 = () => import("./routes-CO5tU_N7.mjs");
 var Route$18 = createFileRoute("/")({
 	component: lazyRouteComponent($$splitComponentImporter$14, "component"),
 	head: () => pageHead(PAGE_COPY.home.title, PAGE_COPY.home.description, PAGE_COPY.home.path)
@@ -791,7 +791,7 @@ var Route$16 = createFileRoute("/apps")({ beforeLoad: () => {
 } });
 var PATH = "/audit-ai-agent-decisions";
 var DESCRIPTION$1 = "Reconstruct an AI agent's decision, test the record with evidence, inference and gap, and design human approvals that hold up later.";
-var $$splitComponentImporter$12 = () => import("./audit-ai-agent-decisions-CJ9XfaQ6.mjs");
+var $$splitComponentImporter$12 = () => import("./audit-ai-agent-decisions-B13t0eyr.mjs");
 var TITLE = "How to audit AI agent decisions: a step-by-step guide | FIA Labs";
 var AUDIT_FAQS = [
 	{
@@ -828,7 +828,7 @@ var Route$14 = createFileRoute("/company")({
 	component: lazyRouteComponent($$splitComponentImporter$11, "component"),
 	head: () => pageHead(PAGE_COPY.company.title, PAGE_COPY.company.description, PAGE_COPY.company.path)
 });
-var $$splitComponentImporter$10 = () => import("./contact-BufEZAqj.mjs");
+var $$splitComponentImporter$10 = () => import("./contact-Bt4OAc5i.mjs");
 var Route$13 = createFileRoute("/contact")({
 	component: lazyRouteComponent($$splitComponentImporter$10, "component"),
 	head: () => pageHead(PAGE_COPY.contact.title, PAGE_COPY.contact.description, PAGE_COPY.contact.path)
@@ -895,7 +895,7 @@ var Route$1 = createFileRoute("/work/")({
 	component: lazyRouteComponent($$splitComponentImporter$1, "component"),
 	head: () => pageHead(PAGE_COPY.work.title, PAGE_COPY.work.description, PAGE_COPY.work.path)
 });
-var $$splitComponentImporter = () => import("./work._slug-CfdWJFDx.mjs");
+var $$splitComponentImporter = () => import("./work._slug-D5Q6zzVB.mjs");
 var Route = createFileRoute("/work/$slug")({
 	component: lazyRouteComponent($$splitComponentImporter, "component"),
 	beforeLoad: ({ params }) => {

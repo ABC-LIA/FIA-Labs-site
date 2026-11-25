@@ -1,9 +1,9 @@
 import { u as FIA_ORG_ID } from "./site-DzHDP_Sq.mjs";
 import { q as require_jsx_runtime, y as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as PageFrame } from "./page-frame-DwFh0oLd.mjs";
-import { a as PATH, i as DESCRIPTION$1, r as AUDIT_FAQS } from "./router-CtbgqIrj.mjs";
+import { a as PATH, i as DESCRIPTION$1, r as AUDIT_FAQS } from "./router-Bk8a0obG.mjs";
 import { t as JsonLd } from "./json-ld-2dnvi90N.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audit-ai-agent-decisions-CJ9XfaQ6.js
+//#region node_modules/.nitro/vite/services/ssr/assets/audit-ai-agent-decisions-B13t0eyr.js
 var import_jsx_runtime = require_jsx_runtime();
 var ORIGIN = "https://federatedintel.ai";
 var URL = `${ORIGIN}${PATH}`;
@@ -177,6 +177,24 @@ function AuditAiAgentDecisionsPage() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(P, { children: "Map approvals to the same delegations of authority your organisation already uses for people. An agent's action should not be approvable by someone who could not authorise the same action if a colleague proposed it." }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(H3, { children: "When an approval should lapse" }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(P, { children: "An approval is given on a particular record, for a particular scope, at a particular time. It should stop covering the action when the inputs change, when the scope widens, or when enough time has passed that the circumstances may have moved. Set the lapse condition when the approval is given, and record it with the approval." }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(P, { children: [
+					"Adrian Bertino-Clarke, FIA Labs' founder, has written about this problem as \"approval decay\": an approval is historical, but the action runs in the present, so the record of an approval does not show that its conditions still held when the agent acted. See his field guide ",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("em", { children: "From Advice to Authority" }),
+					" and the essays",
+					" ",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(A, {
+						href: "https://federatedintel.substack.com/p/yesterdays-permission-todays-consequence",
+						children: "Yesterday's Permission, Today's Consequence"
+					}),
+					" ",
+					"and",
+					" ",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(A, {
+						href: "https://federatedintel.substack.com/p/the-missing-moment-in-ai-governance",
+						children: "The Missing Moment in AI Governance"
+					}),
+					"."
+				] }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(H3, { children: "Where to put the gate" }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(P, { children: "Put the human gate before actions that are irreversible or leave the organisation: payments, filings, messages to customers or regulators, changes to production systems. Internal drafting and analysis rarely need a gate; the record of them does." }),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(H2, { children: "How this maps to frameworks you already use" }),
